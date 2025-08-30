@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgcw6wj1a4lec"]
+
+[ext_resource type="Script" uid="uid://n8708n6h47jp" path="res://scenes/end_screen.gd" id="1_uanjm"]
+[ext_resource type="FontFile" uid="uid://dngj8q2mrhf3a" path="res://Fonts/ARCADECLASSIC.TTF" id="2_2vifa"]
+
+[node name="EndScreen" type="CanvasLayer"]
+script = ExtResource("1_uanjm")
+
+[node name="GameOver" type="Label" parent="."]
+offset_left = 144.0
+offset_top = 13.0
+offset_right = 506.0
+offset_bottom = 94.0
+theme_override_fonts/font = ExtResource("2_2vifa")
+theme_override_font_sizes/font_size = 80
+text = "Game Over"
+
+[node name="Returning" type="Label" parent="."]
+offset_left = 80.0
+offset_top = 179.0
+offset_right = 599.0
+offset_bottom = 210.0
+theme_override_fonts/font = ExtResource("2_2vifa")
+theme_override_font_sizes/font_size = 30
+text = "Returning to Main Menu in 10 Seconds"
+
+[node name="Timer" type="Timer" parent="."]

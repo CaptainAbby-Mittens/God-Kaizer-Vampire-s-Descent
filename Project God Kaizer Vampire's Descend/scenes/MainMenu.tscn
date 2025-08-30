@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4iwl1te85apj"]
+
+[ext_resource type="Script" uid="uid://di574vgvd61i2" path="res://scripts/main_menu.gd" id="1_yqorp"]
+[ext_resource type="FontFile" uid="uid://dngj8q2mrhf3a" path="res://Fonts/ARCADECLASSIC.TTF" id="2_0ykhv"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_yqorp")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 641.0
+offset_bottom = 362.0
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 16.0
+offset_right = 592.0
+offset_bottom = 67.0
+theme_override_fonts/font = ExtResource("2_0ykhv")
+theme_override_font_sizes/font_size = 38
+text = "God Kaizer: Vampire's Descend"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 154.0
+offset_right = 386.0
+offset_bottom = 250.0
+theme_override_fonts/font = ExtResource("2_0ykhv")
+theme_override_font_sizes/font_size = 44
+text = "Start"
+icon_alignment = 1
