@@ -54,6 +54,7 @@ func _physics_process(delta):
 	# Safe move_and_slide
 	if is_inside_tree() and get_world_2d():
 		move_and_slide()
+	
 
 func handle_timers(delta):
 	# Safe physics check

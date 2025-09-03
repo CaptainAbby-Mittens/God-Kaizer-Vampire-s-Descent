@@ -9,20 +9,18 @@ func _ready():
 	print("Health bar scene loaded!")
 	top_level = true
 	move_child(label, get_child_count() - 1)
-	# Configure progress bar - RED STYLE
+	
+	# Configure progress bar - SETUP ONLY, NO VALUES
 	progress_bar.min_value = 0
-	progress_bar.max_value = 100
-	progress_bar.value = 100
 	progress_bar.size = Vector2(200, 20)
-	await get_tree().create_timer(0.5).timeout
-	connect_to_player()
+	
 	# Apply RED style to progress bar
 	style_progress_bar_red()
 	
-	# Configure label - BLACK TEXT
+	# Configure label - SETUP ONLY, NO VALUES
 	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
-	label.text = "HP: 100/100"
+	label.text = "HP: ..."  # ← Temporary placeholder
 	
 	# Apply BLACK text color
 	style_label_black()
@@ -32,6 +30,10 @@ func _ready():
 	
 	# Center label on progress bar
 	center_label()
+	
+	# Connect to player for ACTUAL values
+	await get_tree().create_timer(0.1).timeout
+	connect_to_player()
 
 func style_progress_bar_red():
 	# Create a RED style for the progress bar

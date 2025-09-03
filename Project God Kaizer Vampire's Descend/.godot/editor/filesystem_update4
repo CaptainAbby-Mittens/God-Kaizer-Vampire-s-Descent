@@ -1,2 +1,3 @@
 res://scenes/MainMenu.tscn
-res://scenes/game.tscn
+res://scripts/game.gd
+res://scripts/ui_health_bar.gd

@@ -50,6 +50,13 @@ func load_room(room_scene: PackedScene):
 	# Position player at the appropriate entrance
 	position_player_in_room()
 
+	refresh_health_display()
+
+func refresh_health_display():
+	# Make sure health display shows current values, not defaults
+	if health_display and health_display.has_method("update_health") and player:
+		health_display.update_health(player.current_health, player.max_health)
+		print("Health display refreshed: ", player.current_health, "/", player.max_health)
 func position_player_in_room():
 	# Position based on which direction we came from
 	# You can add Position2D nodes named "EntryLeft", "EntryRight" in your rooms
