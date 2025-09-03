@@ -1043,6 +1043,7 @@ sources/0 = SubResource("TileSetAtlasSource_esk66")
 [node name="Room_Next" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+position = Vector2(-1, 0)
 tile_set = SubResource("TileSet_oy2ld")
 format = 2
 
@@ -1054,10 +1055,11 @@ tile_set = SubResource("TileSet_oy2ld")
 use_kinematic_bodies = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(1, 0)
 limit_left = 0
 limit_top = 0
 limit_right = 640
 limit_bottom = 360
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_e7nuk")]
-position = Vector2(19, 216)
+position = Vector2(18, 214)
