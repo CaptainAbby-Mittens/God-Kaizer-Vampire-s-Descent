@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://bwvm53rrsnyxt"]
+[gd_scene load_steps=6 format=4 uid="uid://bwvm53rrsnyxt"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_7jswd"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_2naem"]
+[ext_resource type="PackedScene" uid="uid://dbm5en0r83d8f" path="res://scenes/Pickups/HealthUpgrade.tscn" id="3_2naem"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esk66"]
 texture = ExtResource("1_7jswd")
@@ -1063,3 +1064,6 @@ limit_bottom = 360
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_2naem")]
 position = Vector2(18, 214)
+
+[node name="HealthUpgrade" parent="." instance=ExtResource("3_2naem")]
+position = Vector2(394, 169)

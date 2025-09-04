@@ -3,15 +3,18 @@ extends Node
 
 # Tracks the player's current room position in the grid (e.g., [0, 0])
 var current_room_coords = Vector2i(0, 0)
-
+signal player_died
 # A dictionary to act as our "world map". Key: Vector2i Coordinates, Value: Room scene file path
 var world_map = {
 	Vector2i(0, 0): "res://scenes/Area1/room_start.tscn",  # Start room
 	Vector2i(1, 0): "res://scenes/Area1/room_1.tscn",
 	Vector2i(2, 0): "res://scenes/Area1/room_2.tscn",  
-
-
+	Vector2i(3, 0): "res://scenes/Area1/room_3.tscn",  
+	Vector2i(4, 0): "res://scenes/Area1/room_4.tscn",  
+	Vector2i(5, 0): "res://scenes/Area1/room_5.tscn",  
+	Vector2i(6, 0): "res://scenes/Area1/room_6.tscn",  
 }
+
 var player_stats = {
 	"max_health": 100,
 	"current_health": 100,
@@ -53,6 +56,9 @@ func save_player_stats():
 	if player:
 		player_stats["max_health"] = player.max_health
 		player_stats["current_health"] = player.current_health
+		if player.current_health <= 0:
+			player_died.emit()  # ← Emit the death signal
+			print("GameManager: Player death detected - emitting signal")
 
 func restore_player_stats():
 	var player = get_tree().get_first_node_in_group("player")

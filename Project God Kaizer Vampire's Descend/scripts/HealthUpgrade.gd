@@ -1,54 +1,76 @@
-# HealthUpgrade.gd
+# HealthPickup.gd
 extends Area2D
 
-@export var health_increase: int = 25  # How much max HP to add
-@export var respawn_time: float = 30.0  # Time to respawn (seconds)
+@export var health_increase: int = 25
+@export var respawn_time: float = 10.0
+
+# Color properties for the ColorRect
+@export var active_color: Color = Color(0, 1, 0, 0.8)    # Green when active
+@export var inactive_color: Color = Color(0, 0.3, 0, 0.3) # Dark green when inactive
+
+@onready var color_rect = $ColorRect
+@onready var collision = $CollisionShape2D
+
+var is_active: bool = true
 
 func _ready():
-	# Connect the area entered signal
-	body_entered.connect(_on_body_entered)  
+	# Connect signals
+	body_entered.connect(_on_body_entered)
 	
-	# Optional: Add a gentle floating animation
-	create_floating_animation()
+	# Set up collision
+	collision_layer = 2  # Pickups layer
+	collision_mask = 1   # Detect player layer
+	
+	# Set up ColorRect appearance
+
 
 func _on_body_entered(body):
-	# Check if the colliding body is the player
-	if body.is_in_group("player"):
-		print("Health upgrade collected!")
-		
-		# Grant max HP to the player
+	if not is_active:
+		return
+	
+	if body.is_in_group("player") and body.has_method("increase_max_health"):
+		# Grant health to player
 		body.increase_max_health(health_increase)
-		
-		# Play collection effect
-		play_collection_effect()
-		
-		# Hide and schedule respawn
-		hide()
-		$CollisionShape2D.set_deferred("disabled", true)
-		get_tree().create_timer(respawn_time).timeout.connect(_on_respawn_timeout)
+		print("Player gained +", health_increase, " max health!")
+		color_rect.visible = false
+		# Disable pickup temporarily
+		collect_pickup()
 
-func play_collection_effect():
-	# Play a collection sound
-	# $AudioStreamPlayer2D.play()
+func collect_pickup():
+	is_active = false
 	
-	# Show a particle effect
-	# $Particles2D.emitting = true
+	# Disable collision
+	collision.set_deferred("disabled", true)
 	
-	# Simple scale animation
-	var tween = create_tween()
-	tween.tween_property($Sprite2D, "scale", Vector2(1.5, 1.5), 0.1)
-	tween.tween_property($Sprite2D, "scale", Vector2(0, 0), 0.2)
-	tween.tween_callback(queue_free)  # Or hide for respawning
+	# Update visual appearance
 
-func _on_respawn_timeout():
-	# Respawn the health upgrade
-	show()
-	$CollisionShape2D.disabled = false
-	print("Health upgrade respawned!")
+	
+	# Optional: Play collection sound
+	# $CollectionSound.play()
+	
+	# Start respawn timer
+	start_respawn_timer()
 
-func create_floating_animation():
-	# Simple floating animation
-	var tween = create_tween()
-	tween.set_loops()
-	tween.tween_property($Sprite2D, "position:y", position.y - 5, 1.0)
-	tween.tween_property($Sprite2D, "position:y", position.y, 1.0)
+func start_respawn_timer():
+	await get_tree().create_timer(respawn_time).timeout
+	respawn_pickup()
+
+func respawn_pickup():
+	is_active = true
+	color_rect.visible = true
+	# Enable collision
+	collision.set_deferred("disabled", false)
+	
+	# Update visual appearance
+
+	
+	print("Health pickup respawned")
+
+
+
+# Optional: Add a simple hover effect
+func _process(delta):
+	if is_active and color_rect:
+		# Subtle hovering effect
+		var hover_offset = sin(Time.get_ticks_msec() * 0.003) * 3.0
+		color_rect.position.y = hover_offset
