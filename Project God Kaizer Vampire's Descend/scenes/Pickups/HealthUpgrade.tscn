@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://dbm5en0r83d8f"]
 
-[ext_resource type="Script" uid="uid://bfysqd746pw8f" path="res://scripts/HealthUpgrade.gd" id="1_68r6g"]
+[ext_resource type="Script" uid="uid://bfysqd746pw8f" path="res://scripts/HealthUpgrade.gd" id="1_2uvvc"]
 
 [node name="HealthUpgrade" type="Area2D"]
-script = ExtResource("1_68r6g")
+script = ExtResource("1_2uvvc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 

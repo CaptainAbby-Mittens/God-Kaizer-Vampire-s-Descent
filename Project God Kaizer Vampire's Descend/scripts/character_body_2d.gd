@@ -19,6 +19,7 @@ var current_health : int = max_health
 
 # Health bar nodes
 @onready var health_bar = $HealthBar  # We'll create this node next
+@onready var character_sprite = $Sprite2D 
 
 # Coyote time and jump buffering
 var coyote_time = 0.08    # Time after leaving ledge to still jump
@@ -85,6 +86,8 @@ func handle_movement(delta):
 		handle_ground_movement(direction, delta)
 	elif can_use_physics():
 		handle_air_movement(direction, delta)
+		
+	handle_sprite_flip(direction)
 
 func handle_ground_movement(direction, delta):
 	if direction != 0:
@@ -101,7 +104,14 @@ func handle_air_movement(direction, delta):
 	else:
 		# Less friction in air
 		velocity.x = move_toward(velocity.x, 0, air_friction * delta)
-
+func handle_sprite_flip(direction):
+	# Only flip if we're actually moving in a direction
+	if direction != 0:
+		# Flip the sprite to face the movement direction
+		if direction > 0:
+			character_sprite.scale.x = 1  # Face right (normal scale)
+		elif direction < 0:
+			character_sprite.scale.x = -1 # Face left (flipped horizontally)
 func handle_jump_input():
 	# Detect when jump button is first pressed
 	if Input.is_action_just_pressed("ui_accept"):

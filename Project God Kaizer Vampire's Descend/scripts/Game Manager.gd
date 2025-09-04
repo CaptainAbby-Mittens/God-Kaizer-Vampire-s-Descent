@@ -6,10 +6,10 @@ var current_room_coords = Vector2i(0, 0)
 
 # A dictionary to act as our "world map". Key: Vector2i Coordinates, Value: Room scene file path
 var world_map = {
-	Vector2i(0, 0): "res://scenes/room_start.tscn",  # Start room
-	Vector2i(1, 0): "res://scenes/room_1.tscn",
-	Vector2i(2, 0): "res://scenes/room_2.tscn",  
-	Vector2i(-1, 0): "res://scenes/room_start.tscn", # Room to the left (back to start)
+	Vector2i(0, 0): "res://scenes/Area1/room_start.tscn",  # Start room
+	Vector2i(1, 0): "res://scenes/Area1/room_1.tscn",
+	Vector2i(2, 0): "res://scenes/Area1/room_2.tscn",  
+	Vector2i(-1, 0): "res://scenes/Area1/room_start.tscn", # Room to the left (back to start)
 
 }
 var player_stats = {

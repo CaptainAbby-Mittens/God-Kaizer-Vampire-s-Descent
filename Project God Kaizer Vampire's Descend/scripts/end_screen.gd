@@ -22,7 +22,7 @@ func update_countdown():
 func _on_timer_timeout():
 	# Timer finished, return to main menu
 	print("Returning to main menu...")
-	get_tree().change_scene_to_file("res://MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Area1/MainMenu.tscn")
 	
 	# Optional: Remove the end screen
 	queue_free()

@@ -6,7 +6,7 @@ extends Area2D
 
 func _ready():
 	# Connect the area entered signal
-	body_entered.connect(_on_body_entered)
+	body_entered.connect(_on_body_entered)  
 	
 	# Optional: Add a gentle floating animation
 	create_floating_animation()

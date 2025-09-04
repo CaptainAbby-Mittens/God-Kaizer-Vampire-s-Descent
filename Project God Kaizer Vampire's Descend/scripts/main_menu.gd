@@ -21,5 +21,5 @@ func _on_start_button_pressed():
 	# Start the game - CHOOSE ONE OF THESE OPTIONS:
 	
 	# OPTION 1: If you use game.tscn as your main scene
-	get_tree().change_scene_to_file("res://scenes/room_start.tscn")
+	get_tree().change_scene_to_file("res://scenes/Area1/room_start.tscn")
 	

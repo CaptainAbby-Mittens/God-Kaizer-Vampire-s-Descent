@@ -16,17 +16,17 @@ func _ready():
 	create_health_display()
 	
 	# Load the first room
-	load_room(load("res://scenes/Room_Start.tscn"))
+	load_room(load("res://scenes/Area1/MainMenu.tscn"))
 
 func create_player():
 	# Create the player once and keep it persistent
-	player = load("res://Player.tscn").instantiate()
+	player = load("res://scenes/Players and NPC/Player.tscn").instantiate()
 	add_child(player)
 	print("Persistent player created!")
 
 func create_health_display():
 	# Create health display once
-	health_display = load("res://UI_HealthValue.tscn").instantiate()
+	health_display = load("res://scenes/Players and NPC/UI_HealthBar.tscn").instantiate()
 	add_child(health_display)
 	
 	# Connect to player health updates
