@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwgodrkg5ljec"]
+
+[ext_resource type="Script" uid="uid://b8pd0dc4xwn6l" path="res://scripts/50 Damage Block.gd" id="1_lxhyh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_818mn"]
+size = Vector2(280, 8)
+
+[node name="BloodDamageBlock" type="Area2D"]
+position = Vector2(15, 4)
+script = ExtResource("1_lxhyh")
+metadata/_edit_vertical_guides_ = [92.0, -48.0, 232.0, 92.0, 372.0]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_818mn")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -140.0
+offset_top = -12.0
+offset_right = 140.0
+offset_bottom = 4.0
+color = Color(0.517647, 0, 0, 1)

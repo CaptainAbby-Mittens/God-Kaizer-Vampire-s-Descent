@@ -1,19 +1,13 @@
-res://scenes/MainMenu.tscn
-res://scripts/character_body_2d.gd
-res://scenes/room_1.tscn
-res://scenes/room_start.tscn
-res://scenes/room_2.tscn
-res://scenes/Player.tscn
-res://scenes/game.tscn
-res://scenes/Area1/room_1.tscn
-res://scenes/Area1/room_start.tscn
-res://scenes/Area1/room_2.tscn
-res://scenes/Players and NPC/Player.tscn
-res://scripts/EndScreen.tscn
-res://scenes/end_screen.gd
-res://scripts/Game Manager.gd
-res://scripts/game.gd
-res://scripts/main_menu.gd
+res://scenes/Damage/BloodDamageBlock.tscn
+res://blood_damage_block.gd
 res://scenes/Area1/MainMenu.tscn
-res://scenes/Pickups/HealthUpgrade.tscn
-res://scenes/EndScreen.tscn
+res://scenes/Area1/room_2.tscn
+res://scripts/character_body_2d.gd
+res://scenes/Area1/room_start.tscn
+res://scenes/Area1/room_1.tscn
+res://scenes/Players and NPC/Player.tscn
+res://scripts/Game Manager.gd
+res://scripts/blood_damage_block.gd
+res://scenes/game.tscn
+res://scenes/Damage/Room2BloodBlock.tscn
+res://scripts/50 Damage Block.gd

@@ -1,2 +1,7 @@
+GPUParticles2D
+CPUParticles2D
+ColorRect
+Area2D
+CollisionShape2D
 CollisionPolygon2D
 Sprite2D

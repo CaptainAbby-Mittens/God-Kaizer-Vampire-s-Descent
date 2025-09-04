@@ -9,7 +9,7 @@ var world_map = {
 	Vector2i(0, 0): "res://scenes/Area1/room_start.tscn",  # Start room
 	Vector2i(1, 0): "res://scenes/Area1/room_1.tscn",
 	Vector2i(2, 0): "res://scenes/Area1/room_2.tscn",  
-	Vector2i(-1, 0): "res://scenes/Area1/room_start.tscn", # Room to the left (back to start)
+
 
 }
 var player_stats = {
@@ -46,6 +46,7 @@ func change_room(direction: Vector2i):
 				player.global_position.x = screen_width - 50  # Place near right edge
 	await get_tree().create_timer(0.1).timeout
 	restore_player_stats()
+
 
 func save_player_stats():
 	var player = get_tree().get_first_node_in_group("player")

@@ -40,6 +40,8 @@ func _ready():
 	physics_ready = true
 	current_health = max_health
 	health_updated.emit(current_health, max_health)
+	
+	add_to_group("player")
 func _physics_process(delta):
 	# Safety check - don't process physics until ready
 	if not physics_ready or not is_inside_tree():
@@ -173,13 +175,17 @@ func increase_max_health_no_heal(amount: int):
 # Player.gd - Add these functions
 func die():
 	print("Player died! Showing game over screen...")
-	
+	global_position = Vector2.ZERO
+	GameManager.current_room_coords = Vector2i(0, 0)
 	# Freeze the game
 	get_tree().paused = true
 	
 	# Show simple game over screen without needing a separate scene
 	show_simple_game_over_screen()
 
+
+
+	
 func show_simple_game_over_screen():
 	# Create game over elements programmatically
 	var game_over_layer = CanvasLayer.new()
@@ -236,7 +242,7 @@ func start_game_over_countdown(game_over_layer):
 	# Clean up and return to menu
 	game_over_layer.queue_free()
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/MainMenu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Area1/MainMenu.tscn")
 	reset_player()
 
 

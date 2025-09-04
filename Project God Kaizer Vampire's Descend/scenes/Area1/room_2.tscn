@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://d1njg4hbu6gcr"]
+[gd_scene load_steps=6 format=4 uid="uid://d1njg4hbu6gcr"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_jecxq"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_u7ycg"]
+[ext_resource type="PackedScene" uid="uid://bwgodrkg5ljec" path="res://scenes/Damage/Room2BloodBlock.tscn" id="3_u7ycg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_esk66"]
 texture = ExtResource("1_jecxq")
@@ -1060,3 +1061,6 @@ limit_bottom = 360
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_u7ycg")]
 position = Vector2(18, 216)
+
+[node name="BloodDamageBlock" parent="." instance=ExtResource("3_u7ycg")]
+position = Vector2(484, 244)
