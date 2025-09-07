@@ -1,0 +1,16 @@
+res://addons/godot_super-wakatime/api_key_prompt.tscn::a6988a5ba43d5aa92a08f216c1db28db::1756123292::res://.godot/exported/133200997/export-cd8705cb5e2533bd79c64579ac674dae-api_key_prompt.scn
+res://addons/godot_super-wakatime/counter.tscn::7f13ad35960e259f6de719f9785ce249::1756123332::res://.godot/exported/133200997/export-4af6c9115c1c285af5925fa1ce6a526e-counter.scn
+res://scenes/Area1/MainMenu.tscn::6f220a657ebd2e6d4db4ebc64fff84e4::1757008422::res://.godot/exported/133200997/export-66d36ebc8009d99eb1a39b4f90913155-MainMenu.scn
+res://scenes/Area1/room_1.tscn::1d9763a6c927282fed53f0b08c0a7a0d::1757008423::res://.godot/exported/133200997/export-6c2fef0fb3d4e5381418d7366e8b363a-room_1.scn
+res://scenes/Area1/room_2.tscn::1542276d9bebc5d727835dea10b6eb83::1757008422::res://.godot/exported/133200997/export-812f4a1cdc2abe795d431c109e654d82-room_2.scn
+res://scenes/Area1/room_3.tscn::65cc2569f8afc27c038678ce273c6c46::1757008424::res://.godot/exported/133200997/export-dfb1b7f3e057bde27fe93a3b31bef564-room_3.scn
+res://scenes/Area1/room_4.tscn::14915538c1011cfc1714d628bc6a65d1::1757008424::res://.godot/exported/133200997/export-0f083c1699a3125fb6f8afa34ebee9a7-room_4.scn
+res://scenes/Area1/room_5.tscn::6f321ac5b38f5e5e0c729776f754fc23::1757008424::res://.godot/exported/133200997/export-eb014d32f58817be3500c63174734095-room_5.scn
+res://scenes/Area1/room_6.tscn::17f0f6d8a5752c702e8568916700c891::1757008425::res://.godot/exported/133200997/export-433cbd182bde0ec03c60578763d33151-room_6.scn
+res://scenes/Area1/room_start.tscn::15174aad060429ea0a958550de45d03b::1757008619::res://.godot/exported/133200997/export-a02bcb1ccd4be9fe8882ad9136ab4cfc-room_start.scn
+res://scenes/Damage/Room2BloodBlock.tscn::ecb89940a555b0ddfd2e754a85ff66f3::1757008422::res://.godot/exported/133200997/export-7b96e51cb5a6e5928ee02b72fed904d0-Room2BloodBlock.scn
+res://scenes/Pickups/HealthUpgrade.tscn::1b70ebdbdd514e4be73b429b86bc80df::1757008425::res://.godot/exported/133200997/export-465ed05a2d9206cc7b2a8b1c775cee24-HealthUpgrade.scn
+res://scenes/Players and NPC/Player.tscn::7adf98147172cd3e7ddcd60fe07c2a46::1757008424::res://.godot/exported/133200997/export-b202a230eee8f91bed0ff0741a1853a7-Player.scn
+res://scenes/Players and NPC/UI_HealthBar.tscn::75679ded006f6acba2c82ef9dd601b53::1757008425::res://.godot/exported/133200997/export-c95ca1f4fabf28362629feb90829ad45-UI_HealthBar.scn
+res://scenes/EndScreen.tscn::1546dfabed83f1e4789da4ba6b0a389b::1757000320::res://.godot/exported/133200997/export-fbf7fe00226cb87c9342c48da97b2085-EndScreen.scn
+res://scenes/game.tscn::c5ce33f59918d076d58360347466650a::1757008424::res://.godot/exported/133200997/export-c2a7af834e91ff64325daddf58e45dc0-game.scn
