@@ -13,6 +13,20 @@ var world_map = {
 	Vector2i(4, 0): "res://scenes/Area1/room_4.tscn",  
 	Vector2i(5, 0): "res://scenes/Area1/room_5.tscn",  
 	Vector2i(6, 0): "res://scenes/Area1/room_6.tscn",  
+	Vector2i(7, 0): "res://scenes/Area1/room_7.tscn",  # Start room
+	Vector2i(8, 0): "res://scenes/Area1/room_8.tscn",
+	Vector2i(9, 0): "res://scenes/Area1/room_9.tscn",  
+	Vector2i(10, 0):"res://scenes/Area1/room_10.tscn",  
+	Vector2i(11, 0):"res://scenes/Area1/room_11.tscn",  
+	Vector2i(12, 0):"res://scenes/Area1/room_12.tscn",  
+	Vector2i(13, 0):"res://scenes/Area1/room_13.tscn",  
+	Vector2i(14, 0):"res://scenes/Area1/room_14.tscn",  # Start room
+	Vector2i(15, 0):"res://scenes/Area1/room_15.tscn",
+	Vector2i(16, 0):"res://scenes/Area1/room_16.tscn",  
+	Vector2i(17, 0):"res://scenes/Area1/room_17.tscn",  
+	Vector2i(18, 0):"res://scenes/Area1/room_18.tscn",  
+	Vector2i(19, 0):"res://scenes/Area1/room_19.tscn",  
+	Vector2i(20, 0):"res://scenes/Area1/room_20.tscn",  
 }
 
 var player_stats = {
