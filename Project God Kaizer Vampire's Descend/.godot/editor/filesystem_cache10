@@ -1,20 +1,21 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1757604505
+::res://::1757961298
 8 bit fantasy music.wav::AudioStreamWAV/AudioStreamWAV::4232532440531331490::1756483179::1756483446::1::::<><><>0<>0<>b8f179713f054ea0a97c825edf7fd69b<>res://.godot/imported/8 bit fantasy music.wav-48ce09b1cfe85fcfe633bf00dbffa5f7.sample::
 export_presets.cfg::TextFile/TextFile::-1::1757009332::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8350211589443757559::1755624644::1756483441::1::::<><><>0<>0<>3b3d130fa839ed84db087f90213e592c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 README.md::TextFile/TextFile::-1::1756485358::0::1::::<><><>0<>0<><>::
-::res://addons/::1756528507
-::res://addons/godot_super-wakatime/::1756593828
+::res://addons/::1757961298
+::res://addons/godot_super-wakatime/::1757955976
 api_key_prompt.tscn::PackedScene/PackedScene::3919262858641749045::1756123292::0::1::::<><><>0<>0<><>::
-counter.tscn::PackedScene/PackedScene::6849360014225833986::1756123332::0::1::::<><><>0<>0<><>::
+counter.tscn::PackedScene/PackedScene::6849360014225833986::1757955976::0::1::::<><><>0<>0<><>::
 decompressor.gd::GDScript/GDScript::513498479588648040::1756123292::0::1::::<>RefCounted<><>0<>0<><>::
 godot_super-wakatime.gd::GDScript/GDScript::6277149880384411866::1756123292::0::1::::<>EditorPlugin<><>0<>1<><>::
 heartbeat.gd::GDScript/GDScript::2715808424618332339::1756123292::0::1::::<>RefCounted<><>0<>0<><>::
 plugin.cfg::TextFile/TextFile::-1::1756123292::0::1::::<><><>0<>0<><>::
 README.md::TextFile/TextFile::-1::1756123292::0::1::::<><><>0<>0<><>::
 utils.gd::GDScript/GDScript::5251015809120159908::1756123292::0::1::::<>RefCounted<><>0<>0<><>::
-::res://assets/::1756940243
+::res://assets/::1757961298
+Godot Project.png::CompressedTexture2D::2610825134420222496::1757961270::1757961298::1::::<><><>0<>0<>94109680746f441d7df7f62a3833ba2c<>res://.godot/imported/Godot Project.png-eac09e6fa5cb2cb9c775d4769dd8bb42.ctex::
 Maxis.png::CompressedTexture2D/CompressedTexture2D::3711895859739213982::1756940243::1756940241::1::::<><><>0<>0<>1fbaeaebd06fb7025c69b157cbc9f4ee<>res://.godot/imported/Maxis.png-74378d0394fabbeba1b12bde86f623fe.ctex::
 ::res://Fonts/::1756593828
 ARCADECLASSIC.TTF::FontFile/FontFile::8084709551683388756::1756228800::1756483441::1::::<><><>0<>0<>938aaa5c4a5c139c8e7263ff0ef57ab4<>res://.godot/imported/ARCADECLASSIC.TTF-bc5778a1c5b0e5c73c86f0f07b0a60e7.fontdata::
@@ -23,15 +24,15 @@ pizzadudedotdk.txt::TextFile/TextFile::-1::1756228800::0::1::::<><><>0<>0<><>::
 godotwaka2.png::CompressedTexture2D/CompressedTexture2D::683731418556845034::1755624766::1756483442::1::::<><><>0<>0<>461ab3b92b7145b1e8f8130268f2df58<>res://.godot/imported/godotwaka2.png-7d3d010fb4adc0d433467ab1cc4754ed.ctex::
 godotwaka.png::CompressedTexture2D/CompressedTexture2D::1402629769397036369::1755624766::1756483442::1::::<><><>0<>0<>3eb4e33cd252189fe77b7c05dbf1608c<>res://.godot/imported/godotwaka.png-ef0518417b4f997d237759e5551dd05d.ctex::
 icon.jpg::CompressedTexture2D/CompressedTexture2D::6334584602472999067::1755624766::1756483441::1::::<><><>0<>0<>236b1ddb974b7356c82a868f39879786<>res://.godot/imported/icon.jpg-64f68b30ea939aa8019167e67dffb2db.ctex::
-::res://scenes/::1757439031
+::res://scenes/::1757605129
 EndScreen.tscn::PackedScene/PackedScene::2813074805080745502::1757000320::0::1::::<><><>0<>0<><>::uid://n8708n6h47jp::::res://scripts/end_screen.gd<>uid://dngj8q2mrhf3a::::res://Fonts/ARCADECLASSIC.TTF
 game.tscn::PackedScene/PackedScene::6683444621325899329::1757261526::0::1::::<><><>0<>0<><>::uid://cip3sa83c6pgt::::res://scripts/game.gd<>uid://yy8nx7pu0lms::::res://scripts/audio_stream_player.gd
-::res://scenes/Area1/::1757344840
-MainMenu.tscn::PackedScene/PackedScene::6826189667680843591::1757291577::0::1::::<><><>0<>0<><>::uid://di574vgvd61i2::::res://scripts/main_menu.gd<>uid://dngj8q2mrhf3a::::res://Fonts/ARCADECLASSIC.TTF
+::res://scenes/Area1/::1757958543
+MainMenu.tscn::PackedScene/PackedScene::6826189667680843591::1757955975::0::1::::<><><>0<>0<><>::uid://di574vgvd61i2::::res://scripts/main_menu.gd<>uid://dngj8q2mrhf3a::::res://Fonts/ARCADECLASSIC.TTF
 room_1.tscn::PackedScene/PackedScene::3974710852007888105::1757288516::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://dbm5en0r83d8f::::res://scenes/Pickups/HealthUpgrade.tscn
 room_2.tscn::PackedScene/PackedScene::9011567598233422469::1757291578::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://bwgodrkg5ljec::::res://scenes/Damage/Room2BloodBlock.tscn
 room_3.tscn::PackedScene/PackedScene::4728101335208513412::1757291579::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
-room_4.tscn::PackedScene/PackedScene::8573509542830732392::1757291578::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+room_4.tscn::PackedScene/PackedScene::8573509542830732392::1757958543::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
 room_5.tscn::PackedScene/PackedScene::6096508825443875768::1757291755::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dbm5en0r83d8f::::res://scenes/Pickups/HealthUpgrade.tscn<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://bwgodrkg5ljec::::res://scenes/Damage/Room2BloodBlock.tscn
 room_6.tscn::PackedScene/PackedScene::4858577769437576887::1757344830::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://2vhbu41rlrnb::::res://scenes/Platforms/PlatformElevator.tscn
 room_7.tscn::PackedScene/PackedScene::4489020708734849078::1757344831::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
@@ -71,18 +72,9 @@ Room_17.tscn::PackedScene/PackedScene::572501872281914548::1757431905::0::1::::<
 Room_18.tscn::PackedScene/PackedScene::4225350740204692204::1757431914::0::1::::<><><>0<>0<><>::
 Room_19.tscn::PackedScene/PackedScene::7566612300794706966::1757431921::0::1::::<><><>0<>0<><>::
 Room_20.tscn::PackedScene/PackedScene::6415326614456455814::1757431929::0::1::::<><><>0<>0<><>::
-::res://scenes/Area3/::1757604505
+::res://scenes/Area3/::1757604621
+Area_1.tscn::PackedScene/PackedScene::7647174048372094214::1757604621::0::1::::<><><>0<>0<><>::
 LevelNotice.tscn::PackedScene/PackedScene::72545575910221223::1757604218::0::1::::<><><>0<>0<><>::
-Room_20.tscn::PackedScene::4282245403584070362::1757604579::0::1::::<><><>0<>0<><>::
-Room_19.tscn::PackedScene::8840049179154648911::1757604571::0::1::::<><><>0<>0<><>::
-Room_18.tscn::PackedScene::4454824274857482607::1757604563::0::1::::<><><>0<>0<><>::
-Room_17.tscn::PackedScene::8580297759432656522::1757604557::0::1::::<><><>0<>0<><>::
-Room_116.tscn::PackedScene::255572738151043568::1757604548::0::1::::<><><>0<>0<><>::
-Room_15.tscn::PackedScene::5206446533400308182::1757604538::0::1::::<><><>0<>0<><>::
-Room_14.tscn::PackedScene::8994053471544414896::1757604532::0::1::::<><><>0<>0<><>::
-Room_13.tscn::PackedScene::7326671820732194433::1757604525::0::1::::<><><>0<>0<><>::
-Room_12.tscn::PackedScene::1938663365894254754::1757604518::0::1::::<><><>0<>0<><>::
-Room_11.tscn::PackedScene::5507305524734514785::1757604512::0::1::::<><><>0<>0<><>::
 Room_1.tscn::PackedScene/PackedScene::4148026415220369911::1757604248::0::1::::<><><>0<>0<><>::
 Room_2.tscn::PackedScene/PackedScene::4127323500136318132::1757604255::0::1::::<><><>0<>0<><>::
 Room_3.tscn::PackedScene/PackedScene::6994427405507765489::1757604264::0::1::::<><><>0<>0<><>::
@@ -91,8 +83,68 @@ Room_5.tscn::PackedScene/PackedScene::3665145634905620721::1757604276::0::1::::<
 Room_6.tscn::PackedScene/PackedScene::8958653823170841750::1757604283::0::1::::<><><>0<>0<><>::
 Room_7.tscn::PackedScene/PackedScene::7214912289501353475::1757604290::0::1::::<><><>0<>0<><>::
 Room_8.tscn::PackedScene/PackedScene::6452205208086936250::1757604299::0::1::::<><><>0<>0<><>::
-Room_9.tscn::PackedScene::3341407109570878106::1757604306::0::1::::<><><>0<>0<><>::
-Room_10.tscn::PackedScene::1819296035624518227::1757604422::0::1::::<><><>0<>0<><>::
+Room_9.tscn::PackedScene/PackedScene::3341407109570878106::1757604306::0::1::::<><><>0<>0<><>::
+Room_10.tscn::PackedScene/PackedScene::1819296035624518227::1757604422::0::1::::<><><>0<>0<><>::
+Room_11.tscn::PackedScene/PackedScene::5507305524734514785::1757604512::0::1::::<><><>0<>0<><>::
+Room_12.tscn::PackedScene/PackedScene::1938663365894254754::1757604518::0::1::::<><><>0<>0<><>::
+Room_13.tscn::PackedScene/PackedScene::7326671820732194433::1757604525::0::1::::<><><>0<>0<><>::
+Room_14.tscn::PackedScene/PackedScene::8994053471544414896::1757604532::0::1::::<><><>0<>0<><>::
+Room_15.tscn::PackedScene/PackedScene::5206446533400308182::1757604538::0::1::::<><><>0<>0<><>::
+Room_16.tscn::PackedScene/PackedScene::255572738151043568::1757604548::0::1::::<><><>0<>0<><>::
+Room_17.tscn::PackedScene/PackedScene::8580297759432656522::1757604557::0::1::::<><><>0<>0<><>::
+Room_18.tscn::PackedScene/PackedScene::4454824274857482607::1757604563::0::1::::<><><>0<>0<><>::
+Room_19.tscn::PackedScene/PackedScene::8840049179154648911::1757604571::0::1::::<><><>0<>0<><>::
+Room_20.tscn::PackedScene/PackedScene::4282245403584070362::1757604579::0::1::::<><><>0<>0<><>::
+::res://scenes/Area4/::1757604902
+LevelNotice.tscn::PackedScene/PackedScene::3318547386870397258::1757604761::0::1::::<><><>0<>0<><>::
+Room_1.tscn::PackedScene/PackedScene::9105594473753753268::1757604777::0::1::::<><><>0<>0<><>::
+Room_2.tscn::PackedScene/PackedScene::3957854500280809879::1757604782::0::1::::<><><>0<>0<><>::
+Room_3.tscn::PackedScene/PackedScene::1264070890152996598::1757604787::0::1::::<><><>0<>0<><>::
+Room_4.tscn::PackedScene/PackedScene::1623111141685193732::1757604792::0::1::::<><><>0<>0<><>::
+Room_5.tscn::PackedScene/PackedScene::1870534596897361616::1757604800::0::1::::<><><>0<>0<><>::
+Room_6.tscn::PackedScene/PackedScene::559622006668519861::1757604806::0::1::::<><><>0<>0<><>::
+Room_7.tscn::PackedScene/PackedScene::2748382409475603964::1757604811::0::1::::<><><>0<>0<><>::
+Room_8.tscn::PackedScene/PackedScene::6433719574433011819::1757604817::0::1::::<><><>0<>0<><>::
+Room_9.tscn::PackedScene/PackedScene::7235608864402025430::1757604823::0::1::::<><><>0<>0<><>::
+Room_10.tscn::PackedScene/PackedScene::5857705031981818236::1757604829::0::1::::<><><>0<>0<><>::
+Room_11.tscn::PackedScene/PackedScene::1311140768670824785::1757604838::0::1::::<><><>0<>0<><>::
+Room_12.tscn::PackedScene/PackedScene::2259847673526002396::1757604844::0::1::::<><><>0<>0<><>::
+Room_13.tscn::PackedScene/PackedScene::3517765278094996211::1757604851::0::1::::<><><>0<>0<><>::
+Room_14.tscn::PackedScene/PackedScene::1550254794986712167::1757604861::0::1::::<><><>0<>0<><>::
+Room_15.tscn::PackedScene/PackedScene::7298865726378431254::1757604866::0::1::::<><><>0<>0<><>::
+Room_16.tscn::PackedScene/PackedScene::6870748993586285889::1757604876::0::1::::<><><>0<>0<><>::
+Room_17.tscn::PackedScene/PackedScene::1126386331183376433::1757604883::0::1::::<><><>0<>0<><>::
+Room_18.tscn::PackedScene/PackedScene::8186572990760198445::1757604889::0::1::::<><><>0<>0<><>::
+Room_19.tscn::PackedScene/PackedScene::8561316372942274420::1757604895::0::1::::<><><>0<>0<><>::
+Room_20.tscn::PackedScene/PackedScene::7878814951681949778::1757604902::0::1::::<><><>0<>0<><>::
+::res://scenes/Area5/::1757605108
+LevelNotice.tscn::PackedScene/PackedScene::4027487157553275637::1757604957::0::1::::<><><>0<>0<><>::
+Room_1.tscn::PackedScene/PackedScene::3680010413957472964::1757604966::0::1::::<><><>0<>0<><>::
+Room_2.tscn::PackedScene/PackedScene::4138612075528658974::1757604975::0::1::::<><><>0<>0<><>::
+Room_3.tscn::PackedScene/PackedScene::591889853544079514::1757604990::0::1::::<><><>0<>0<><>::
+Room_4.tscn::PackedScene/PackedScene::7310058768327837690::1757604999::0::1::::<><><>0<>0<><>::
+Room_5.tscn::PackedScene/PackedScene::7732983700676571392::1757605006::0::1::::<><><>0<>0<><>::
+Room_6.tscn::PackedScene/PackedScene::3929440355115521388::1757605011::0::1::::<><><>0<>0<><>::
+Room_7.tscn::PackedScene/PackedScene::6896625662631687134::1757605018::0::1::::<><><>0<>0<><>::
+Room_8.tscn::PackedScene/PackedScene::6442990362319744482::1757605026::0::1::::<><><>0<>0<><>::
+Room_9.tscn::PackedScene/PackedScene::2312103697546715227::1757605032::0::1::::<><><>0<>0<><>::
+Room_10.tscn::PackedScene/PackedScene::4973161991031193709::1757605039::0::1::::<><><>0<>0<><>::
+Room_11.tscn::PackedScene/PackedScene::791342160451812817::1757605046::0::1::::<><><>0<>0<><>::
+Room_12.tscn::PackedScene/PackedScene::7760259257428154978::1757605053::0::1::::<><><>0<>0<><>::
+Room_13.tscn::PackedScene/PackedScene::9024376053477803574::1757604981::0::1::::<><><>0<>0<><>::
+Room_14.tscn::PackedScene/PackedScene::1407463535109321509::1757605069::0::1::::<><><>0<>0<><>::
+Room_15.tscn::PackedScene/PackedScene::6965603159081256278::1757605076::0::1::::<><><>0<>0<><>::
+Room_16.tscn::PackedScene/PackedScene::8418256286534546221::1757605083::0::1::::<><><>0<>0<><>::
+Room_17.tscn::PackedScene/PackedScene::695731038536189856::1757605089::0::1::::<><><>0<>0<><>::
+Room_19.tscn::PackedScene/PackedScene::3246013182552959556::1757605102::0::1::::<><><>0<>0<><>::
+Room_20.tscn::PackedScene/PackedScene::7650226420414708151::1757605108::0::1::::<><><>0<>0<><>::
+Room_`18.tscn::PackedScene/PackedScene::3882225510815423987::1757605095::0::1::::<><><>0<>0<><>::
+::res://scenes/AreaBoss/::1757605211
+Congratulations.tscn::PackedScene/PackedScene::5633216593785384893::1757605211::0::1::::<><><>0<>0<><>::
+PreBossRoom.tscn::PackedScene/PackedScene::3926204568413302908::1757605143::0::1::::<><><>0<>0<><>::
+xBoss.tscn::PackedScene/PackedScene::3712604816209498781::1757605155::0::1::::<><><>0<>0<><>::
+yBoss.tscn::PackedScene/PackedScene::2327085100653252209::1757605161::0::1::::<><><>0<>0<><>::
+zFinalBoss.tscn::PackedScene/PackedScene::4626286089916093774::1757605170::0::1::::<><><>0<>0<><>::
 ::res://scenes/Damage/::1757261524
 Room2BloodBlock.tscn::PackedScene/PackedScene::3943817814192759462::1757261524::0::1::::<><><>0<>0<><>::uid://b8pd0dc4xwn6l::::res://scripts/50 Damage Block.gd
 ::res://scenes/Pickups/::1757288517
@@ -102,13 +154,13 @@ PlatformElevator.tscn::PackedScene/PackedScene::1938878612276221927::1757291580:
 ::res://scenes/Players and NPC/::1757261528
 Player.tscn::PackedScene/PackedScene::8105791100950896674::1757261526::0::1::::<><><>0<>0<><>::uid://bg48l40mkaiey::::res://scripts/character_body_2d.gd<>uid://ci83l3fcych00::::res://scenes/Players and NPC/UI_HealthBar.tscn<>uid://bs5cnafuasb3s::::res://assets/Maxis.png
 UI_HealthBar.tscn::PackedScene/PackedScene::5404197780405705239::1757261528::0::1::::<><><>0<>0<><>::uid://dlfn8324s0v45::::res://scripts/ui_health_bar.gd
-::res://scripts/::1757299018
+::res://scripts/::1757961217
 50 Damage Block.gd::GDScript/GDScript::4733845147893891229::1757005583::0::1::::<>Area2D<><>0<>0<><>::
 audio_stream_player.gd::GDScript/GDScript::1736105447672317246::1756511417::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
-character_body_2d.gd::GDScript/GDScript::2869445567239138464::1757283929::0::1::::<>CharacterBody2D<><>0<>0<><>::
-end_screen.gd::GDScript/GDScript::982568776566584633::1757000015::0::1::::<>CanvasLayer<><>0<>0<><>::
-Game Manager.gd::GDScript/GDScript::5755595710846315181::1757299018::0::1::::<>Node<><>0<>0<><>::
-game.gd::GDScript/GDScript::5367050055143753203::1757000317::0::1::::<>Node2D<><>0<>0<><>::
+character_body_2d.gd::GDScript/GDScript::2869445567239138464::1757954335::0::1::::<>CharacterBody2D<><>0<>0<><>::
+end_screen.gd::GDScript/GDScript::982568776566584633::1757953547::0::1::::<>CanvasLayer<><>0<>0<><>::
+Game Manager.gd::GDScript/GDScript::5755595710846315181::1757953928::0::1::::<>Node<><>0<>0<><>::
+game.gd::GDScript/GDScript::5367050055143753203::1757952783::0::1::::<>Node2D<><>0<>0<><>::
 HealthUpgrade.gd::GDScript/GDScript::2788031654916433863::1757287149::0::1::::<>Area2D<><>0<>0<><>::
-main_menu.gd::GDScript/GDScript::7784699977815705563::1757000188::0::1::::<>CanvasLayer<><>0<>0<><>::
+main_menu.gd::GDScript/GDScript::7784699977815705563::1757955975::0::1::::<>CanvasLayer<><>0<>0<><>::
 ui_health_bar.gd::GDScript/GDScript::7942510985678996372::1757284613::0::1::::<>Control<><>0<>0<><>::

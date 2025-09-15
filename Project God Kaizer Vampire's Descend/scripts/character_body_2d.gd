@@ -179,7 +179,14 @@ func die():
 	GameManager.current_room_coords = Vector2i(0, 0)
 	# Freeze the game
 	get_tree().paused = true
+	print("Player died! Respawning...")
 	
+	# Stop the playtime timer
+	if has_node("/root/GameManager"):
+		get_node("/root/GameManager").stop_playtime_timer()
+
+	
+	print("Player respawned")
 	# Show simple game over screen without needing a separate scene
 	show_simple_game_over_screen()
 
@@ -204,13 +211,28 @@ func show_simple_game_over_screen():
 	game_over_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	game_over_label.add_theme_font_size_override("font_size", 60)
 	game_over_label.modulate = Color.WEB_GRAY
-	game_over_label.position = Vector2(0, get_viewport().get_visible_rect().size.y / 2 - 50)
+	game_over_label.position = Vector2(0, get_viewport().get_visible_rect().size.y / 2 - 80)  # Moved up a bit
 	game_over_label.size = Vector2(get_viewport().get_visible_rect().size.x, 100)
 	
 	var custom_font = FontFile.new()
-	custom_font = load("res://Fonts/ARCADECLASSIC.TTF")  # Adjust path to your font file
+	custom_font = load("res://Fonts/ARCADECLASSIC.TTF")
 	game_over_label.add_theme_font_override("font", custom_font)
 	background.add_child(game_over_label)
+	
+	# === NEW: Playtime Display ===
+	var playtime_label = Label.new()
+	playtime_label.name = "PlaytimeLabel"
+	playtime_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	playtime_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	playtime_label.add_theme_font_size_override("font_size", 36)
+	playtime_label.modulate = Color.LIGHT_GRAY
+	playtime_label.position = Vector2(0, get_viewport().get_visible_rect().size.y / 2 - 10)  # Position below GAME OVER
+	playtime_label.size = Vector2(get_viewport().get_visible_rect().size.x, 40)
+	playtime_label.add_theme_font_override("font", custom_font)
+	background.add_child(playtime_label)
+	
+	# Update playtime text
+	update_playtime_display(playtime_label)
 	
 	# Countdown text
 	var countdown_label = Label.new()
@@ -218,7 +240,7 @@ func show_simple_game_over_screen():
 	countdown_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	countdown_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
 	countdown_label.add_theme_font_size_override("font_size", 30)
-	countdown_label.position = Vector2(0, get_viewport().get_visible_rect().size.y / 2 + 20)
+	countdown_label.position = Vector2(0, get_viewport().get_visible_rect().size.y / 2 + 50)  # Adjusted position
 	countdown_label.size = Vector2(get_viewport().get_visible_rect().size.x, 50)
 	countdown_label.add_theme_font_override("font", custom_font)
 	background.add_child(countdown_label)
@@ -227,17 +249,42 @@ func show_simple_game_over_screen():
 	var timer = Timer.new()
 	timer.wait_time = 5
 	timer.one_shot = true
-	timer.autostart = true  # ← This will auto-start when added to scene
+	timer.autostart = true
 	game_over_layer.add_child(timer)
 	start_game_over_countdown(game_over_layer)
+	
 	# Add to scene
 	get_tree().root.add_child(game_over_layer)
+
+# === NEW FUNCTION: Update Playtime Display ===
+func update_playtime_display(playtime_label: Label):
+	if has_node("/root/GameManager"):
+		var game_manager = get_node("/root/GameManager")
+		var playtime = 0.0
+		
+		# Get playtime using whichever method your GameManager has
+		if game_manager.has_method("get_current_playtime"):
+			playtime = game_manager.get_current_playtime()
+		elif game_manager.has_method("get_playtime"):
+			playtime = game_manager.get_playtime()
+		elif game_manager.has_property("playtime"):
+			playtime = game_manager.playtime
+		
+		# Format the time
+		var minutes = int(playtime) / 60
+		var seconds = int(playtime) % 60
+		var milliseconds = int((playtime - int(playtime)) * 100)
+		
+		# Update the label
+		playtime_label.text = "Time: %02d:%02d.%02d" % [minutes, seconds, milliseconds]
+	else:
+		playtime_label.text = "Time: 00:00.00"
 
 
 func start_game_over_countdown(game_over_layer):
 	# Wait for 2 seconds
-	await get_tree().create_timer(2.0).timeout
-	print("2 seconds elapsed, returning to menu")
+	await get_tree().create_timer(5.0).timeout
+	print("5 seconds elapsed, returning to menu")
 	
 	# Clean up and return to menu
 	game_over_layer.queue_free()
@@ -266,34 +313,5 @@ func can_use_physics():
 	return physics_ready and is_inside_tree() and get_world_2d() != null
 
 
-func _input(event):
-	# Test damage with number keys
-	if Input.is_key_pressed(KEY_1):  # Press 1
-		take_damage(10)
-	
-	if Input.is_key_pressed(KEY_2):  # Press 2
-		take_damage(25)
-	
-	if Input.is_key_pressed(KEY_3):  # Press 3
-		take_damage(50)
-	
-	# Test healing with number keys
-	if Input.is_key_pressed(KEY_4):  # Press 4
-		heal(10)
-	
-	if Input.is_key_pressed(KEY_5):  # Press 5
-		heal(25)
-	
-	if Input.is_key_pressed(KEY_6):  # Press 6
-		heal(50)
-	
-	# Test max health increase
-	if Input.is_key_pressed(KEY_7):  # Press 7
-		increase_max_health(25)
-	
-	if Input.is_key_pressed(KEY_8):  # Press 8
-		increase_max_health(50)
-	
-	if Input.is_key_pressed(KEY_9):  # Press 9
-		increase_max_health_no_heal(25)
+
 	

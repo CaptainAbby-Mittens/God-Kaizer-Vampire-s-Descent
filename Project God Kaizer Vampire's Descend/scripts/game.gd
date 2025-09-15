@@ -6,6 +6,7 @@ var player = null
 var current_room = null
 var health_display = null
 
+
 func _ready():
 	print("Game starting...")
 	

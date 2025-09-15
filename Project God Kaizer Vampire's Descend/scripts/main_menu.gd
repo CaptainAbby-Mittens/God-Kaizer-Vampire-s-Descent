@@ -13,12 +13,25 @@ func _ready():
 
 
 func _on_start_button_pressed():
-	print("Start button pressed! Beginning game...")
+	print("Start button pressed")
 	
-	# Hide the main menu
-	hide()
+	# Reset playtime timer if GameManager exists
+	if has_node("/root/GameManager"):
+		var gm = get_node("/root/GameManager")
+		if gm.has_method("restart_playtime_timer"):
+			gm.restart_playtime_timer()
+		if gm.has_method("start_playtime_timer"):
+			gm.start_playtime_timer()
 	
-	# Start the game - CHOOSE ONE OF THESE OPTIONS:
+	# Start the game
+	start_game()
+	
+	
+func start_game():
+	# Your existing game start logic here
+	# Example:
+	
+	#   Start the game - CHOOSE ONE OF THESE OPTIONS:
 	
 	# OPTION 1: If you use game.tscn as your main scene
 	get_tree().change_scene_to_file("res://scenes/Area1/room_start.tscn")
