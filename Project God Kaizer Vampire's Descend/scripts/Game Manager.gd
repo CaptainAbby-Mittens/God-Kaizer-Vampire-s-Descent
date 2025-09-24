@@ -128,6 +128,15 @@ var start_time: float = 0.0
 
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
+
+func respawn_all_potions():
+	print("Respawning all potions...")
+	get_tree().call_group("potions", "respawn_potion")
+
+func reset_potions_on_restart():
+	# Called when start button is pressed
+	respawn_all_potions()
+	
 func restart_playtime_timer():
 	# Reset all timer variables
 	playtime = 0.0

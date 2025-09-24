@@ -1,8 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://cbhscikw7dk28"]
+[gd_scene load_steps=12 format=4 uid="uid://cbhscikw7dk28"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_0esly"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_i70sg"]
 [ext_resource type="PackedScene" uid="uid://2vhbu41rlrnb" path="res://scenes/Platforms/PlatformElevator.tscn" id="3_i70sg"]
+[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/VampireSword1.tscn" id="4_cskop"]
+[ext_resource type="PackedScene" uid="uid://cp7b5v6gm3ugq" path="res://scenes/Pickups/HealingPotion.tscn" id="5_4n7qa"]
+[ext_resource type="PackedScene" uid="uid://f1mxf3q2bblt" path="res://scenes/Pickups/MysteryPotion.tscn" id="6_cskk4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i70sg"]
 texture = ExtResource("1_0esly")
@@ -4173,3 +4176,12 @@ libraries = {
 &"": SubResource("AnimationLibrary_0quv4")
 }
 autoplay = "Elevaator"
+
+[node name="VampireSword1" parent="." instance=ExtResource("4_cskop")]
+position = Vector2(155, 55)
+
+[node name="HealingPotion" parent="." instance=ExtResource("5_4n7qa")]
+position = Vector2(53, -18)
+
+[node name="MysteryPotion" parent="." instance=ExtResource("6_cskk4")]
+position = Vector2(6, 86)

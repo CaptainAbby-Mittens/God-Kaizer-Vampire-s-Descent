@@ -1,21 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://bwgodrkg5ljec"]
+[gd_scene load_steps=6 format=3 uid="uid://bwgodrkg5ljec"]
 
 [ext_resource type="Script" uid="uid://b8pd0dc4xwn6l" path="res://scripts/50 Damage Block.gd" id="1_lxhyh"]
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_nfceg"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_818mn"]
-size = Vector2(280, 8)
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h28ed"]
+texture = ExtResource("2_nfceg")
+48:2/animation_frame_0/duration = 1.0
+48:2/animation_frame_1/duration = 1.0
+48:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_omvba"]
+sources/2 = SubResource("TileSetAtlasSource_h28ed")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2gkig"]
+size = Vector2(16, 16)
 
 [node name="BloodDamageBlock" type="Area2D"]
 position = Vector2(15, 4)
 script = ExtResource("1_lxhyh")
 metadata/_edit_vertical_guides_ = [92.0, -48.0, 232.0, 92.0, 372.0]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_818mn")
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 1, 0, 1, 0, 2, 0, 48, 0, 2, 0, 0, 0)
+tile_set = SubResource("TileSet_omvba")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-offset_left = -140.0
-offset_top = -12.0
-offset_right = 140.0
-offset_bottom = 4.0
-color = Color(0.517647, 0, 0, 1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(24, 24)
+shape = SubResource("RectangleShape2D_2gkig")

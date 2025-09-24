@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://f1mxf3q2bblt"]
+
+[ext_resource type="Script" uid="uid://bpyhau1nlp0df" path="res://scripts/Potions Script/MysteryPotion.gd" id="1_17wdo"]
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_4aqgn"]
+
+[node name="MysteryPotion" type="Area2D"]
+script = ExtResource("1_17wdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(40, 24)
+texture = ExtResource("2_4aqgn")
+region_enabled = true
+region_rect = Rect2(760, 0, 16, 16)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(39, 17, 41, 17, 47, 23, 47, 30, 46, 31, 34, 31, 33, 30, 33, 23)

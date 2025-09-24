@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1y3m7cni4m6k"]
+
+[ext_resource type="Script" uid="uid://cefilbdo1ws43" path="res://scripts/Vampire Scripts/Vampire Types Sword.gd" id="1_rbr07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t6bcj"]
+size = Vector2(40, 64)
+
+[node name="VampireSword1" type="CharacterBody2D"]
+script = ExtResource("1_rbr07")
+metadata/_edit_horizontal_guides_ = [64.0]
+
+[node name="Sprite2D" type="ColorRect" parent="."]
+offset_right = 40.0
+offset_bottom = 64.0
+color = Color(1, 0, 0, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 32)
+shape = SubResource("RectangleShape2D_t6bcj")

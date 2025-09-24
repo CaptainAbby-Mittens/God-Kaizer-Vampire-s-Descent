@@ -12,7 +12,7 @@ config_version=5
 
 config/name="God Kaizer: Vampire's Descend"
 run/main_scene="uid://c4iwl1te85apj"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]

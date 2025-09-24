@@ -14,3 +14,4 @@ offset_bottom = 16.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(24, 8)
 shape = SubResource("RectangleShape2D_y434i")
+one_way_collision = true

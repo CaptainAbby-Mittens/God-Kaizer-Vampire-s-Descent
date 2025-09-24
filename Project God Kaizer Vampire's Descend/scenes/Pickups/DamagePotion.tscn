@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://x5dfaa3ckla4"]
+
+[ext_resource type="Script" uid="uid://dkx4wpfpidrvr" path="res://scripts/Potions Script/DamagePotion.gd" id="1_5nugs"]
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_233aa"]
+
+[node name="DamagePotion" type="Area2D"]
+script = ExtResource("1_5nugs")
+
+[node name="GodotProject" type="Sprite2D" parent="."]
+position = Vector2(278.75, 278)
+scale = Vector2(1.03333, 1)
+texture = ExtResource("2_233aa")
+region_enabled = true
+region_rect = Rect2(776, 0.786968, 15.4447, 15.213)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(271, 277, 271, 283, 273, 285, 285, 285, 287, 283, 287, 277, 280, 271, 278, 271)

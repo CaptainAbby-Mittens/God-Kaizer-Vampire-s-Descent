@@ -22,6 +22,8 @@ func _on_start_button_pressed():
 			gm.restart_playtime_timer()
 		if gm.has_method("start_playtime_timer"):
 			gm.start_playtime_timer()
+		if gm.has_method("reset_potions_on_restart"):
+			gm.reset_potions_on_restart()
 	
 	# Start the game
 	start_game()

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cp7b5v6gm3ugq"]
+
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="1_73shp"]
+[ext_resource type="Script" uid="uid://dkuco7p0o2vod" path="res://scripts/Potions Script/HealingPotion.gd" id="1_s56vo"]
+
+[node name="HealingPotion" type="Area2D"]
+script = ExtResource("1_s56vo")
+
+[node name="GodotProject" type="Sprite2D" parent="."]
+position = Vector2(244, 129)
+texture = ExtResource("1_73shp")
+region_enabled = true
+region_rect = Rect2(760, 17, 16, 14)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(243, 122, 245, 122, 251, 128, 251, 135, 250, 136, 238, 136, 237, 135, 237, 128)

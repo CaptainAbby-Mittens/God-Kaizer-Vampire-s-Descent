@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://b8mlex1craqoy"]
+[gd_scene load_steps=6 format=4 uid="uid://b8mlex1craqoy"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_sohbg"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_7vvj5"]
+[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/VampireSword1.tscn" id="3_h40a2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ngwjk"]
 texture = ExtResource("1_sohbg")
@@ -4123,3 +4124,9 @@ position = Vector2(320, 180)
 
 [node name="player" parent="." instance=ExtResource("2_7vvj5")]
 position = Vector2(12, 214)
+
+[node name="VampireSword1" parent="." instance=ExtResource("3_h40a2")]
+position = Vector2(371, 183)
+
+[node name="VampireSword2" parent="." instance=ExtResource("3_h40a2")]
+position = Vector2(431, 182)

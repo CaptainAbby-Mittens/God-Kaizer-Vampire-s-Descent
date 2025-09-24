@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://chb44cc8nwvrh"]
+
+[ext_resource type="Script" uid="uid://duh6ax0bomsy3" path="res://scripts/Potions Script/MaxHPPotion.gd" id="1_didrn"]
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="1_hom7r"]
+
+[node name="MaxHpPotion" type="Area2D"]
+script = ExtResource("1_didrn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(53, 96)
+texture = ExtResource("1_hom7r")
+region_enabled = true
+region_rect = Rect2(776, 16, 16, 15)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PackedVector2Array(52, 89, 54, 89, 60, 95, 60, 102, 59, 104, 47, 104, 46, 102, 46, 95)
