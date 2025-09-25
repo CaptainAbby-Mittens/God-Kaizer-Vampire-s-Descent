@@ -70,31 +70,78 @@ func attack_with_weapon():
 	can_attack = true
 
 func equip_weapon(new_weapon):
-	print("Equipping weapon: ", new_weapon.weapon_name)
+	print("=== EQUIPPING WEAPON ===")
+	print("Weapon name: ", new_weapon.weapon_name)
 	
+	# Use call_deferred for reparenting operations
+	call_deferred("_deferred_equip_weapon", new_weapon)
+
+func _deferred_equip_weapon(new_weapon):
 	# Drop current weapon if any
 	if current_weapon:
 		drop_current_weapon()
 	
-	# Equip new weapon
+	# Store reference to new weapon
 	current_weapon = new_weapon
 	
-	# Update weapon sprite - FIXED: Use get_node() to access the Sprite2D
-	if weapon_sprite and new_weapon.has_node("Sprite2D"):
-		weapon_sprite.texture = new_weapon.get_node("Sprite2D").texture
-		weapon_sprite.hframes = new_weapon.get_node("Sprite2D").hframes
-		weapon_sprite.vframes = new_weapon.get_node("Sprite2D").vframes
-		weapon_sprite.visible = true
+	# Reparent the weapon to the player
+	var old_parent = new_weapon.get_parent()
+	if old_parent:
+		old_parent.remove_child(new_weapon)
+	add_child(new_weapon)
 	
-	print("Weapon equipped: ", current_weapon.weapon_name)
+	# Reset weapon position and properties
+	new_weapon.position = Vector2.ZERO
+	new_weapon.is_equipped = true
+	
+	# Update the player's weapon sprite
+	update_weapon_sprite(new_weapon)
+	
+	print("Weapon successfully equipped to player")
+
+func update_weapon_sprite(weapon):
+	if weapon_sprite and weapon.has_node("Sprite2D"):
+		var weapon_sprite_node = weapon.get_node("Sprite2D")
+		weapon_sprite.texture = weapon_sprite_node.texture
+		
+		# Copy sprite properties if they exist
+		if weapon_sprite_node is Sprite2D:
+			weapon_sprite.hframes = weapon_sprite_node.hframes
+			weapon_sprite.vframes = weapon_sprite_node.vframes
+			weapon_sprite.frame = weapon_sprite_node.frame
+		
+		weapon_sprite.visible = true
+		print("Weapon sprite updated")
+	else:
+		print("Warning: Could not update weapon sprite")
 
 func drop_current_weapon():
 	if current_weapon:
-		print("Dropping: ", current_weapon.weapon_name)
-		current_weapon.drop()
+		print("Dropping weapon: ", current_weapon.weapon_name)
+		call_deferred("_deferred_drop_weapon")
+func _deferred_drop_weapon():
+	if current_weapon:
+		# Remove from player
+		remove_child(current_weapon)
+		
+		# Add back to the scene
+		get_parent().add_child(current_weapon)
+		
+		# Position it where the player is
+		current_weapon.global_position = global_position
+		current_weapon.is_equipped = false
+		
+		# Reset the weapon's properties with set_deferred
+		if current_weapon.has_node("Sprite2D"):
+			current_weapon.get_node("Sprite2D").visible = true
+		if current_weapon.has_node("CollisionShape2D"):
+			current_weapon.get_node("CollisionShape2D").set_deferred("disabled", false)
+		
 		current_weapon = null
+		
+		# Hide player's weapon sprite
 		weapon_sprite.visible = false
-
+		print("Weapon dropped")
 func _physics_process(delta):
 	# Safety check - don't process physics until ready
 	if not physics_ready or not is_inside_tree():
