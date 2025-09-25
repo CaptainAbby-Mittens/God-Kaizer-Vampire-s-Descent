@@ -13361,4 +13361,4 @@ tile_set = SubResource("TileSet_xaijw")
 use_kinematic_bodies = true
 
 [node name="StartSword" parent="." instance=ExtResource("4_qeig3")]
-position = Vector2(78, 226)
+position = Vector2(128, 227.99998)

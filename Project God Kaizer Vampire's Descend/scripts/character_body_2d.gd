@@ -54,7 +54,7 @@ func _process(delta):
 	handle_weapon_input()
 	
 func handle_weapon_input():
-	if Input.is_action_just_pressed("ui_attack") and can_attack and current_weapon:
+	if Input.is_action_just_pressed("attack") and can_attack and current_weapon:
 		attack_with_weapon()
 
 func attack_with_weapon():
@@ -74,18 +74,16 @@ func equip_weapon(new_weapon):
 	
 	# Drop current weapon if any
 	if current_weapon:
-		current_weapon.position = Vector2(20, 0)  # Adjust as needed
-		current_weapon.z_index = 1  # Make sure weapon renders above player
 		drop_current_weapon()
 	
 	# Equip new weapon
 	current_weapon = new_weapon
 	
-	# Update weapon sprite
-	if weapon_sprite and new_weapon.sprite:
-		weapon_sprite.texture = new_weapon.sprite.texture
-		weapon_sprite.hframes = new_weapon.sprite.hframes
-		weapon_sprite.vframes = new_weapon.sprite.vframes
+	# Update weapon sprite - FIXED: Use get_node() to access the Sprite2D
+	if weapon_sprite and new_weapon.has_node("Sprite2D"):
+		weapon_sprite.texture = new_weapon.get_node("Sprite2D").texture
+		weapon_sprite.hframes = new_weapon.get_node("Sprite2D").hframes
+		weapon_sprite.vframes = new_weapon.get_node("Sprite2D").vframes
 		weapon_sprite.visible = true
 	
 	print("Weapon equipped: ", current_weapon.weapon_name)
