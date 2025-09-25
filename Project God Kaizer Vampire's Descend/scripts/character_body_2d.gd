@@ -20,7 +20,10 @@ var current_health : int = max_health
 # Health bar nodes
 @onready var health_bar = $HealthBar  # We'll create this node next
 @onready var character_sprite = $Sprite2D 
-
+@onready var weapon_sprite = $WeaponSprite  # Make sure this node exists
+var current_weapon: Node = null
+var can_attack: bool = true
+var attack_cooldown: float = 0.0
 # Coyote time and jump buffering
 var coyote_time = 0.08    # Time after leaving ledge to still jump
 var coyote_timer = 0.0
@@ -35,6 +38,7 @@ var max_jump_hold_time = 0.2  # Maximum time to hold jump for full height
 var physics_ready = false
 
 func _ready():
+	weapon_sprite.visible = false
 	# Wait until physics is properly set up
 	await get_tree().physics_frame
 	physics_ready = true
@@ -42,6 +46,57 @@ func _ready():
 	health_updated.emit(current_health, max_health)
 	
 	add_to_group("player")
+func _process(delta):
+	if attack_cooldown > 0:
+		attack_cooldown -= delta
+		attack_cooldown = max(0, attack_cooldown)
+	
+	handle_weapon_input()
+	
+func handle_weapon_input():
+	if Input.is_action_just_pressed("ui_attack") and can_attack and current_weapon:
+		attack_with_weapon()
+
+func attack_with_weapon():
+	if attack_cooldown > 0 or not current_weapon:
+		return
+	
+	can_attack = false
+	current_weapon.attack()
+	
+	attack_cooldown = 1.0 / current_weapon.attack_speed
+	
+	await get_tree().create_timer(attack_cooldown).timeout
+	can_attack = true
+
+func equip_weapon(new_weapon):
+	print("Equipping weapon: ", new_weapon.weapon_name)
+	
+	# Drop current weapon if any
+	if current_weapon:
+		current_weapon.position = Vector2(20, 0)  # Adjust as needed
+		current_weapon.z_index = 1  # Make sure weapon renders above player
+		drop_current_weapon()
+	
+	# Equip new weapon
+	current_weapon = new_weapon
+	
+	# Update weapon sprite
+	if weapon_sprite and new_weapon.sprite:
+		weapon_sprite.texture = new_weapon.sprite.texture
+		weapon_sprite.hframes = new_weapon.sprite.hframes
+		weapon_sprite.vframes = new_weapon.sprite.vframes
+		weapon_sprite.visible = true
+	
+	print("Weapon equipped: ", current_weapon.weapon_name)
+
+func drop_current_weapon():
+	if current_weapon:
+		print("Dropping: ", current_weapon.weapon_name)
+		current_weapon.drop()
+		current_weapon = null
+		weapon_sprite.visible = false
+
 func _physics_process(delta):
 	# Safety check - don't process physics until ready
 	if not physics_ready or not is_inside_tree():

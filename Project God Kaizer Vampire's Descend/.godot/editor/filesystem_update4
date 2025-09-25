@@ -1,8 +1,5 @@
-res://scenes/Area1/room_1.tscn
-res://scripts/Vampire Scripts/Player Detection Zone.gd
-res://scenes/Area1/room_4.tscn
-res://scenes/Area1/room_3.tscn
-res://scenes/Area1/room_5.tscn
-res://scenes/Area1/room_6.tscn
-res://scripts/Vampire Scripts/Vampire sword.gd
-res://scripts/50 Damage Block.gd
+res://scenes/Weapons/Start Sword.tscn
+res://scripts/character_body_2d.gd
+res://scripts/WeaponScripts/WeaponWAnimation.gd
+res://scenes/Players and NPC/Player.tscn
+res://scenes/Area1/room_start.tscn
