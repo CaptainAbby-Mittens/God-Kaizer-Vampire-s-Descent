@@ -21,7 +21,8 @@ func _ready():
 	current_health = max_health
 	collision_layer = 2  # Enemies layer
 	collision_mask = 1   # Player layer
-	
+	add_to_group("enemy")
+	print("Vampire added to enemy group")
 	# Start in idle state with idle frame
 	current_state = State.IDLE
 	update_sprite_frame()

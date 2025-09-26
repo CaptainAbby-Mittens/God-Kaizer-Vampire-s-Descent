@@ -4,6 +4,8 @@ extends Node
 # Tracks the player's current room position in the grid (e.g., [0, 0])
 var current_room_coords = Vector2i(0, 0)
 signal player_died
+var player_weapon_path: String = ""
+var player_has_weapon: bool = false
 # A dictionary to act as our "world map". Key: Vector2i Coordinates, Value: Room scene file path
 var world_map = {
 	Vector2i(0, 0): "res://scenes/Area1/room_start.tscn",  # Start room

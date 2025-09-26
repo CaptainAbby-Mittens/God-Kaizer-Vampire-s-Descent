@@ -4,6 +4,7 @@ extends "res://scripts/Vampire Scripts/Vampire sword.gd"
 @export var vampire_type: String = "basic"
 
 func _ready():
+
 	super._ready()
 	
 	# Adjust stats based on vampire type

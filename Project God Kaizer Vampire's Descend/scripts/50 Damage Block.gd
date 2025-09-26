@@ -15,7 +15,7 @@ var damage_timers = {}
 var is_damaging: bool = false
 var pulse_time: float = 0.0
 
-@onready var color_rect = $ColorRect
+
 
 func _ready():
 	# Connect signals
@@ -32,11 +32,7 @@ func _process(delta):
 	# Handle visual effects
 	pulse_time += delta
 	
-	if color_rect:
-		if is_damaging:
-			# Pulsing effect when damaging
-			var pulse = sin(pulse_time * pulse_speed) * 0.2 + 1.0
-			color_rect.color = damage_color * Color(1, 1, 1, pulse * 0.8)
+
 
 
 func _on_body_entered(body):
@@ -73,7 +69,7 @@ func start_damage_timer(player):
 func _on_damage_tick(player):
 	if player in players_in_area and is_instance_valid(player):
 		# Flash effect on damage tick
-		flash_damage_effect()
+
 		apply_damage(player)
 	else:
 		if player in damage_timers:
@@ -83,12 +79,6 @@ func _on_damage_tick(player):
 		if players_in_area.is_empty():
 			is_damaging = false
 
-func flash_damage_effect():
-	# Quick flash when damage is applied
-	if color_rect:
-		var tween = create_tween()
-		tween.tween_property(color_rect, "color", damage_color * Color(1, 1, 1, 1.2), 0.1)
-		tween.tween_property(color_rect, "color", damage_color * Color(1, 1, 1, 0.8), 0.1)
 
 func apply_damage(player):
 	if is_instance_valid(player) and player.has_method("take_damage"):

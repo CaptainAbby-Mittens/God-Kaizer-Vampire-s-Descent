@@ -4,7 +4,9 @@ extends CharacterBody2D
 @export var max_walk_speed = 160.0        # Soma walks fairly slow
 @export var walk_acceleration = 4000.0     # Crisp but not instant acceleration
 @export var ground_friction = 1000.0       # Slight slide when stopping
-
+var current_weapon = null
+var current_weapon_path: String = ""
+var facing_right: bool = true  # Track facing direction
 @export var max_air_speed = 160.0         # Slightly faster in air
 @export var air_acceleration = 700.0      # Less control in air
 @export var air_friction = 200.0          # Less friction in air
@@ -21,7 +23,7 @@ var current_health : int = max_health
 @onready var health_bar = $HealthBar  # We'll create this node next
 @onready var character_sprite = $Sprite2D 
 @onready var weapon_sprite = $WeaponSprite  # Make sure this node exists
-var current_weapon: Node = null
+
 var can_attack: bool = true
 var attack_cooldown: float = 0.0
 # Coyote time and jump buffering
@@ -37,22 +39,124 @@ var max_jump_hold_time = 0.2  # Maximum time to hold jump for full height
 # Safety flag
 var physics_ready = false
 
+
+
 func _ready():
-	weapon_sprite.visible = false
+
+	# Make sure player is in the correct group
+	add_to_group("player")
+	print("Player: Added to 'player' group")
+	
+	# Load weapon from GameManager if player had one
+	if GameManager.player_has_weapon and GameManager.player_weapon_path != "":
+		print("Player: Loading weapon from GameManager")
+		current_weapon_path = GameManager.player_weapon_path
+		equip_weapon_from_path()
+
 	# Wait until physics is properly set up
 	await get_tree().physics_frame
 	physics_ready = true
 	current_health = max_health
 	health_updated.emit(current_health, max_health)
-	
+
 	add_to_group("player")
 func _process(delta):
-	if attack_cooldown > 0:
-		attack_cooldown -= delta
-		attack_cooldown = max(0, attack_cooldown)
+	update_weapon_position()
+	if Input.is_action_just_pressed("attack"):
+		print("X key pressed")
+		attack()
+func equip_weapon(weapon_node):
+	print("Player: Equipping weapon")
 	
-	handle_weapon_input()
+	# Store the weapon scene path in both local and global storage
+	current_weapon_path = weapon_node.get_scene_file_path()
+	GameManager.player_weapon_path = current_weapon_path
+	GameManager.player_has_weapon = true
 	
+	print("Weapon path stored locally and globally: ", current_weapon_path)
+	
+	# Remove old weapon if exists
+	if current_weapon:
+		current_weapon.queue_free()
+		current_weapon = null
+	
+	# Use call_deferred to avoid physics callback issues
+	call_deferred("equip_weapon_from_path")
+	
+	# Remove pickup weapon
+	weapon_node.queue_free()
+
+	
+func update_weapon_position():
+	if current_weapon:
+		if facing_right:
+			# Sword on right side (facing right)
+			current_weapon.position = Vector2(50, 0)
+			# Keep sword facing normal direction
+			current_weapon.scale.x = 1
+		else:
+			# Sword on left side (facing left)  
+			current_weapon.position = Vector2(-50, 0)
+			# Flip sword to face left
+			current_weapon.scale.x = -1
+
+func equip_weapon_from_path():
+	if current_weapon_path != "":
+		var weapon_scene = load(current_weapon_path).instantiate()
+		current_weapon = weapon_scene
+		add_child(weapon_scene)
+		current_weapon.set_as_top_level(false)
+		
+		# Set initial position based on facing
+		update_weapon_position()
+		
+		# Start with weapon HIDDEN
+		current_weapon.visible = false
+		
+		# Call equip method using call_deferred
+		if weapon_scene.has_method("equip_to_player"):
+			weapon_scene.call_deferred("equip_to_player", self)
+		
+		print("Weapon equipped with directional positioning")
+
+
+
+func attack():
+	if current_weapon:
+		print("Attacking with weapon")
+		
+		# Make weapon visible before playing animation
+		current_weapon.visible = true
+		
+		# Get AnimationPlayer and play swing animation
+		var animation_player = current_weapon.get_node("AnimationPlayer")
+		if animation_player:
+			# Signal weapon to start damaging
+			if current_weapon.has_method("start_attack"):
+				current_weapon.start_attack()
+			
+			# Connect to animation_finished signal
+			if not animation_player.is_connected("animation_finished", _on_weapon_animation_finished):
+				animation_player.connect("animation_finished", _on_weapon_animation_finished)
+			
+			animation_player.play("Swing")
+			print("Playing Swing animation")
+	else:
+		print("No weapon equipped")
+
+func _on_weapon_animation_finished(anim_name):
+	if anim_name == "Swing" and current_weapon:
+		# Signal weapon to stop damaging
+		if current_weapon.has_method("end_attack"):
+			current_weapon.end_attack()
+		
+		# Hide the weapon after swing animation finishes
+		current_weapon.visible = false
+		print("Weapon hidden after swing animation")
+
+
+
+
 func handle_weapon_input():
 	if Input.is_action_just_pressed("attack") and can_attack and current_weapon:
 		attack_with_weapon()
@@ -69,35 +173,10 @@ func attack_with_weapon():
 	await get_tree().create_timer(attack_cooldown).timeout
 	can_attack = true
 
-func equip_weapon(new_weapon):
-	print("=== EQUIPPING WEAPON ===")
-	print("Weapon name: ", new_weapon.weapon_name)
-	
-	# Use call_deferred for reparenting operations
-	call_deferred("_deferred_equip_weapon", new_weapon)
+# Add this function to handle weapon pickup
 
-func _deferred_equip_weapon(new_weapon):
-	# Drop current weapon if any
-	if current_weapon:
-		drop_current_weapon()
-	
-	# Store reference to new weapon
-	current_weapon = new_weapon
-	
-	# Reparent the weapon to the player
-	var old_parent = new_weapon.get_parent()
-	if old_parent:
-		old_parent.remove_child(new_weapon)
-	add_child(new_weapon)
-	
-	# Reset weapon position and properties
-	new_weapon.position = Vector2.ZERO
-	new_weapon.is_equipped = true
-	
-	# Update the player's weapon sprite
-	update_weapon_sprite(new_weapon)
-	
-	print("Weapon successfully equipped to player")
+
+
 
 func update_weapon_sprite(weapon):
 	if weapon_sprite and weapon.has_node("Sprite2D"):
@@ -115,10 +194,7 @@ func update_weapon_sprite(weapon):
 	else:
 		print("Warning: Could not update weapon sprite")
 
-func drop_current_weapon():
-	if current_weapon:
-		print("Dropping weapon: ", current_weapon.weapon_name)
-		call_deferred("_deferred_drop_weapon")
+
 func _deferred_drop_weapon():
 	if current_weapon:
 		# Remove from player
@@ -143,6 +219,10 @@ func _deferred_drop_weapon():
 		weapon_sprite.visible = false
 		print("Weapon dropped")
 func _physics_process(delta):
+	var input_direction = Input.get_axis("ui_left", "ui_right")
+	if input_direction != 0:
+		facing_right = input_direction > 0
+		update_weapon_position()
 	# Safety check - don't process physics until ready
 	if not physics_ready or not is_inside_tree():
 		return
