@@ -9,31 +9,20 @@ var can_damage: bool = false  # Only damage during active attack frames
 
 func _ready():
 	body_entered.connect(_on_body_entered)
-	area_entered.connect(_on_area_entered)  # Connect area entered for enemy detection
-	collision_layer = 2
-	collision_mask = 1 | 4  # Layer 1 (player) and layer 4 (enemies)
+	area_entered.connect(_on_area_entered)
+	collision_layer = 2  # Weapon layer
+	collision_mask = 1 | 4  # Player layer (1) and Enemy layer (4)
+	
+	# Add to weapon group
+	add_to_group("weapon")
 
 func _on_area_entered(area):
-	# This detects when weapon hits enemy areas
-	if can_damage:
-		print("Weapon hit area: ", area.name)
-		print("Area is in enemy group? ", area.is_in_group("enemy"))
-		print("Area's parent: ", area.get_parent().name)
-		
-		# Check if area or its parent is an enemy
-		var enemy = null
-		if area.is_in_group("enemy"):
-			enemy = area
-		elif area.get_parent().is_in_group("enemy"):
-			enemy = area.get_parent()
-		
-		if enemy:
-			print("Weapon hit enemy: ", enemy.name)
-			if enemy.has_method("take_damage"):
-				enemy.take_damage(damage)
-				print("Dealt ", damage, " damage to vampire")
-			else:
-				print("Enemy missing take_damage method")
+	if can_damage and area.get_parent().is_in_group("enemy"):
+		var enemy = area.get_parent()
+		print("Sword hit enemy: ", enemy.name)
+		if enemy.has_method("take_damage"):
+			enemy.take_damage(damage)
+			# Optional: add knockback or other effects
 func _on_body_entered(body):
 	if body.is_in_group("player") and not is_equipped:
 		var player = body

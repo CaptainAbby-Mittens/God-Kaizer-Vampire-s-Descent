@@ -9,20 +9,20 @@ func _ready():
 	
 	# Adjust stats based on vampire type
 	match vampire_type:
-		"basic":
+		"red":
 			max_health = 60
-			damage = 25
-			move_speed = 90.0
-			attack_range = 70.0
-		"knight":
+			damage = 20
+			move_speed = 60
+			attack_range = 70
+		"blue":
 			max_health = 100
 			damage = 35
-			move_speed = 70.0
-			attack_range = 80.0
-		"boss":
+			move_speed = 110
+			attack_range = 60
+		"black":
 			max_health = 200
-			damage = 50
-			move_speed = 60.0
+			damage = 70
+			move_speed = 50
 			attack_range = 100.0
 	
 	current_health = max_health

@@ -22,10 +22,16 @@ func _ready():
 	collision_layer = 2  # Enemies layer
 	collision_mask = 1   # Player layer
 	add_to_group("enemy")
-	print("Vampire added to enemy group")
+	
+	# Connect hit detection area if it exists
+	if has_node("HitDetectionArea"):
+		$HitDetectionArea.area_entered.connect(_on_hit_detection_area_entered)
 	# Start in idle state with idle frame
 	current_state = State.IDLE
 	update_sprite_frame()
+func _on_hit_detection_area_entered(area):
+	if area.is_in_group("weapon") and area.can_damage:
+		take_damage(area.damage)
 
 func _physics_process(delta):
 	match current_state:
@@ -121,14 +127,11 @@ func update_sprite_frame():
 			if sprite is Sprite2D:
 				sprite.frame = 3
 
-func take_damage(amount: int):
-	current_health -= amount
-	print("Enemy took ", amount, " damage. Health: ", current_health)
+func take_damage(damage):
+	current_health -= damage
+	print("Vampire took ", damage, " damage! Health: ", current_health)
 	
-	# Flash effect when hit
-	modulate = Color.RED
-	await get_tree().create_timer(0.1).timeout
-	modulate = Color.WHITE
+	# Change to hurt state
 	
 	if current_health <= 0:
 		die()

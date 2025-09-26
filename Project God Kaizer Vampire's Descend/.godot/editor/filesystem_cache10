@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1758898466
+::res://::1758930275
 8 bit fantasy music.wav::AudioStreamWAV/AudioStreamWAV::4232532440531331490::1756483179::1756483446::1::::<><><>0<>0<>b8f179713f054ea0a97c825edf7fd69b<>res://.godot/imported/8 bit fantasy music.wav-48ce09b1cfe85fcfe633bf00dbffa5f7.sample::
 export_presets.cfg::TextFile::-1::1758715573::0::1::::<><><>0<>0<><>::
 icon.svg::CompressedTexture2D/CompressedTexture2D::8350211589443757559::1755624644::1756483441::1::::<><><>0<>0<>3b3d130fa839ed84db087f90213e592c<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
@@ -158,16 +158,16 @@ PlatformElevator.tscn::PackedScene::1938878612276221927::1758565823::0::1::::<><
 ::res://scenes/Players and NPC/::1758818068
 Player.tscn::PackedScene::8105791100950896674::1758818068::0::1::::<><><>0<>0<><>::uid://bg48l40mkaiey::::res://scripts/character_body_2d.gd<>uid://ci83l3fcych00::::res://scenes/Players and NPC/UI_HealthBar.tscn<>uid://bs5cnafuasb3s::::res://assets/Maxis.png
 UI_HealthBar.tscn::PackedScene/PackedScene::5404197780405705239::1757261528::0::1::::<><><>0<>0<><>::uid://dlfn8324s0v45::::res://scripts/ui_health_bar.gd
-::res://scenes/Vampires/::1758645843
-VampireSword1.tscn::PackedScene::4262598874143016800::1758645843::0::1::::<><><>0<>0<><>::uid://cefilbdo1ws43::::res://scripts/Vampire Scripts/Vampire Types Sword.gd
-::res://scenes/Weapons/::1758891974
-Start Sword.tscn::PackedScene::8814448662044037200::1758891974::0::1::::<><><>0<>0<><>::uid://dvv122j4hkv5m::::res://scripts/WeaponScripts/WeaponWAnimation.gd<>uid://bdgx55im0icf5::::res://assets/Godot Project.png
-::res://scripts/::1758891938
+::res://scenes/Vampires/::1758930275
+VampireSword1.tscn::PackedScene::4262598874143016800::1758930487::0::1::::<><><>0<>0<><>::uid://cefilbdo1ws43::::res://scripts/Vampire Scripts/VampireSwordBasic.gd
+::res://scenes/Weapons/::1758907811
+Start Sword.tscn::PackedScene::8814448662044037200::1758907811::0::1::::<><><>0<>0<><>::uid://dvv122j4hkv5m::::res://scripts/WeaponScripts/WeaponWAnimation.gd<>uid://bdgx55im0icf5::::res://assets/Godot Project.png
+::res://scripts/::1758902259
 50 Damage Block.gd::GDScript::4733845147893891229::1758825164::0::1::::<>Area2D<><>0<>0<><>::
 audio_stream_player.gd::GDScript/GDScript::1736105447672317246::1756511417::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
-character_body_2d.gd::GDScript::2869445567239138464::1758891938::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character_body_2d.gd::GDScript::2869445567239138464::1758902259::0::1::::<>CharacterBody2D<><>0<>0<><>::
 end_screen.gd::GDScript/GDScript::982568776566584633::1757953547::0::1::::<>CanvasLayer<><>0<>0<><>::
-Game Manager.gd::GDScript::5755595710846315181::1758630936::0::1::::<>Node<><>0<>0<><>::
+Game Manager.gd::GDScript::5755595710846315181::1758899889::0::1::::<>Node<><>0<>0<><>::
 game.gd::GDScript/GDScript::5367050055143753203::1758045551::0::1::::<>Node2D<><>0<>0<><>::
 HealthUpgrade.gd::GDScript/GDScript::2788031654916433863::1757287149::0::1::::<>Area2D<><>0<>0<><>::
 main_menu.gd::GDScript/GDScript::7784699977815705563::1758211522::0::1::::<>CanvasLayer<><>0<>0<><>::
@@ -178,11 +178,11 @@ DamagePotion.gd::GDScript/GDScript::7910432052325771607::1758302609::0::1::::<>A
 HealingPotion.gd::GDScript/GDScript::7902586182715975115::1758302495::0::1::::<>Area2D<><>0<>0<><>::
 MaxHPPotion.gd::GDScript/GDScript::8579373041615930804::1758302609::0::1::::<>Area2D<><>0<>0<><>::
 MysteryPotion.gd::GDScript/GDScript::3489224514548283159::1758302609::0::1::::<>Area2D<><>0<>0<><>::
-::res://scripts/Vampire Scripts/::1758718201
+::res://scripts/Vampire Scripts/::1758930464
 Player Detection Zone.gd::GDScript::2210884195826876234::1758715220::0::1::::<>Area2D<><>0<>0<><>::
-Vampire sword.gd::GDScript::935030536542867864::1758718201::0::1::::<>CharacterBody2D<><>0<>0<><>::
-Vampire Types Sword.gd::GDScript::5064424068213206670::1758645618::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://scripts/WeaponScripts/::1758891462
+Vampire sword.gd::GDScript::935030536542867864::1758907811::0::1::::<>CharacterBody2D<><>0<>0<><>::
+VampireSwordBasic.gd::GDScript::5064424068213206670::1758930464::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/WeaponScripts/::1758908226
 Sword.gd::GDScript::1780171120847730686::1758741081::0::1::::<>Area2D<><>0<>0<><>::
 weaponmanager.gd::GDScript::1738242698677259253::1758824721::0::1::::<>RefCounted<><>0<>0<><>::
-WeaponWAnimation.gd::GDScript::8678207991921692412::1758891462::0::1::::<>Area2D<><>0<>0<><>::
+WeaponWAnimation.gd::GDScript::8678207991921692412::1758908226::0::1::::<>Area2D<><>0<>0<><>::

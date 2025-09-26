@@ -1,6 +1,2 @@
-res://scripts/character_body_2d.gd
-res://scripts/WeaponScripts/WeaponWAnimation.gd
-res://scripts/Game Manager.gd
 res://scenes/Vampires/VampireSword1.tscn
-res://scripts/Vampire Scripts/Vampire sword.gd
-res://scripts/Vampire Scripts/Vampire Types Sword.gd
+res://scripts/Vampire Scripts/VampireSwordBasic.gd

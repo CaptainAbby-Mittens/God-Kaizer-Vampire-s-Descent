@@ -1,12 +1,24 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1y3m7cni4m6k"]
+[gd_scene load_steps=5 format=3 uid="uid://b1y3m7cni4m6k"]
 
-[ext_resource type="Script" uid="uid://cefilbdo1ws43" path="res://scripts/Vampire Scripts/Vampire Types Sword.gd" id="1_rbr07"]
+[ext_resource type="Script" uid="uid://cefilbdo1ws43" path="res://scripts/Vampire Scripts/VampireScript.gd" id="1_rbr07"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6bcj"]
 size = Vector2(40, 64)
 
+[sub_resource type="Animation" id="Animation_rbr07"]
+resource_name = "Swing_Vampire_Sword"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6bcj"]
+_data = {
+&"Swing_Vampire_Sword": SubResource("Animation_rbr07")
+}
+
 [node name="VampireSword1" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 2
 script = ExtResource("1_rbr07")
+vampire_type = "blue"
+max_health = 20
 metadata/_edit_horizontal_guides_ = [64.0]
 
 [node name="Sprite2D" type="ColorRect" parent="."]
@@ -17,3 +29,8 @@ color = Color(1, 0, 0, 1)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20, 32)
 shape = SubResource("RectangleShape2D_t6bcj")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t6bcj")
+}
