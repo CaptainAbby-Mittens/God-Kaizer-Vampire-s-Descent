@@ -1,15 +1,15 @@
 res://addons/godot_super-wakatime/api_key_prompt.tscn::650e9e8a9a30b8a8d718b043ffe42c60::1758565546::res://.godot/exported/133200997/export-cd8705cb5e2533bd79c64579ac674dae-api_key_prompt.scn
 res://addons/godot_super-wakatime/counter.tscn::7f13ad35960e259f6de719f9785ce249::1757955976::res://.godot/exported/133200997/export-4af6c9115c1c285af5925fa1ce6a526e-counter.scn
-res://scenes/Area1/MainMenu.tscn::6f220a657ebd2e6d4db4ebc64fff84e4::1758565551::res://.godot/exported/133200997/export-66d36ebc8009d99eb1a39b4f90913155-MainMenu.scn
+res://scenes/Area1/MainMenu.tscn::6f220a657ebd2e6d4db4ebc64fff84e4::1758891245::res://.godot/exported/133200997/export-66d36ebc8009d99eb1a39b4f90913155-MainMenu.scn
 res://scenes/Area1/room_1.tscn::5cd771e0d0e054d24f986627ffca2228::1758715220::res://.godot/exported/133200997/export-6c2fef0fb3d4e5381418d7366e8b363a-room_1.scn
 res://scenes/Area1/room_2.tscn::9b389b8ff96bc45e083ce26df3943e19::1758635469::res://.godot/exported/133200997/export-812f4a1cdc2abe795d431c109e654d82-room_2.scn
 res://scenes/Area1/room_3.tscn::2b52fd9af7dec8fb01fb1ea2ecd1544c::1758715222::res://.godot/exported/133200997/export-dfb1b7f3e057bde27fe93a3b31bef564-room_3.scn
 res://scenes/Area1/room_4.tscn::91a08d3b2a31e60f7e22a82d7883902f::1758715221::res://.godot/exported/133200997/export-0f083c1699a3125fb6f8afa34ebee9a7-room_4.scn
-res://scenes/Area1/room_5.tscn::c1f6a41b6ff10590e3757b018f06a3e2::1758715224::res://.godot/exported/133200997/export-eb014d32f58817be3500c63174734095-room_5.scn
+res://scenes/Area1/room_5.tscn::2f203cfd8a17afb3f6f6051f47ac7da8::1758718152::res://.godot/exported/133200997/export-eb014d32f58817be3500c63174734095-room_5.scn
 res://scenes/Area1/room_6.tscn::8b32443526b0f27a734c83e4094db2cf::1758715225::res://.godot/exported/133200997/export-433cbd182bde0ec03c60578763d33151-room_6.scn
-res://scenes/Area1/room_start.tscn::d219459faa0d0126111114f43e2d90f7::1758565550::res://.godot/exported/133200997/export-a02bcb1ccd4be9fe8882ad9136ab4cfc-room_start.scn
+res://scenes/Area1/room_start.tscn::bb2ae57541028221ad7aa7c8cc4fc0f0::1758934131::res://.godot/exported/133200997/export-a02bcb1ccd4be9fe8882ad9136ab4cfc-room_start.scn
 res://scenes/Damage/Room2BloodBlock.tscn::5225e2c355d51fdc646d98854dd4b27b::1758631910::res://.godot/exported/133200997/export-7b96e51cb5a6e5928ee02b72fed904d0-Room2BloodBlock.scn
-res://scenes/Players and NPC/Player.tscn::031a3bb7ef44c8a1ed47931e14a5232d::1758629849::res://.godot/exported/133200997/export-b202a230eee8f91bed0ff0741a1853a7-Player.scn
+res://scenes/Players and NPC/Player.tscn::c563b9394063cebe148d811910f9d654::1758818068::res://.godot/exported/133200997/export-b202a230eee8f91bed0ff0741a1853a7-Player.scn
 res://scenes/Players and NPC/UI_HealthBar.tscn::75679ded006f6acba2c82ef9dd601b53::1757261528::res://.godot/exported/133200997/export-c95ca1f4fabf28362629feb90829ad45-UI_HealthBar.scn
 res://scenes/EndScreen.tscn::1546dfabed83f1e4789da4ba6b0a389b::1757000320::res://.godot/exported/133200997/export-fbf7fe00226cb87c9342c48da97b2085-EndScreen.scn
 res://scenes/game.tscn::c5ce33f59918d076d58360347466650a::1757261526::res://.godot/exported/133200997/export-c2a7af834e91ff64325daddf58e45dc0-game.scn
@@ -122,4 +122,6 @@ res://scenes/Pickups/DamagePotion.tscn::f296462d35d60cadf6549a9c54160b5d::175856
 res://scenes/Pickups/HealingPotion.tscn::0746513ed8270e52bb50159c8f8b90b9::1758565553::res://.godot/exported/133200997/export-0e8a69bd23c2f7f0560ced2f7daa9ea4-HealingPotion.scn
 res://scenes/Pickups/MaxHPPotion.tscn::75edddf2f2528cb9daf7fa1394611db2::1758302610::res://.godot/exported/133200997/export-c440dcb9043f0bef6b8447e8c8815db0-MaxHPPotion.scn
 res://scenes/Pickups/MysteryPotion.tscn::99f97cb85ad2b596f57c86ed1ee3bd35::1758302610::res://.godot/exported/133200997/export-e5d05e17246fc207ba56823c4c92d514-MysteryPotion.scn
-res://scenes/Vampires/VampireSword1.tscn::80cdf35e7e2cd14f996c00c3a33f6b9c::1758645843::res://.godot/exported/133200997/export-7461db4cd2a61f51d86ff2da165fdfd5-VampireSword1.scn
+res://scenes/Vampires/VampireSword1.tscn::64fc6e779c4907da67100d51bfa1eb46::1758934622::res://.godot/exported/133200997/export-7461db4cd2a61f51d86ff2da165fdfd5-VampireSword1.scn
+res://scenes/Weapons/Start Sword.tscn::f71353ee6cc57dce31266d293f187d74::1758934622::res://.godot/exported/133200997/export-f35fb32b94b072892c0237eeeb6594c5-Start Sword.scn
+res://scenes/Weapons.tscn::1830201f1707ffb278d6e4ff7507adb7::1758741706::res://.godot/exported/133200997/export-c8d7269c130e28b162c77c95a6f1f043-Weapons.scn

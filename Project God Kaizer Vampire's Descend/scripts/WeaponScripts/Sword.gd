@@ -3,7 +3,7 @@ extends Area2D
 
 @export_category("Weapon Properties")
 @export var weapon_name: String = "Weapon"
-@export var damage: int = 25
+@export var damage: int = 40
 @export var attack_speed: float = 1.0
 @export var weapon_range: float = 80.0
 @export var weapon_type: String = "sword"  # sword, axe, spear, etc.
@@ -71,3 +71,5 @@ func get_weapon_data() -> Dictionary:
 		"range": weapon_range,
 		"type": weapon_type
 	}
+func get_damage():
+	return damage

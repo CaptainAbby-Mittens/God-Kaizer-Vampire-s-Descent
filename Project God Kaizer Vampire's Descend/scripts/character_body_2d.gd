@@ -46,7 +46,7 @@ func _ready():
 	# Make sure player is in the correct group
 	add_to_group("player")
 	print("Player: Added to 'player' group")
-	
+
 	# Load weapon from GameManager if player had one
 	if GameManager.player_has_weapon and GameManager.player_weapon_path != "":
 		print("Player: Loading weapon from GameManager")
@@ -68,25 +68,40 @@ func _process(delta):
 func equip_weapon(weapon_node):
 	print("Player: Equipping weapon")
 	
-	# Store the weapon scene path in both local and global storage
-	current_weapon_path = weapon_node.get_scene_file_path()
-	GameManager.player_weapon_path = current_weapon_path
+	# Store the weapon scene path in GameManager for persistence
+	GameManager.player_weapon_path = weapon_node.get_scene_file_path()
 	GameManager.player_has_weapon = true
 	
-	print("Weapon path stored locally and globally: ", current_weapon_path)
+	print("Weapon path stored: ", GameManager.player_weapon_path)
 	
 	# Remove old weapon if exists
 	if current_weapon:
 		current_weapon.queue_free()
 		current_weapon = null
 	
-	# Use call_deferred to avoid physics callback issues
-	call_deferred("equip_weapon_from_path")
+	# Create new instance and make it a child of the player
+	if GameManager.player_weapon_path != "":
+		call_deferred("_deferred_equip_weapon")
 	
-	# Remove pickup weapon
+	# Remove the world pickup weapon
 	weapon_node.queue_free()
 
-	
+func _deferred_equip_weapon():
+	if GameManager.player_weapon_path != "":
+		var weapon_scene = load(GameManager.player_weapon_path).instantiate()
+		current_weapon = weapon_scene
+		
+		# Add as child of player
+		add_child(weapon_scene)
+		weapon_scene.position = Vector2(50, 0)
+		weapon_scene.set_as_top_level(false)
+		weapon_scene.visible = false
+		
+		if weapon_scene.has_method("equip_to_player"):
+			weapon_scene.equip_to_player(self)
+		
+		print("Weapon equipped as child of player")
+
 func update_weapon_position():
 	if current_weapon:
 		if facing_right:

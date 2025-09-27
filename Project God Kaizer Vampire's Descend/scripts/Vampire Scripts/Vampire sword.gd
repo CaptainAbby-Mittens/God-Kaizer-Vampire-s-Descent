@@ -19,10 +19,10 @@ var current_state: State = State.IDLE
 
 func _ready():
 	current_health = max_health
-	collision_layer = 2  # Enemies layer
-	collision_mask = 1   # Player layer
+	collision_layer = 4  # Enemies layer
+	collision_mask = 1 | 2  # Player (1) + Weapons (2)
 	add_to_group("enemy")
-	
+	print("Sword collision shape disabled: ", $CollisionShape2D.disabled)
 	# Connect hit detection area if it exists
 	if has_node("HitDetectionArea"):
 		$HitDetectionArea.area_entered.connect(_on_hit_detection_area_entered)
@@ -30,8 +30,8 @@ func _ready():
 	current_state = State.IDLE
 	update_sprite_frame()
 func _on_hit_detection_area_entered(area):
-	if area.is_in_group("weapon") and area.can_damage:
-		take_damage(area.damage)
+	if area.is_in_group("weapon") and area.has_method("get_damage"):
+		take_damage(area.get_damage())
 
 func _physics_process(delta):
 	match current_state:

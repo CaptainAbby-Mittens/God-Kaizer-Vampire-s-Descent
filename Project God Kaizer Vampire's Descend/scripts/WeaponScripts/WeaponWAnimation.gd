@@ -3,7 +3,8 @@ extends Area2D
 @export var weapon_name: String = "Sword"
 @export var damage: int = 30
 @export var attack_speed: float = 1.0
-
+var current_weapon = null
+var current_weapon_path: String = ""
 var is_equipped: bool = false
 var can_damage: bool = false  # Only damage during active attack frames
 
@@ -24,12 +25,16 @@ func _on_area_entered(area):
 			enemy.take_damage(damage)
 			# Optional: add knockback or other effects
 func _on_body_entered(body):
+	if can_damage and body.is_in_group("enemy"):
+		print("Sword hit enemy: ", body.name)
+		if body.has_method("take_damage"):
+			body.take_damage(damage)
 	if body.is_in_group("player") and not is_equipped:
 		var player = body
 		if player.has_method("equip_weapon"):
 			print("Weapon: Picked up by player")
 			is_equipped = true
-			
+		
 			# Hide the pickup weapon immediately
 			if has_node("Sprite2D"):
 				$Sprite2D.visible = false
@@ -40,12 +45,35 @@ func _on_body_entered(body):
 			
 			# Call equip_weapon on the player
 			player.equip_weapon(self)
-
+func attack():
+	if current_weapon:
+		print("Attacking with weapon")
+		
+		# Make weapon visible
+		current_weapon.visible = true
+		
+		# ENABLE DAMAGE HERE
+		if current_weapon.has_method("start_attack"):
+			current_weapon.start_attack()
+		
+		# Get AnimationPlayer and play swing animation
+		var animation_player = current_weapon.get_node("AnimationPlayer")
+		if animation_player:
+			animation_player.play("Swing")
+			print("Playing Swing animation")
+			
+			# Wait for animation to finish then hide weapon and disable damage
+			await animation_player.animation_finished
+			current_weapon.visible = false
+			if current_weapon.has_method("end_attack"):
+				current_weapon.end_attack()
+	else:
+		print("No weapon equipped")
 func start_attack():
 	# Called when attack animation starts
 	can_damage = true
 	print("Weapon can now damage enemies")
-
+	collision_mask = 1 | 4  
 func end_attack():
 	# Called when attack animation ends
 	can_damage = false

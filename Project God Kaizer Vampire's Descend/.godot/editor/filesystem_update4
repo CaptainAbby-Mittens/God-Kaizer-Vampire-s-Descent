@@ -1,2 +1,1 @@
-res://scenes/Vampires/VampireSword1.tscn
-res://scripts/Vampire Scripts/VampireSwordBasic.gd
+res://scripts/Vampire Scripts/VampireScript.gd
