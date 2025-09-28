@@ -1,6 +1,4 @@
-res://scenes/Area1/room_1.tscn
-res://scenes/Players and NPC/Player.tscn
-res://scenes/Weapons/Start Sword.tscn
 res://scripts/WeaponScripts/WeaponWAnimation.gd
+res://scenes/Area1/room_start.tscn
 res://scripts/character_body_2d.gd
-res://scripts/WeaponScripts/Sword.gd
+res://scenes/Weapons/Start Sword.tscn

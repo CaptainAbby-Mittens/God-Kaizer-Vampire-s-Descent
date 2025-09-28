@@ -61,21 +61,14 @@ func _ready():
 
 	add_to_group("player")
 func _process(delta):
-
+	if current_weapon and current_weapon.has_method("update_collision_position"):
+		current_weapon.update_collision_position()
+	queue_redraw()
 	update_weapon_position()
 	if Input.is_action_just_pressed("attack"):
 		print("X key pressed")
 		attack()
-	if current_weapon:
-		# Position the entire weapon node relative to player
-		var weapon_offset = Vector2(20, 0)  # Adjust as needed
-		
-		if facing_right:
-			current_weapon.position = weapon_offset
-			current_weapon.scale.x = abs(current_weapon.scale.x)  # Face right
-		else:
-			current_weapon.position = Vector2(-weapon_offset.x, weapon_offset.y)
-			current_weapon.scale.x = -abs(current_weapon.scale.x)  # Face left
+
 
 func equip_weapon(weapon_node):
 	print("Player: Equipping weapon")
@@ -98,7 +91,9 @@ func equip_weapon(weapon_node):
 	
 	# Remove the world pickup weapon
 	weapon_node.queue_free()
+	
 
+		
 func _deferred_equip_weapon():
 	if GameManager.player_weapon_path != "":
 		var weapon_scene = load(GameManager.player_weapon_path).instantiate()
@@ -519,7 +514,3 @@ func handle_room_transition():
 # NEW: Safe physics check function
 func can_use_physics():
 	return physics_ready and is_inside_tree() and get_world_2d() != null
-
-
-
-	
