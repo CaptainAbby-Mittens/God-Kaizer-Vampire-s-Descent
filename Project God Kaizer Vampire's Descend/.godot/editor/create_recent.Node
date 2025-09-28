@@ -1,9 +1,9 @@
 CollisionShape2D
+CollisionPolygon2D
 Area2D
 AnimationPlayer
 Sprite2D
 AnimatedSprite2D
-CollisionPolygon2D
 ColorRect
 CharacterBody2D
 TileMapLayer

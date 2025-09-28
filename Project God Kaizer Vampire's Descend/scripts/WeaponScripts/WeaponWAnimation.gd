@@ -3,8 +3,11 @@ extends Area2D
 @export var weapon_name: String = "Sword"
 @export var damage: int = 30
 @export var attack_speed: float = 1.0
+
+var damaged_enemies: Array = []
 var current_weapon = null
 var current_weapon_path: String = ""
+var is_attacking: bool = false
 var is_equipped: bool = false
 var can_damage: bool = false  # Only damage during active attack frames
 
@@ -13,9 +16,10 @@ func _ready():
 	area_entered.connect(_on_area_entered)
 	collision_layer = 2  # Weapon layer
 	collision_mask = 1 | 4  # Player layer (1) and Enemy layer (4)
-	
+
 	# Add to weapon group
 	add_to_group("weapon")
+
 
 func _on_area_entered(area):
 	if can_damage and area.get_parent().is_in_group("enemy"):
@@ -24,6 +28,7 @@ func _on_area_entered(area):
 		if enemy.has_method("take_damage"):
 			enemy.take_damage(damage)
 			# Optional: add knockback or other effects
+
 func _on_body_entered(body):
 	if can_damage and body.is_in_group("enemy"):
 		print("Sword hit enemy: ", body.name)
@@ -45,38 +50,32 @@ func _on_body_entered(body):
 			
 			# Call equip_weapon on the player
 			player.equip_weapon(self)
+
 func attack():
-	if current_weapon:
-		print("Attacking with weapon")
-		
-		# Make weapon visible
-		current_weapon.visible = true
-		
-		# ENABLE DAMAGE HERE
-		if current_weapon.has_method("start_attack"):
-			current_weapon.start_attack()
-		
-		# Get AnimationPlayer and play swing animation
-		var animation_player = current_weapon.get_node("AnimationPlayer")
-		if animation_player:
-			animation_player.play("Swing")
-			print("Playing Swing animation")
-			
-			# Wait for animation to finish then hide weapon and disable damage
-			await animation_player.animation_finished
-			current_weapon.visible = false
-			if current_weapon.has_method("end_attack"):
-				current_weapon.end_attack()
+	if is_attacking or not is_equipped:
+		return
+	
+	is_attacking = true
+	damaged_enemies.clear()  # Reset hit enemies for new attack
+	
+	if has_node("AnimationPlayer") and $AnimationPlayer.has_animation("swing"):
+		$AnimationPlayer.play("swing")
 	else:
-		print("No weapon equipped")
+		is_attacking = false
+
 func start_attack():
 	# Called when attack animation starts
 	can_damage = true
 	print("Weapon can now damage enemies")
-	collision_mask = 1 | 4  
+	
+	# Debug: Check what enemies are in range
+	var overlapping = get_overlapping_bodies()
+	print("Overlapping bodies at attack start: ", overlapping)
+
 func end_attack():
 	# Called when attack animation ends
 	can_damage = false
+	is_attacking = false
 	print("Weapon can no longer damage enemies")
 
 func equip_to_player(player):
@@ -90,9 +89,25 @@ func equip_to_player(player):
 	# Weapon starts HIDDEN (only shows during swing)
 	visible = false
 	
-	# Ensure collision is disabled for pickup, but enabled for attack detection
-	if has_node("CollisionShape2D"):
-		$CollisionShape2D.disabled = false  # Enable for attack detection
-		$CollisionShape2D.set_collision_layer_value(1, false)  # Disable player layer
-		$CollisionShape2D.set_collision_mask_value(1, false)   # Disable player mask
-		$CollisionShape2D.set_collision_mask_value(4, true)    # Enable enemy mask
+	# Ensure collision is enabled for attack detection
+	if has_node("CollisionPolygon2D"):
+		$CollisionPolygon2D.disabled = false
+
+# Debug function to visualize collision during development
+func _draw():
+	if Engine.is_editor_hint() and has_node("CollisionPolygon2D"):
+		var col = $CollisionPolygon2D
+		var polygon = col.polygon
+		var color = Color.RED
+		
+		for i in range(polygon.size()):
+			var point = polygon[i]
+			var next_point = polygon[(i + 1) % polygon.size()]
+			draw_line(point, next_point, color, 2.0)
+
+# Debug process to see positions
+func _process(delta):
+	if is_attacking:
+		print("Sword Global Position: ", global_position)
+		print("Collision Global Position: ", $CollisionPolygon2D.global_position)
+		print("Sprite Global Position: ", $Sprite2D.global_position)

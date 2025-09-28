@@ -1268,6 +1268,7 @@ sources/0 = SubResource("TileSetAtlasSource_esk66")
 sources/2 = SubResource("TileSetAtlasSource_gijss")
 
 [node name="Room_Next" type="Node2D"]
+position = Vector2(-1, 0)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1, 0)
@@ -1277,7 +1278,7 @@ limit_right = 640
 limit_bottom = 360
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_2naem")]
-position = Vector2(18, 214)
+position = Vector2(15, 215)
 
 [node name="Layer1" type="TileMapLayer" parent="."]
 use_parent_material = true
