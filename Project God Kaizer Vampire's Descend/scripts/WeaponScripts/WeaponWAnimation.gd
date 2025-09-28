@@ -17,6 +17,21 @@ var can_damage: bool = false  # Only damage during active attack frames
 @onready var collision_polygon = $CollisionPolygon2D
 @onready var animation_player = $AnimationPlayer
 
+func equip_to_player(player):
+	print("Weapon: Successfully equipped to player")
+	is_equipped = true
+	
+	# Make sure sprite is visible but weapon starts hidden
+	if sprite:
+		sprite.visible = true
+	
+	# Weapon starts HIDDEN (only shows during swing)
+	visible = false
+	
+	# Ensure collision is enabled for attack detection
+	if collision_polygon:
+		collision_polygon.disabled = false
+
 func _ready():
 	body_entered.connect(_on_body_entered)
 	area_entered.connect(_on_area_entered)
@@ -25,7 +40,6 @@ func _ready():
 
 	# Add to weapon group
 	add_to_group("weapon")
-
 
 func _on_area_entered(area):
 	if can_damage and area.get_parent().is_in_group("enemy"):
@@ -77,6 +91,7 @@ func attack():
 		animation_player.play("swing")
 	else:
 		is_attacking = false
+
 func check_existing_overlaps():
 	if can_damage:
 		# Check areas (like enemy attack areas)
@@ -95,19 +110,13 @@ func check_existing_overlaps():
 				print("Sword hit overlapping enemy: ", body.name)
 				if body.has_method("take_damage"):
 					body.take_damage(damage)
-func update_collision_direction():
-	if collision_polygon and sprite:
-		# Copy the sprite's POSITION to the collision, not scale
-		collision_polygon.position = sprite.position
-		#print("Collision position updated to: ", collision_polygon.position)
+
 func start_attack():
 	# Called when attack animation starts
 	can_damage = true
 	print("Weapon can now damage enemies")
-	
-	# Force update collision position
-	update_collision_position()
 	check_existing_overlaps()
+	
 	# Debug: Check what enemies are in range
 	var overlapping = get_overlapping_bodies()
 	print("Overlapping bodies at attack start: ", overlapping)
@@ -121,49 +130,18 @@ func end_attack():
 	# Hide weapon after attack
 	visible = false
 
-func equip_to_player(player):
-	print("Weapon: Successfully equipped to player")
-	is_equipped = true
-	
-	# Make sure sprite is visible but weapon starts hidden
-	if sprite:
-		sprite.visible = true
-	
-	# Weapon starts HIDDEN (only shows during swing)
-	visible = false
-	
-	# Ensure collision is enabled for attack detection
-	if collision_polygon:
-		collision_polygon.disabled = false
-
-# MANUALLY force collision to follow sprite
-func update_collision_position():
-	if collision_polygon and sprite:
-		# Copy the sprite's exact transform to the collision polygon
-		collision_polygon.position = sprite.position
-		collision_polygon.rotation = sprite.rotation
-		collision_polygon.scale = sprite.scale
-		#print("Collision updated to match sprite")
-
 # Debug function to visualize collision during development
 func _draw():
 	if show_collision_debug and collision_polygon:
 		if collision_polygon.polygon.size() > 0:
-			# Get the sword's global transform to position the collision correctly
-			var sword_global_transform = global_transform
-			var sprite_global_transform = sprite.global_transform if sprite else Transform2D()
+			# Get the current transform including any flipping
+			var transform = collision_polygon.get_global_transform()
 			
-			# Transform the collision polygon to match the sword's GLOBAL position
+			# Transform the collision polygon to match the current global position and scale
 			var transformed_polygon = PackedVector2Array()
 			for point in collision_polygon.polygon:
-				# Apply the collision polygon's local transform first
-				var transformed_point = point * collision_polygon.scale
-				transformed_point = transformed_point.rotated(collision_polygon.rotation)
-				transformed_point += collision_polygon.position
-				
-				# Then apply the sword's global transform
-				transformed_point = sword_global_transform * transformed_point
-				
+				# Apply the global transform to each point
+				var transformed_point = transform * point
 				# Convert to local coordinates for drawing
 				transformed_point = to_local(transformed_point)
 				transformed_polygon.append(transformed_point)
@@ -181,31 +159,14 @@ func _draw():
 					center += point
 				center /= transformed_polygon.size()
 				draw_circle(center, 3.0, Color(1, 1, 0, 1))
-			
-			# Debug text showing positions
-			draw_string(SystemFont.new(), Vector2(10, 20), "Sword Pos: " + str(global_position), HORIZONTAL_ALIGNMENT_LEFT, -1, 16)
-			draw_string(SystemFont.new(), Vector2(10, 40), "Collision Pos: " + str(collision_polygon.global_position), HORIZONTAL_ALIGNMENT_LEFT, -1, 16)
-			draw_string(SystemFont.new(), Vector2(10, 60), "Sprite Pos: " + str(sprite.global_position if sprite else "No sprite"), HORIZONTAL_ALIGNMENT_LEFT, -1, 16)
-
 
 # Call this when you want to toggle visibility
 func toggle_collision_debug():
 	show_collision_debug = !show_collision_debug
 	queue_redraw()
 
-# Debug process to see positions and force collision to follow sprite
+# Removed the manual collision positioning in _process since AnimationPlayer handles it
 func _process(delta):
-	if is_attacking:
-		# CONTINUOUSLY force collision to follow sprite during attack
-		update_collision_position()
-		
-		# Debug info
-		if collision_polygon and sprite:
-			print("Sprite position: ", sprite.position)
-			print("Collision position: ", collision_polygon.position)
-			print("Sprite rotation: ", sprite.rotation)
-			print("Collision rotation: ", collision_polygon.rotation)
-	
-	# Always redraw debug when showing collision
-	if show_collision_debug:
+	# Always redraw debug when showing collision or during attacks
+	if show_collision_debug or is_attacking:
 		queue_redraw()

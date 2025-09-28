@@ -122,6 +122,11 @@ func update_weapon_position():
 			current_weapon.position = Vector2(-50, 0)
 			# Flip sword to face left
 			current_weapon.scale.x = -1
+		
+		# Force collision to update immediately when flipping
+		if current_weapon.has_method("update_collision_position"):
+			current_weapon.update_collision_position()
+
 
 func equip_weapon_from_path():
 	if current_weapon_path != "":
