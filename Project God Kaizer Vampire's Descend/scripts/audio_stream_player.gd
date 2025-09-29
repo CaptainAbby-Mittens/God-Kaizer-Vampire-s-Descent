@@ -6,5 +6,5 @@ func _ready():
 	var music_stream = load("res://8 bit fantasy music.wav")
 	stream = music_stream
 
-	volume_db = -45  # Slightly quieter than normal
+	volume_db = -10  # Slightly quieter than normal
 	play()

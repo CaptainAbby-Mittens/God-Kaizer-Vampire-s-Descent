@@ -4122,4 +4122,4 @@ tile_set = SubResource("TileSet_ty528")
 position = Vector2(320, 180)
 
 [node name="player" parent="." instance=ExtResource("2_18htk")]
-position = Vector2(12, 214)
+position = Vector2(17, 198)

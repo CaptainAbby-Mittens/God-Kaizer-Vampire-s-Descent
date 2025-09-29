@@ -490,15 +490,27 @@ func update_playtime_display(playtime_label: Label):
 
 
 func start_game_over_countdown(game_over_layer):
-	# Wait for 2 seconds
-	await get_tree().create_timer(5.0).timeout
-	print("5 seconds elapsed, returning to menu")
+	# Store the scene tree reference BEFORE waiting
+	var scene_tree = get_tree()
 	
-	# Clean up and return to menu
-	game_over_layer.queue_free()
-	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/Area1/MainMenu.tscn")
-	reset_player()
+	# Wait for 5 seconds
+	await get_tree().create_timer(5.0).timeout
+	
+	print("Game over countdown finished")
+	
+	# Clean up the game over layer
+	if is_instance_valid(game_over_layer):
+		game_over_layer.queue_free()
+	
+	# Use the stored scene tree reference
+	if scene_tree and is_instance_valid(scene_tree):
+		scene_tree.paused = false
+		# Use call_deferred to be safe
+		scene_tree.call_deferred("change_scene_to_file", "res://scenes/Area1/MainMenu.tscn")
+	else:
+		# Fallback - the scene tree is gone, we need to handle this differently
+		print("ERROR: Scene tree is no longer available")
+		# You might need to implement a different restart mechanism
 
 
 func reset_player():

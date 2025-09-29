@@ -17,7 +17,9 @@ var can_damage: bool = false  # Only damage during active attack frames
 @onready var collision_polygon = $CollisionPolygon2D
 @onready var animation_player = $AnimationPlayer
 
-func equip_to_player(player):
+
+
+func equip_to_player(_player):
 	print("Weapon: Successfully equipped to player")
 	is_equipped = true
 	
@@ -31,6 +33,11 @@ func equip_to_player(player):
 	# Ensure collision is enabled for attack detection
 	if collision_polygon:
 		collision_polygon.disabled = false
+func update_weapon_position(new_position: Vector2):
+	if sprite:
+		sprite.position = new_position
+	if collision_polygon:
+		collision_polygon.position = new_position
 
 func _ready():
 	body_entered.connect(_on_body_entered)
@@ -41,6 +48,7 @@ func _ready():
 	# Add to weapon group
 	add_to_group("weapon")
 
+
 func _on_area_entered(area):
 	if can_damage and area.get_parent().is_in_group("enemy"):
 		var enemy = area.get_parent()
@@ -48,7 +56,6 @@ func _on_area_entered(area):
 		if enemy.has_method("take_damage"):
 			enemy.take_damage(damage)
 			# Optional: add knockback or other effects
-
 func _on_body_entered(body):
 	if can_damage and body.is_in_group("enemy"):
 		print("Sword hit enemy: ", body.name)
@@ -91,7 +98,6 @@ func attack():
 		animation_player.play("swing")
 	else:
 		is_attacking = false
-
 func check_existing_overlaps():
 	if can_damage:
 		# Check areas (like enemy attack areas)
@@ -108,15 +114,17 @@ func check_existing_overlaps():
 		for body in bodies:
 			if body.is_in_group("enemy"):
 				print("Sword hit overlapping enemy: ", body.name)
-				if body.has_method("take_damage"):
+				if body.has_method("take_damage"): #WGADIKGUASDVBSJHD B
 					body.take_damage(damage)
 
 func start_attack():
 	# Called when attack animation starts
 	can_damage = true
 	print("Weapon can now damage enemies")
-	check_existing_overlaps()
 	
+	# Force update collision position
+
+	check_existing_overlaps()
 	# Debug: Check what enemies are in range
 	var overlapping = get_overlapping_bodies()
 	print("Overlapping bodies at attack start: ", overlapping)
@@ -130,43 +138,33 @@ func end_attack():
 	# Hide weapon after attack
 	visible = false
 
+
+# MANUALLY force collision to follow sprite
+
+		
+
+
 # Debug function to visualize collision during development
-func _draw():
-	if show_collision_debug and collision_polygon:
-		if collision_polygon.polygon.size() > 0:
-			# Get the current transform including any flipping
-			var transform = collision_polygon.get_global_transform()
-			
-			# Transform the collision polygon to match the current global position and scale
-			var transformed_polygon = PackedVector2Array()
-			for point in collision_polygon.polygon:
-				# Apply the global transform to each point
-				var transformed_point = transform * point
-				# Convert to local coordinates for drawing
-				transformed_point = to_local(transformed_point)
-				transformed_polygon.append(transformed_point)
-			
-			# Draw the transformed collision polygon
-			draw_colored_polygon(transformed_polygon, debug_color)
-			
-			# Draw outline
-			draw_polyline(transformed_polygon, Color(1, 0, 0, 1), 2.0)
-			
-			# Draw center point
-			if transformed_polygon.size() > 0:
-				var center = Vector2.ZERO
-				for point in transformed_polygon:
-					center += point
-				center /= transformed_polygon.size()
-				draw_circle(center, 3.0, Color(1, 1, 0, 1))
+
+
 
 # Call this when you want to toggle visibility
 func toggle_collision_debug():
 	show_collision_debug = !show_collision_debug
 	queue_redraw()
 
-# Removed the manual collision positioning in _process since AnimationPlayer handles it
-func _process(delta):
-	# Always redraw debug when showing collision or during attacks
+# Debug process to see positions and force collision to follow sprite
+func _process(_delta):
+	if is_attacking:
+
+		
+		# Debug info
+		if collision_polygon and sprite:
+			print("Sprite position: ", sprite.position)
+			print("Collision position: ", collision_polygon.position)
+			print("Sprite rotation: ", sprite.rotation)
+			print("Collision rotation: ", collision_polygon.rotation)
+	
+	# Always redraw debug when showing collision
 	if show_collision_debug or is_attacking:
 		queue_redraw()

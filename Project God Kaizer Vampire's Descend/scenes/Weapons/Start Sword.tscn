@@ -17,10 +17,22 @@ tracks/0/keys = {
 "update": 0,
 "values": [-0.3926991]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.9809487]
+}
 
 [sub_resource type="Animation" id="Animation_kxwi5"]
 resource_name = "Swing"
-length = 0.5
+length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -28,10 +40,22 @@ tracks/0/path = NodePath("Sprite2D:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 0.4),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [-0.3926991, 1.5707964]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CollisionPolygon2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.9809487]
 }
 
 [sub_resource type="Animation" id="Animation_87up2"]
@@ -64,12 +88,11 @@ offset = Vector2(15.203464, -15.08355)
 region_enabled = true
 region_rect = Rect2(766, 97, 34, 32)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
-rotation = -0.39269912
-polygon = PackedVector2Array(9, -16, 16.263456, -16.263454, 16.263456, -9.192387, -0.70710754, 7.7781744, -11.313709, 15.556348, -11.313709, 15.556348, -15, 15, -15.556351, 11.313706, -11, 5, -7.7781744, 0.70710635)
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_87up2")
 }
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+rotation = 1.9809487
+polygon = PackedVector2Array(4.9643335, -2.0869572, 0, 0, -1.6235881, -3.9196887, 1.0551963, -10.386846, -0.027196407, -12.999971, 1.279367, -13.541167, 0.7381706, -14.847731, 10.305258, -37.944717, 16.838072, -40.6507, 19.544052, -34.11788, 9.976966, -11.020895, 8.670403, -10.479699, 9.211599, -9.173136, 6.876767, -7.1211004)

@@ -6,6 +6,7 @@ var current_room_coords = Vector2i(0, 0)
 signal player_died
 var player_weapon_path: String = ""
 var player_has_weapon: bool = false
+var current_game_over_layer: CanvasLayer = null
 # A dictionary to act as our "world map". Key: Vector2i Coordinates, Value: Room scene file path
 var world_map = {
 	Vector2i(0, 0): "res://scenes/Area1/room_start.tscn",  # Start room
@@ -194,18 +195,30 @@ func _process(delta):
 		var current_time = Time.get_ticks_msec() / 1000.0
 		if int(current_time) != int(current_time - delta):
 			playtime_updated.emit(get_current_playtime())
-
+func cleanup_vampires():
+	var vampires = get_tree().get_nodes_in_group("enemy")
+	print("Cleaning up ", vampires.size(), " vampires")
+	for vampire in vampires:
+		if is_instance_valid(vampire):
+			vampire.queue_free()
 func _ready():
 	print("GameManager loaded! World map has ", world_map.size(), " rooms.")
 	print("Available rooms: ", world_map)
-
+func cleanup_current_room():
+	if current_game_over_layer and is_instance_valid(current_game_over_layer):
+		current_game_over_layer.queue_free()
+		current_game_over_layer = null
+	# Force cleanup of all temporary objects
+	get_tree().call_group("enemy", "queue_free")
+	get_tree().call_group("weapon", "queue_free")
+	get_tree().call_group("projectile", "queue_free")
 # This function will be called to change rooms
 func change_room(direction: Vector2i):
 	save_player_stats()
-
+	cleanup_current_room()
 	var new_room_coords = current_room_coords + direction
 	print("Changing to room at coordinates: ", new_room_coords)
-	
+	cleanup_vampires()
 	if world_map.has(new_room_coords):
 		current_room_coords = new_room_coords
 		get_tree().change_scene_to_file(world_map[new_room_coords])

@@ -31,3 +31,15 @@ theme_override_fonts/font = ExtResource("2_uholg")
 theme_override_font_sizes/font_size = 44
 text = "Start"
 icon_alignment = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 153.0
+offset_top = 269.0
+offset_right = 471.0
+offset_bottom = 344.0
+theme_override_fonts/font = ExtResource("2_uholg")
+theme_override_font_sizes/font_size = 20
+text = "Arrow keys to  move left and right
+Space to jump
+X to swing sword"
+horizontal_alignment = 1
