@@ -1306,7 +1306,7 @@ position = Vector2(280, -127)
 position = Vector2(313, 78)
 
 [node name="VampireSword1" parent="." instance=ExtResource("8_qxprt")]
-position = Vector2(306, 183)
+position = Vector2(332, 215)
 
 [node name="MaxHpPotion2" parent="." instance=ExtResource("6_qxprt")]
 position = Vector2(41, 7)

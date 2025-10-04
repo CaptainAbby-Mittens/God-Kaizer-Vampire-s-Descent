@@ -1,22 +1,78 @@
-[gd_scene load_steps=6 format=3 uid="uid://b1y3m7cni4m6k"]
+[gd_scene load_steps=14 format=3 uid="uid://b1y3m7cni4m6k"]
 
 [ext_resource type="Script" uid="uid://cefilbdo1ws43" path="res://scripts/Vampire Scripts/VampireScript.gd" id="1_rbr07"]
+[ext_resource type="Texture2D" uid="uid://hdp16tn65828" path="res://assets/Vampire/attack 1 (1).png" id="2_tq2y5"]
+[ext_resource type="Texture2D" uid="uid://cfn6l50agmnjx" path="res://assets/Vampire/attack 2 (1).png" id="3_jk7qk"]
+[ext_resource type="Texture2D" uid="uid://bobw4weym71at" path="res://assets/Vampire/attack 3 (1).png" id="4_nw3in"]
+[ext_resource type="Texture2D" uid="uid://qbyt8woe5652" path="res://assets/Vampire/attack 4 (1).png" id="5_3sg1x"]
+[ext_resource type="Texture2D" uid="uid://by76uhoyef33r" path="res://assets/Vampire/walk 1 (1).png" id="6_oiqg3"]
+[ext_resource type="Texture2D" uid="uid://xaswqgjbtbtn" path="res://assets/Vampire/walk 2 (1).png" id="7_38y4d"]
+[ext_resource type="Texture2D" uid="uid://c5rbj0voew1y7" path="res://assets/Vampire/walk 3 (1).png" id="8_i51qr"]
+[ext_resource type="Texture2D" uid="uid://bu5o8eo38j2sv" path="res://assets/Vampire/death 1.png" id="9_04msv"]
+[ext_resource type="Texture2D" uid="uid://d3jngbuxppwtt" path="res://assets/Vampire/death 2.png" id="10_efwb7"]
+[ext_resource type="Texture2D" uid="uid://lwjj22ge66jc" path="res://assets/Vampire/idle (1).png" id="11_4p218"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6bcj"]
 size = Vector2(40, 64)
 
-[sub_resource type="Animation" id="Animation_rbr07"]
-resource_name = "Swing_Vampire_Sword"
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_t6bcj"]
-_data = {
-&"Swing_Vampire_Sword": SubResource("Animation_rbr07")
-}
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbr07"]
-size = Vector2(40, 64)
+[sub_resource type="SpriteFrames" id="SpriteFrames_lcf3t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_tq2y5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_jk7qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nw3in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3sg1x")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_oiqg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_38y4d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_i51qr")
+}],
+"loop": true,
+"name": &"Chasing",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_04msv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_efwb7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_efwb7")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_4p218")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
 
 [node name="VampireSword1" type="CharacterBody2D"]
+scale = Vector2(-1, 1)
 collision_layer = 8
 collision_mask = 2
 script = ExtResource("1_rbr07")
@@ -24,26 +80,19 @@ vampire_type = "red"
 max_health = 20
 metadata/_edit_horizontal_guides_ = [64.0]
 
-[node name="Sprite2D" type="ColorRect" parent="."]
-offset_left = -20.0
-offset_top = -32.0
-offset_right = 20.0
-offset_bottom = 32.0
-pivot_offset = Vector2(20, 32)
-color = Color(1, 0, 0, 1)
-metadata/_edit_use_anchors_ = true
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t6bcj")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_t6bcj")
-}
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_lcf3t")
+animation = &"Attack"
 
-[node name="HitDetectionArea" type="Area2D" parent="."]
-collision_layer = 8
+[node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
+visible = false
+position = Vector2(0, 18)
+collision_layer = 9
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="HitDetectionArea"]
-shape = SubResource("RectangleShape2D_rbr07")
+[node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]

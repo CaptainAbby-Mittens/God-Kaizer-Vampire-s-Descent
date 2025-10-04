@@ -4178,7 +4178,7 @@ libraries = {
 autoplay = "Elevaator"
 
 [node name="VampireSword1" parent="." instance=ExtResource("4_cskop")]
-position = Vector2(155, 55)
+position = Vector2(167, 87)
 
 [node name="HealingPotion" parent="." instance=ExtResource("5_4n7qa")]
 position = Vector2(53, -18)
