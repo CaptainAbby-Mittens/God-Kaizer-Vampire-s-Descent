@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@export var collider_offset: Vector2 = Vector2(0, -20)
 @export var max_health: int = 50
 @export var damage: int = 20
 @export var move_speed: float = 80.0
@@ -28,17 +28,9 @@ func _ready():
 	collision_layer = 4
 	collision_mask = 1 | 2
 	add_to_group("enemy")
-	if contact_area and not contact_area.area_entered.is_connected(_on_contact_area_entered):
+
+	if contact_area:
 		contact_area.area_entered.connect(_on_contact_area_entered)
-	if collider:
-		var parent_area = collider.get_parent() as Area2D
-		if parent_area:
-			parent_area.monitoring = true
-			parent_area.monitorable = true
-			parent_area.collision_layer = 0
-			parent_area.collision_mask = 1  # only detect player
-			if not parent_area.area_entered.is_connected(_on_contact_area_entered):
-				parent_area.area_entered.connect(_on_contact_area_entered)
 
 	if has_node("HitDetectionArea"):
 		var hit_area = $HitDetectionArea
@@ -66,10 +58,8 @@ func _ready():
 
 	# Build collision polygons once
 	generate_frame_polys()
+	sprite.frame_changed.connect(_on_frame_changed)
 
-	
-	# Apply initial collision polygon
-	_on_frame_changed()
 
 # ---------------- COLLISION POLY GEN ---------------- #
 
@@ -103,7 +93,12 @@ func _on_frame_changed():
 	var frame = sprite.frame
 	var frame_idx = get_frame_index(anim, frame)
 	if frame_idx >= 0 and frame_idx < frame_polys.size() and frame_polys[frame_idx] != null:
-		collider.polygon = frame_polys[frame_idx]
+		var poly = frame_polys[frame_idx]
+		# Apply offset before assigning
+		var adjusted_poly = []
+		for point in poly:
+			adjusted_poly.append(point + collider_offset)
+		collider.polygon = adjusted_poly
 
 
 func get_frame_index(anim: String, frame: int) -> int:
@@ -137,6 +132,7 @@ func _start_contact_cooldown():
 	await get_tree().create_timer(contact_damage_cooldown).timeout
 	can_deal_contact_damage = true
 
+
 # ---------------- STATE MACHINE ---------------- #
 
 func _physics_process(delta):
@@ -164,7 +160,7 @@ func idle_state(_delta):
 			update_sprite_frame()
 
 func chasing_state(delta):
-	var effective_range = attack_range * 1.2
+	var effective_range = attack_range * 1.4
 
 	if sprite and sprite.scale.x > 0:  # facing right
 		effective_range *= 0.7

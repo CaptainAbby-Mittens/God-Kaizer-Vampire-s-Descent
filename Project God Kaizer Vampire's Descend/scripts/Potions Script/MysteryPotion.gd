@@ -5,8 +5,8 @@ func _ready():
 	potion_type = "mystery"
 	super._ready()
 	
-	if visual_node:
-		visual_node.modulate = Color(0.5, 0, 0.5)  # Purple
+	#if visual_node:
+		#visual_node.modulate = Color(0.5, 0, 0.5)  # Purple
 
 func apply_effect(player):
 	var effects = ["max_hp", "heal", "damage"]

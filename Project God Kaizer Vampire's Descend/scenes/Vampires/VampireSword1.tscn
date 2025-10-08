@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://b1y3m7cni4m6k"]
+[gd_scene load_steps=15 format=3 uid="uid://b1y3m7cni4m6k"]
 
 [ext_resource type="Script" uid="uid://cefilbdo1ws43" path="res://scripts/Vampire Scripts/VampireScript.gd" id="1_rbr07"]
 [ext_resource type="Texture2D" uid="uid://hdp16tn65828" path="res://assets/Vampire/attack 1 (1).png" id="2_tq2y5"]
@@ -11,9 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://bu5o8eo38j2sv" path="res://assets/Vampire/death 1.png" id="9_04msv"]
 [ext_resource type="Texture2D" uid="uid://d3jngbuxppwtt" path="res://assets/Vampire/death 2.png" id="10_efwb7"]
 [ext_resource type="Texture2D" uid="uid://lwjj22ge66jc" path="res://assets/Vampire/idle (1).png" id="11_4p218"]
+[ext_resource type="Script" uid="uid://2fr3uvswg262" path="res://scripts/Vampire Scripts/VampireHitDetector.gd" id="12_jk7qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6bcj"]
-size = Vector2(40, 64)
+size = Vector2(33, 57)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lcf3t"]
 animations = [{
@@ -72,15 +73,17 @@ animations = [{
 }]
 
 [node name="VampireSword1" type="CharacterBody2D"]
+texture_filter = 1
 scale = Vector2(-1, 1)
 collision_layer = 8
-collision_mask = 2
+collision_mask = 3
 script = ExtResource("1_rbr07")
 vampire_type = "red"
 max_health = 20
 metadata/_edit_horizontal_guides_ = [64.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 3.5)
 shape = SubResource("RectangleShape2D_t6bcj")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
@@ -88,11 +91,12 @@ texture_filter = 1
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_lcf3t")
 animation = &"Attack"
+frame_progress = 0.56250453
 
 [node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
-visible = false
 position = Vector2(0, 18)
-collision_layer = 9
-collision_mask = 2
+collision_layer = 2
+script = ExtResource("12_jk7qk")
 
 [node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
+polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)

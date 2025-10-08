@@ -38,10 +38,20 @@ var max_jump_hold_time = 0.2  # Maximum time to hold jump for full height
 
 # Safety flag
 var physics_ready = false
+var has_key: bool = false
 
+func pick_up_key():
+	has_key = true
+	print("Player picked up a key!")
 
+func use_key() -> bool:
+	if has_key:
+		has_key = false
+		print("Player used a key!")
+		return true
+	return false
 
-func _ready():
+func _ready():	
 
 	# Make sure player is in the correct group
 	add_to_group("player")
@@ -114,12 +124,12 @@ func update_weapon_position():
 	if current_weapon:
 		if facing_right:
 			# Sword on right side (facing right)
-			current_weapon.position = Vector2(50, 0)
+			current_weapon.position = Vector2(28, 13)
 			# Keep sword facing normal direction
 			current_weapon.scale.x = 1
 		else:
 			# Sword on left side (facing left)  
-			current_weapon.position = Vector2(-50, 0)
+			current_weapon.position = Vector2(5, 13)
 			# Flip sword to face left
 			current_weapon.scale.x = -1
 		

@@ -1,7 +1,7 @@
 [gd_scene load_steps=2 format=3 uid="uid://2vhbu41rlrnb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y434i"]
-size = Vector2(48, 16)
+size = Vector2(48, 4)
 
 [node name="Node2D" type="AnimatableBody2D"]
 metadata/_edit_horizontal_guides_ = [16.0]
@@ -10,8 +10,9 @@ metadata/_edit_vertical_guides_ = [48.0]
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 48.0
 offset_bottom = 16.0
+color = Color(0.09411765, 0.078431375, 0.14509805, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(24, 8)
+position = Vector2(24, 2)
 shape = SubResource("RectangleShape2D_y434i")
 one_way_collision = true
