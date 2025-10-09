@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="4_hyb34"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="4_l3gcc"]
 [ext_resource type="PackedScene" uid="uid://f1mxf3q2bblt" path="res://scenes/Pickups/MysteryPotion.tscn" id="5_hyb34"]
-[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/VampireSword1.tscn" id="7_fduab"]
+[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/RedVampire.tscn" id="7_fduab"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lx4h"]
 texture = ExtResource("4_l3gcc")

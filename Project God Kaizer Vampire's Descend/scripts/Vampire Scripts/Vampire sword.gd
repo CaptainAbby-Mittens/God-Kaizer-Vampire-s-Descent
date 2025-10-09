@@ -25,6 +25,7 @@ var frame_polys: Array = []
 
 func _ready():
 	current_health = max_health
+	print("INIT HEALTH:", max_health, current_health, name)
 	collision_layer = 4
 	collision_mask = 1 | 2
 	add_to_group("enemy")
@@ -98,7 +99,7 @@ func _on_frame_changed():
 		var adjusted_poly = []
 		for point in poly:
 			adjusted_poly.append(point + collider_offset)
-		collider.polygon = adjusted_poly
+		collider.call_deferred("set_polygon", adjusted_poly)
 
 
 func get_frame_index(anim: String, frame: int) -> int:

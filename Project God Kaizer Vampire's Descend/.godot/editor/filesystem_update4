@@ -1,7 +1,0 @@
-res://scripts/character_body_2d.gd
-res://scenes/Pickups/Area1Key.tscn
-res://scenes/Platforms/Unlock Platform Area 1.tscn
-res://scripts/Key and platform scripts/Area1Kay.gd
-res://scripts/Key and platform scripts/Area1Platform.gd
-res://scenes/Area1/room_8.tscn
-res://scenes/Players and NPC/Player.tscn

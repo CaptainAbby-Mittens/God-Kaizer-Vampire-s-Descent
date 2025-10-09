@@ -128,7 +128,7 @@ var world_map = {
 var playtime: float = 0.0
 var is_timer_running: bool = false
 var start_time: float = 0.0
-
+var has_key: bool = false
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
 

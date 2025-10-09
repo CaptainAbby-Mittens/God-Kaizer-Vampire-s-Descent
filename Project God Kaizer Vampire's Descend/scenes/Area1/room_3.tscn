@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_sohbg"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_7vvj5"]
-[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/VampireSword1.tscn" id="3_h40a2"]
+[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/RedVampire.tscn" id="3_h40a2"]
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="4_d3r68"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="4_xqqai"]
 

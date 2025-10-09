@@ -40,6 +40,7 @@ func update_weapon_position(new_position: Vector2):
 		collision_polygon.position = new_position
 
 func _ready():
+	
 	body_entered.connect(_on_body_entered)
 	area_entered.connect(_on_area_entered)
 	collision_layer = 2  # Weapon layer
@@ -114,7 +115,7 @@ func check_existing_overlaps():
 		for body in bodies:
 			if body.is_in_group("enemy"):
 				print("Sword hit overlapping enemy: ", body.name)
-				if body.has_method("take_damage"): #WGADIKGUASDVBSJHD B
+				if body.has_method("take_damage"):
 					body.take_damage(damage)
 
 func start_attack():
@@ -138,20 +139,6 @@ func end_attack():
 	# Hide weapon after attack
 	visible = false
 
-
-# MANUALLY force collision to follow sprite
-
-		
-
-
-# Debug function to visualize collision during development
-
-
-
-# Call this when you want to toggle visibility
-func toggle_collision_debug():
-	show_collision_debug = !show_collision_debug
-	queue_redraw()
 
 # Debug process to see positions and force collision to follow sprite
 func _process(_delta):
