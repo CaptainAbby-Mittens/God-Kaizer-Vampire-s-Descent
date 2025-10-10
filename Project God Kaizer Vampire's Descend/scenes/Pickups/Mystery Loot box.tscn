@@ -1,12 +1,17 @@
-[gd_scene load_steps=4 format=3 uid="uid://bojcxupw3ecn2"]
+[gd_scene load_steps=5 format=3 uid="uid://bojcxupw3ecn2"]
 
-[ext_resource type="Script" uid="uid://q5r2rwmlwss2" path="res://scripts/Vampire Scripts/Vampire_Box.gd" id="1_6bgmf"]
+[ext_resource type="Script" uid="uid://q5r2rwmlwss2" path="res://scripts/Potions Script/Box.gd" id="1_6bgmf"]
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="2_k33o2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa8aa"]
 size = Vector2(16, 16)
 
-[node name="MysteryLootBox" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i8iwk"]
+size = Vector2(16, 16)
+
+[node name="MysteryLootBox" type="StaticBody2D"]
+collision_layer = 3
+collision_mask = 3
 script = ExtResource("1_6bgmf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,3 +22,8 @@ texture_filter = 1
 texture = ExtResource("2_k33o2")
 region_enabled = true
 region_rect = Rect2(160, 160, 16, 16)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_i8iwk")

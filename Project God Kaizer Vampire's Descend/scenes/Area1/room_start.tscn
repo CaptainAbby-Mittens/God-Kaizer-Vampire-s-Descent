@@ -1,11 +1,10 @@
-[gd_scene load_steps=11 format=4 uid="uid://ch3gg0gjbtlse"]
+[gd_scene load_steps=10 format=4 uid="uid://ch3gg0gjbtlse"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_fsf22"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_2jrs7"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_qeig3"]
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="3_h4kka"]
 [ext_resource type="PackedScene" uid="uid://dxt1xf83rxcng" path="res://scenes/Weapons/Start Sword.tscn" id="4_qeig3"]
-[ext_resource type="PackedScene" uid="uid://b1y3m7cni4m6k" path="res://scenes/Vampires/RedVampire.tscn" id="5_qe7b8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qe7b8"]
 texture = ExtResource("2_qeig3")
@@ -14311,6 +14310,3 @@ use_kinematic_bodies = true
 
 [node name="StartSword" parent="." instance=ExtResource("4_qeig3")]
 position = Vector2(105, 227.99998)
-
-[node name="VampireSword1" parent="." instance=ExtResource("5_qe7b8")]
-position = Vector2(416, 217)

@@ -14307,8 +14307,9 @@ tile_map_data = PackedByteArray("AAAAACwAAQAMAA8AAAAAACsAAQAMAA4AAAAAACoAAQAMAA0
 tile_set = SubResource("TileSet_2pdot")
 use_kinematic_bodies = true
 
-[node name="MysteryPotion" parent="." instance=ExtResource("5_6s520")]
-position = Vector2(362, 217)
-
 [node name="MysteryLootBox" parent="." instance=ExtResource("5_4p4wh")]
-position = Vector2(403, 240)
+y_sort_enabled = true
+position = Vector2(370, 238)
+
+[node name="MysteryPotion" parent="MysteryLootBox" instance=ExtResource("5_6s520")]
+position = Vector2(-40, -24)

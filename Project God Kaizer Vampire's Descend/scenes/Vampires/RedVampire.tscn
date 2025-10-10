@@ -1,17 +1,17 @@
 [gd_scene load_steps=15 format=3 uid="uid://b1y3m7cni4m6k"]
 
-[ext_resource type="Script" uid="uid://nk620w6n88cy" path="res://scripts/Vampire Scripts/Vampire sword.gd" id="1_bixt0"]
-[ext_resource type="Texture2D" uid="uid://hdp16tn65828" path="res://assets/Vampire/attack 1 (1).png" id="2_tq2y5"]
-[ext_resource type="Texture2D" uid="uid://cfn6l50agmnjx" path="res://assets/Vampire/attack 2 (1).png" id="3_jk7qk"]
-[ext_resource type="Texture2D" uid="uid://bobw4weym71at" path="res://assets/Vampire/attack 3 (1).png" id="4_nw3in"]
-[ext_resource type="Texture2D" uid="uid://qbyt8woe5652" path="res://assets/Vampire/attack 4 (1).png" id="5_3sg1x"]
-[ext_resource type="Texture2D" uid="uid://by76uhoyef33r" path="res://assets/Vampire/walk 1 (1).png" id="6_oiqg3"]
-[ext_resource type="Texture2D" uid="uid://xaswqgjbtbtn" path="res://assets/Vampire/walk 2 (1).png" id="7_38y4d"]
-[ext_resource type="Texture2D" uid="uid://c5rbj0voew1y7" path="res://assets/Vampire/walk 3 (1).png" id="8_i51qr"]
-[ext_resource type="Texture2D" uid="uid://bu5o8eo38j2sv" path="res://assets/Vampire/death 1.png" id="9_04msv"]
-[ext_resource type="Texture2D" uid="uid://d3jngbuxppwtt" path="res://assets/Vampire/death 2.png" id="10_efwb7"]
-[ext_resource type="Texture2D" uid="uid://lwjj22ge66jc" path="res://assets/Vampire/idle (1).png" id="11_4p218"]
-[ext_resource type="Script" uid="uid://2fr3uvswg262" path="res://scripts/Vampire Scripts/VampireHitDetector.gd" id="12_jk7qk"]
+[ext_resource type="Script" uid="uid://nk620w6n88cy" path="res://scripts/Vampire Scripts/red Vampire Sword.gd" id="1_bixt0"]
+[ext_resource type="Texture2D" uid="uid://hdp16tn65828" path="res://assets/VampireRed/attack 1 (1).png" id="2_tq2y5"]
+[ext_resource type="Texture2D" uid="uid://cfn6l50agmnjx" path="res://assets/VampireRed/attack 2 (1).png" id="3_jk7qk"]
+[ext_resource type="Texture2D" uid="uid://bobw4weym71at" path="res://assets/VampireRed/attack 3 (1).png" id="4_nw3in"]
+[ext_resource type="Texture2D" uid="uid://qbyt8woe5652" path="res://assets/VampireRed/attack 4 (1).png" id="5_3sg1x"]
+[ext_resource type="Texture2D" uid="uid://by76uhoyef33r" path="res://assets/VampireRed/walk 1 (1).png" id="6_oiqg3"]
+[ext_resource type="Texture2D" uid="uid://xaswqgjbtbtn" path="res://assets/VampireRed/walk 2 (1).png" id="7_38y4d"]
+[ext_resource type="Texture2D" uid="uid://c5rbj0voew1y7" path="res://assets/VampireRed/walk 3 (1).png" id="8_i51qr"]
+[ext_resource type="Texture2D" uid="uid://bu5o8eo38j2sv" path="res://assets/VampireRed/death 1.png" id="9_04msv"]
+[ext_resource type="Texture2D" uid="uid://d3jngbuxppwtt" path="res://assets/VampireRed/death 2.png" id="10_efwb7"]
+[ext_resource type="Texture2D" uid="uid://lwjj22ge66jc" path="res://assets/VampireRed/idle (1).png" id="11_4p218"]
+[ext_resource type="Script" uid="uid://2fr3uvswg262" path="res://scripts/Vampire Scripts/RedVampireHitDetector.gd" id="12_jk7qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6bcj"]
 size = Vector2(33, 57)
@@ -72,7 +72,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="VampireSword1" type="CharacterBody2D"]
+[node name="RedVampire" type="CharacterBody2D"]
 texture_filter = 1
 scale = Vector2(-1, 1)
 collision_layer = 8
