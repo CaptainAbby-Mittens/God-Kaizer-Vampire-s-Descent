@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://b47rrruflonb7"]
+[gd_scene load_steps=19 format=4 uid="uid://b47rrruflonb7"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_sncgr"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_7d510"]
@@ -8,7 +8,6 @@
 [ext_resource type="PackedScene" uid="uid://bwgodrkg5ljec" path="res://scenes/Damage/Room2BloodBlock.tscn" id="6_epuvv"]
 [ext_resource type="PackedScene" uid="uid://x5dfaa3ckla4" path="res://scenes/Pickups/DamagePotion.tscn" id="7_h36hi"]
 [ext_resource type="PackedScene" uid="uid://f1mxf3q2bblt" path="res://scenes/Pickups/MysteryPotion.tscn" id="8_6povt"]
-[ext_resource type="PackedScene" uid="uid://qn4pnbeiujsu" path="res://scenes/Pickups/Area1Key.tscn" id="9_6povt"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h36hi"]
 texture = ExtResource("2_i4ern")
@@ -14473,6 +14472,3 @@ position = Vector2(285, 293)
 
 [node name="MysteryPotion3" parent="." instance=ExtResource("8_6povt")]
 position = Vector2(285, 307)
-
-[node name="Area1Key" parent="." instance=ExtResource("9_6povt")]
-position = Vector2(50, 78)

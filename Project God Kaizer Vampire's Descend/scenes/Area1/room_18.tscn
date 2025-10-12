@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=4 uid="uid://b61qyi54q4egb"]
+[gd_scene load_steps=11 format=4 uid="uid://b61qyi54q4egb"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_fmqnp"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_bkfof"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_umouv"]
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="3_h3k5s"]
 [ext_resource type="PackedScene" uid="uid://kuwj5d7lgrk0" path="res://scenes/Vampires/BlueVampire.tscn" id="5_h3k5s"]
+[ext_resource type="PackedScene" uid="uid://cp7b5v6gm3ugq" path="res://scenes/Pickups/HealingPotion.tscn" id="6_65tum"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_65tum"]
 texture = ExtResource("2_bkfof")
@@ -14308,3 +14309,9 @@ use_kinematic_bodies = true
 
 [node name="BlueVampire" parent="Layer2" instance=ExtResource("5_h3k5s")]
 position = Vector2(315, 215)
+
+[node name="HealingPotion" parent="." instance=ExtResource("6_65tum")]
+position = Vector2(368, 111)
+
+[node name="HealingPotion2" parent="." instance=ExtResource("6_65tum")]
+position = Vector2(351, 112)

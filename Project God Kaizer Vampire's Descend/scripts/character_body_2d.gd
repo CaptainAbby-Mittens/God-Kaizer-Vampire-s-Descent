@@ -41,15 +41,10 @@ var physics_ready = false
 var has_key: bool = false
 
 func pick_up_key():
-	GameManager.has_key = true
+	GameManager.has_key1 = true
 	print("Player picked up a key!")
 
-func use_key() -> bool:
-	if has_key:
-		has_key = false
-		print("Player used a key!")
-		return true
-	return false
+
 
 func _ready():	
 

@@ -8,7 +8,7 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		print("Player touched platform.")
-		if GameManager.has_key:
+		if GameManager.has_key1 and GameManager.boss_killed_1:
 			print("Player has key, platform disappearing!")
 			queue_free()
 		else:

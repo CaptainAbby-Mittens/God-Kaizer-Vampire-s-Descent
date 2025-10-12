@@ -6,5 +6,5 @@ func _ready():
 func _on_body_entered(body):
 	if body.is_in_group("player"):
 		print("Player touched key!")
-		GameManager.has_key = true
+		GameManager.has_key1 = true
 		queue_free()

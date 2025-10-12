@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dn4wkmdb6kwok"]
+[gd_scene load_steps=14 format=3 uid="uid://dn4wkmdb6kwok"]
 
 [ext_resource type="Texture2D" uid="uid://c1uv8yj4y3ib1" path="res://assets/Vampire Black/attack 1 black.png" id="1_hvldg"]
 [ext_resource type="Script" uid="uid://dktehitt75beo" path="res://scripts/Vampire Scripts/Black Vampire Boxx Sword.gd" id="1_xqap3"]
@@ -12,9 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://b6o7p8t5fh0ye" path="res://assets/Vampire Black/death 2 black.png" id="9_unq3o"]
 [ext_resource type="Texture2D" uid="uid://55r0gqbtfnjo" path="res://assets/Vampire Black/idle black.png" id="10_yw415"]
 [ext_resource type="Script" uid="uid://bvsgd8f5e4j1n" path="res://scripts/Vampire Scripts/BlackVampireBoss Hit Detector.gd" id="12_xd73m"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_uujqs"]
-size = Vector2(34.5, 67.5)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mw5pj"]
 animations = [{
@@ -85,16 +82,17 @@ animations = [{
 scale = Vector2(-2, 2)
 script = ExtResource("1_xqap3")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2.25, -1.75)
-shape = SubResource("RectangleShape2D_uujqs")
+[node name="collider2" type="CollisionPolygon2D" parent="."]
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(9.25, -18.75, -13.25, -19.25, -6.75, -2.75, 7.75, -13.75)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_mw5pj")
 animation = &"Attack"
-frame_progress = 0.5227005
+frame_progress = 0.90438
 
 [node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
 position = Vector2(0, 18)
@@ -104,4 +102,5 @@ knockback_force = 400.0
 cooldown_time = 1.0
 
 [node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
+visible = false
 polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)

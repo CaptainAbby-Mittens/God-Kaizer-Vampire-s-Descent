@@ -1,9 +1,10 @@
 extends CharacterBody2D
+@export var collider2_offset: Vector2 = Vector2(0, -20)
 @export var collider_offset: Vector2 = Vector2(0, -20)
 @export var max_health: int = 600
 @export var damage: int = 40
 @export var move_speed: float = 35.0
-@export var attack_range: float = 120.0
+@export var attack_range: float = 90.0
 @export var detection_range: float = 600.0
 @export var contact_damage_cooldown: float = 2.0
 # Gravity properties
@@ -12,7 +13,7 @@ extends CharacterBody2D
 
 @onready var sprite: AnimatedSprite2D = $Sprite2D
 @onready var collider: CollisionPolygon2D = $Sprite2D/HitDetectionArea/Collider
-
+@onready var collider2: CollisionPolygon2D = $collider2
 var current_health: int
 var player: Node2D
 var is_player_detected: bool = false
@@ -40,10 +41,19 @@ func update_collision_polygon():
 	var frame_idx = get_frame_index(sprite.animation, sprite.frame)
 	if frame_idx >= 0 and frame_idx < frame_polys.size() and frame_polys[frame_idx] != null:
 		var poly = frame_polys[frame_idx]
+		
+		# Apply offset for first collider
 		var adjusted_poly = []
 		for point in poly:
 			adjusted_poly.append(point + collider_offset)
 		collider.polygon = adjusted_poly
+		
+		# Apply different offset for second collider
+		var adjusted_poly2 = []
+		for point in poly:
+			adjusted_poly2.append(point + collider2_offset)
+		collider2.polygon = adjusted_poly2
+
 
 func _ready():
 	current_health = max_health
@@ -262,7 +272,8 @@ func die():
 	update_sprite_frame()
 	collision_layer = 0
 	collision_mask = 0
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(3.0).timeout
+	GameManager.boss_killed_1 = true
 	queue_free()
 
 func _exit_tree():

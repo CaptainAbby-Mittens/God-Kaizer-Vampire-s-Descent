@@ -87,8 +87,6 @@ animation = &"Attack"
 position = Vector2(0, 18)
 collision_layer = 2
 script = ExtResource("12_k1vk4")
-damage_amount = 20
 
 [node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
-visible = false
 polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)
