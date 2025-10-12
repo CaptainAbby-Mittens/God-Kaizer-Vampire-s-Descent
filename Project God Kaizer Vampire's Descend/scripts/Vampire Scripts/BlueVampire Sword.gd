@@ -57,7 +57,7 @@ func _ready():
 			area.collision_layer = 0
 			area.collision_mask = 1
 			area.area_entered.connect(_on_contact_area_entered)
-
+ 
 	current_state = State.IDLE
 	update_sprite_frame()
 

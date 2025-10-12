@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://vpg15akjhk1k"]
+
+[ext_resource type="Script" uid="uid://crer6uuiknf67" path="res://scripts/Teleport/Teleporter.gd" id="1_ogtnt"]
+[ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="1_qd61x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ogtnt"]
+size = Vector2(19, 32)
+
+[node name="Room20ToRoom1" type="Area2D"]
+script = ExtResource("1_ogtnt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_qd61x")
+region_enabled = true
+region_rect = Rect2(120, 192, 32, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ogtnt")

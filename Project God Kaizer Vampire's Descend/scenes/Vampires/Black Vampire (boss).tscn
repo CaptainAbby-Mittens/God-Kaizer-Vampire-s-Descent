@@ -1,0 +1,107 @@
+[gd_scene load_steps=15 format=3 uid="uid://dn4wkmdb6kwok"]
+
+[ext_resource type="Texture2D" uid="uid://c1uv8yj4y3ib1" path="res://assets/Vampire Black/attack 1 black.png" id="1_hvldg"]
+[ext_resource type="Script" uid="uid://dktehitt75beo" path="res://scripts/Vampire Scripts/Black Vampire Boxx Sword.gd" id="1_xqap3"]
+[ext_resource type="Texture2D" uid="uid://wr24jr0ruuf0" path="res://assets/Vampire Black/attack 2 black.png" id="2_xqap3"]
+[ext_resource type="Texture2D" uid="uid://cm5wd6528vcyi" path="res://assets/Vampire Black/attack 3 black.png" id="3_xd73m"]
+[ext_resource type="Texture2D" uid="uid://drmjo4pa4l000" path="res://assets/Vampire Black/attack 4 black.png" id="4_odp6w"]
+[ext_resource type="Texture2D" uid="uid://b8hjsybptip8a" path="res://assets/Vampire Black/walk 1 black.png" id="5_osxqe"]
+[ext_resource type="Texture2D" uid="uid://bmffcilywp7n6" path="res://assets/Vampire Black/walk 2 black.png" id="6_w77s8"]
+[ext_resource type="Texture2D" uid="uid://b82mbmkg27ors" path="res://assets/Vampire Black/walk 3 black.png" id="7_qklac"]
+[ext_resource type="Texture2D" uid="uid://bxpg02pnoy82h" path="res://assets/Vampire Black/death 1 black.png" id="8_tevn6"]
+[ext_resource type="Texture2D" uid="uid://b6o7p8t5fh0ye" path="res://assets/Vampire Black/death 2 black.png" id="9_unq3o"]
+[ext_resource type="Texture2D" uid="uid://55r0gqbtfnjo" path="res://assets/Vampire Black/idle black.png" id="10_yw415"]
+[ext_resource type="Script" uid="uid://bvsgd8f5e4j1n" path="res://scripts/Vampire Scripts/BlackVampireBoss Hit Detector.gd" id="12_xd73m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uujqs"]
+size = Vector2(34.5, 67.5)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mw5pj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hvldg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_xqap3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_xd73m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_odp6w")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 0.75
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_osxqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_w77s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qklac")
+}],
+"loop": true,
+"name": &"Chasing",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_tevn6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_unq3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_unq3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_unq3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_unq3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_unq3o")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_yw415")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="BlackVampire(boss)" type="CharacterBody2D"]
+scale = Vector2(-2, 2)
+script = ExtResource("1_xqap3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.25, -1.75)
+shape = SubResource("RectangleShape2D_uujqs")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_mw5pj")
+animation = &"Attack"
+frame_progress = 0.5227005
+
+[node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
+position = Vector2(0, 18)
+collision_layer = 2
+script = ExtResource("12_xd73m")
+knockback_force = 400.0
+cooldown_time = 1.0
+
+[node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
+polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)

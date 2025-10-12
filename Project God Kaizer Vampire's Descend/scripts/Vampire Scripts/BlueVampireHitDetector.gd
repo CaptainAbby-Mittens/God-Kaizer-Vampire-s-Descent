@@ -2,7 +2,7 @@
 
 extends Area2D
 
-@export var deal_damage: int = 40
+var deal_damage: int = 40
 @export var knockback_force: float = 400.0
 @export var cooldown_time: float = 1.0  # Increased cooldown
 @export var respawn_on_restart: bool = true

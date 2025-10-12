@@ -1,9 +1,9 @@
 CharacterBody2D
 CollisionShape2D
+Sprite2D
 Area2D
 StaticBody2D
-Sprite2D
+TileMapLayer
 AnimationPlayer
 CollisionPolygon2D
 AnimatedSprite2D
-TileMapLayer

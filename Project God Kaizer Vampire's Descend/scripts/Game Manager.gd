@@ -215,10 +215,18 @@ func cleanup_current_room():
 # This function will be called to change rooms
 func change_room(direction: Vector2i):
 	save_player_stats()
+	
+	# Use call_deferred for cleanup to avoid physics callback issues
+	call_deferred("_deferred_change_room", direction)
+
+func _deferred_change_room(direction: Vector2i):
 	cleanup_current_room()
 	var new_room_coords = current_room_coords + direction
 	print("Changing to room at coordinates: ", new_room_coords)
-	cleanup_vampires()
+	
+	# Use call_deferred for vampire cleanup
+	call_deferred("cleanup_vampires")
+	
 	if world_map.has(new_room_coords):
 		current_room_coords = new_room_coords
 		get_tree().change_scene_to_file(world_map[new_room_coords])
@@ -230,13 +238,13 @@ func change_room(direction: Vector2i):
 		var player = get_tree().get_first_node_in_group("player")
 		if player:
 			var screen_width = 640
-			if direction == Vector2i.RIGHT:    # Entering from left
+			if direction == Vector2i.RIGHT:	# Entering from left
 				player.global_position.x = 50  # Place near left edge
 			elif direction == Vector2i.LEFT:   # Entering from right
 				player.global_position.x = screen_width - 50  # Place near right edge
-	await get_tree().create_timer(0.1).timeout
-	restore_player_stats()
-
+		
+		await get_tree().create_timer(0.1).timeout
+		restore_player_stats()
 
 func save_player_stats():
 	var player = get_tree().get_first_node_in_group("player")

@@ -1,99 +1,47 @@
 # DamageBlock.gd
 extends Area2D
 
-@export var damage_amount: int = 50
+@export var damage_amount: int = 20
 @export var knockback_force: float = 300.0
 @export var damage_cooldown: float = 0.5
 
-# Color properties for visual feedback
-@export var base_color: Color = Color.RED
-@export var damage_color: Color = Color(1.0, 0.3, 0.3)  # Brighter red when damaging
-@export var pulse_speed: float = 5.0
-
-var players_in_area = []
-var damage_timers = {}
-var is_damaging: bool = false
-var pulse_time: float = 0.0
-
-
+var can_damage: bool = true
 
 func _ready():
-	# Connect signals
 	body_entered.connect(_on_body_entered)
-	body_exited.connect(_on_body_exited)
-	
-	# Set up collision
-	collision_layer = 1  # World layer
-	collision_mask = 1   # Player layer
-	
-	# Initialize ColorRect appearance
-
-func _process(delta):
-	# Handle visual effects
-	pulse_time += delta
-	
-
-
+	collision_layer = 1
+	collision_mask = 1
 
 func _on_body_entered(body):
-	if body.is_in_group("player"):
-		print("Player entered damage block")
-		players_in_area.append(body)
-		is_damaging = true
-		apply_damage(body)
-		start_damage_timer(body)
+	if body.is_in_group("player") and can_damage:
+		apply_damage_and_knockback(body)
 
-func _on_body_exited(body):
-	if body.is_in_group("player"):
-		print("Player exited damage block")
-		players_in_area.erase(body)
-		
-		# Stop timer if player leaves
-		if body in damage_timers:
-			damage_timers[body].stop()
-			damage_timers.erase(body)
-		
-		# Update visual state
-		if players_in_area.is_empty():
-			is_damaging = false
-
-func start_damage_timer(player):
-	var timer = Timer.new()
-	timer.wait_time = damage_cooldown
-	timer.one_shot = false
-	timer.timeout.connect(_on_damage_tick.bind(player))
-	add_child(timer)
-	timer.start()
-	damage_timers[player] = timer
-
-func _on_damage_tick(player):
-	if player in players_in_area and is_instance_valid(player):
-		# Flash effect on damage tick
-
-		apply_damage(player)
-	else:
-		if player in damage_timers:
-			damage_timers[player].stop()
-			damage_timers.erase(player)
-		
-		if players_in_area.is_empty():
-			is_damaging = false
-
-
-func apply_damage(player):
+func apply_damage_and_knockback(player):
 	if is_instance_valid(player) and player.has_method("take_damage"):
+		# Apply damage
 		player.take_damage(damage_amount)
 		
-		# Apply knockback away from the block
+		# Calculate knockback direction (away from damage block)
 		var knockback_direction = (player.global_position - global_position).normalized()
-		player.velocity = knockback_direction * knockback_force
 		
-		print("Applied ", damage_amount, " damage to player")
+		# Apply knockback
+		apply_knockback_to_player(player, knockback_direction)
+		
+		print("Applied ", damage_amount, " damage and knockback to player")
+		
+		# Start cooldown
+		can_damage = false
+		await get_tree().create_timer(damage_cooldown).timeout
+		can_damage = true
 
-func _exit_tree():
-	# Clean up timers
-	for timer in damage_timers.values():
-		if is_instance_valid(timer):
-			timer.stop()
-			timer.queue_free()
-	damage_timers.clear()
+func apply_knockback_to_player(player, direction: Vector2):
+	# Try different knockback methods in order of preference
+	if player.has_method("apply_knockback"):
+		player.apply_knockback(direction * knockback_force)
+	elif player is CharacterBody2D:
+		player.velocity = direction * knockback_force
+	elif player.has_method("add_force"):
+		player.add_force(direction * knockback_force)
+	else:
+		# Fallback: directly modify position slightly
+		player.global_position += direction * 20  # Small position nudge
