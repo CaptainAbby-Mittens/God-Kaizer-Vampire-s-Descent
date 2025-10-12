@@ -458,6 +458,16 @@ func show_simple_game_over_screen():
 	countdown_label.add_theme_font_override("font", custom_font)
 	background.add_child(countdown_label)
 	
+	var score_label = Label.new()
+	score_label.text = "Score: " + str(GameManager.score)
+	score_label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	score_label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	score_label.add_theme_font_size_override("font_size", 30)
+	score_label.position = Vector2(0, get_viewport().get_visible_rect().size.y / 2 +20)  # Adjusted position
+	score_label.size = Vector2(get_viewport().get_visible_rect().size.x, 50)
+	score_label.add_theme_font_override("font", custom_font)
+	background.add_child(score_label)
+	
 	# Timer for countdown
 	var timer = Timer.new()
 	timer.wait_time = 5

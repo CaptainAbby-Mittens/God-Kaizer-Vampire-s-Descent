@@ -2,10 +2,13 @@
 extends CanvasLayer
 
 @onready var timer = $Timer
-@onready var countdown_label = $CountdownLabel  # Add this label to your scene
-@onready var playtime_label = $PlaytimeLabel  # Your label node
-@onready var detailed_time_label = $DetailedTimeLabel  # Optional second label
+@onready var countdown_label = $CountdownLabel
+@onready var playtime_label = $PlaytimeLabel
+@onready var detailed_time_label = $DetailedTimeLabel
+@onready var score_label = $Score  # This should reference a Label node, not a variable
+
 @export var show_milliseconds: bool = false
+
 func display_playtime_stats():
 	if not has_node("/root/GameManager"):
 		print("GameManager not found!")
@@ -24,6 +27,16 @@ func display_playtime_stats():
 		var minutes = (int(total_seconds) % 3600) / 60
 		var seconds = int(total_seconds) % 60
 		detailed_time_label.text = "Time Played: %d hours, %d minutes, %d seconds" % [hours, minutes, seconds]
+		
+	# FIXED: Score display
+	if score_label:
+		# Check if score exists in GameManager and set appropriate text
+		if game_manager.has_method("get_score"):
+			score_label.text = "Score: " + str(game_manager.get_score())
+		elif "score" in game_manager:
+			score_label.text = "Score: " + str(game_manager.score)
+		else:
+			score_label.text = "Score: 0"  # Default if no score system
 
 func format_time(seconds: float, show_ms: bool = false) -> String:
 	var minutes = int(seconds) / 60
@@ -53,13 +66,15 @@ func get_playtime_value() -> float:
 	if has_node("/root/GameManager"):
 		return get_node("/root/GameManager").get_current_playtime()
 	return 0.0
+
 func _ready():
 	# Start the countdown
 	timer.start()
 	await get_tree().process_frame
 	display_playtime()
-	# Start updating countdown text
+	display_playtime_stats()  # Call this to display score too
 	update_countdown()
+
 func display_playtime():
 	if has_node("/root/GameManager"):
 		var game_manager = get_node("/root/GameManager")
@@ -76,13 +91,13 @@ func display_playtime():
 	else:
 		print("GameManager not found!")
 
-
 # Optional: Fancy display with hours
 func format_time_detailed(seconds: float) -> String:
 	var hours = int(seconds) / 3600
 	var minutes = (int(seconds) % 3600) / 60
 	var seconds_remaining = int(seconds) % 60
 	return "%02d:%02d:%02d" % [hours, minutes, seconds_remaining]
+
 func _process(delta):
 	# Update countdown text every frame
 	update_countdown()

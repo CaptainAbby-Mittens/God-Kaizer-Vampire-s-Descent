@@ -25,3 +25,7 @@ theme_override_font_sizes/font_size = 30
 text = "Returning to Main Menu in 10 Seconds"
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="score" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

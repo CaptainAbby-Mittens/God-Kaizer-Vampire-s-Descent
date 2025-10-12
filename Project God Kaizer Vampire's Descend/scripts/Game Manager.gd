@@ -130,9 +130,15 @@ var is_timer_running: bool = false
 var start_time: float = 0.0
 var has_key1: bool = false
 var boss_killed_1: bool = false
+var score: int = 0
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
 
+func add_score(addScore):
+	score += addScore
+func reset_score():
+	score = 0
+	
 func respawn_all_potions():
 	print("Respawning all potions...")
 	get_tree().call_group("potions", "respawn_potion")
