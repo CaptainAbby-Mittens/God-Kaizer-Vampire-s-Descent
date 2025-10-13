@@ -22,5 +22,5 @@ func _deferred_teleport(body):
 		var game_manager = get_node("/root/GameManager")
 		if game_manager:
 			# Calculate direction based on teleporter position vs current room
-			var direction = Vector2i(7,0)  # Default direction
+			var direction = Vector2i(1,0)  # Default direction
 			game_manager.change_room(direction)

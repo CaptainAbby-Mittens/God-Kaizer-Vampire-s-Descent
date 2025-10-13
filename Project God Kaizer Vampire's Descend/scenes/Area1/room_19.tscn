@@ -14303,19 +14303,8 @@ collision_layer = 32
 position = Vector2(320, 180)
 
 [node name="player" parent="." instance=ExtResource("2_sb363")]
-position = Vector2(31, 279)
+position = Vector2(24, 269)
 collision_mask = 35
-max_walk_speed = null
-walk_acceleration = null
-ground_friction = null
-max_air_speed = null
-air_acceleration = null
-air_friction = null
-jump_velocity = null
-short_jump_velocity = null
-gravity = null
-max_fall_speed = null
-max_health = null
 
 [node name="Layer2" type="TileMapLayer" parent="."]
 use_parent_material = true

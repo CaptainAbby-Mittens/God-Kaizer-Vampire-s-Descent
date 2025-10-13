@@ -1,22 +1,4 @@
-res://scenes/Vampires/Black Vampire (boss).tscn
-res://scenes/Area1/room_start.tscn
-res://scripts/Vampire Scripts/Black Vampire Boxx Sword.gd
-res://scripts/Vampire Scripts/BlackVampireBoss Hit Detector.gd
-res://scripts/Vampire Scripts/BlueVampireHitDetector.gd
-res://scenes/Area1/room_19.tscn
+res://scenes/Area2/Room_1.tscn
 res://scripts/Game Manager.gd
-res://scripts/Key and platform scripts/Area1Platform.gd
-res://scripts/Key and platform scripts/Area1Kay.gd
-res://scripts/character_body_2d.gd
-res://scenes/Area1/room_7.tscn
-res://scenes/Area1/room_12.tscn
-res://scenes/Area1/room_18.tscn
-res://scenes/Vampires/BlueVampire.tscn
-res://scenes/Area1/MainMenu.tscn
-res://scripts/main_menu.gd
-res://scripts/Vampire Scripts/BlueVampire Sword.gd
-res://scripts/Vampire Scripts/red Vampire Sword.gd
-res://scenes/EndScreen.tscn
-res://scenes/score.gd
-res://scripts/end_screen.gd
-res://scenes/Players and NPC/Player.tscn
+res://scenes/Area1/room_19.tscn
+res://scenes/Area1/room_16.tscn
