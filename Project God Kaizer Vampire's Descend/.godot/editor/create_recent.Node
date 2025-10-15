@@ -1,10 +1,12 @@
+AnimationPlayer
+CollisionShape2D
+Sprite2D
+AnimatableBody2D
+CharacterBody2D
+Camera2D
 TileMapLayer
 Label
 CollisionPolygon2D
-CharacterBody2D
-CollisionShape2D
-Sprite2D
 Area2D
 StaticBody2D
-AnimationPlayer
 AnimatedSprite2D

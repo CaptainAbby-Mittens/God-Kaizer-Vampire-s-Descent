@@ -1,7 +1,7 @@
 # DamageBlock.gd
 extends Area2D
 
-@export var damage_amount: int = 20
+@export var damage_amount: int = 12
 @export var knockback_force: float = 300.0
 @export var damage_cooldown: float = 0.5
 

@@ -1,7 +1,7 @@
 extends Area2D
 
-@export var target_scene_path: String = ""
-@export var target_position: Vector2 = Vector2.ZERO
+@export var target_room_coords: Vector2i = Vector2i(1, 0)  # Use coordinates instead of scene path
+@export var spawn_direction: Vector2i = Vector2i.RIGHT  # Which direction player spawns from
 @export var teleporter_id: String = ""
 
 func _ready():
@@ -9,18 +9,13 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.is_in_group("player"):
-		print("Teleporting player to: ", target_scene_path)
+		print("Teleporting player to room: ", target_room_coords)
 		# Use call_deferred to avoid physics callback issues
 		call_deferred("_deferred_teleport", body)
 
 func _deferred_teleport(body):
-	if target_scene_path.is_empty():
-		# Teleport within same scene
-		body.global_position = target_position
+	var game_manager = get_node("/root/GameManager")
+	if game_manager:
+		game_manager.teleport_to_room(target_room_coords, spawn_direction)
 	else:
-		# Change to different scene - use GameManager for coordinate-based teleportation
-		var game_manager = get_node("/root/GameManager")
-		if game_manager:
-			# Calculate direction based on teleporter position vs current room
-			var direction = Vector2i(1,0)  # Default direction
-			game_manager.change_room(direction)
+		print("ERROR: GameManager not found!")

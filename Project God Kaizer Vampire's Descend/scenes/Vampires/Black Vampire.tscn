@@ -1,0 +1,110 @@
+[gd_scene load_steps=14 format=3 uid="uid://dkjt6teivcft0"]
+
+[ext_resource type="Script" uid="uid://5m84ulwi66dd" path="res://scripts/Vampire Scripts/Black Vampire Sword.gd" id="1_5fv47"]
+[ext_resource type="Texture2D" uid="uid://c1uv8yj4y3ib1" path="res://assets/Vampire Black/attack 1 black.png" id="2_eljh5"]
+[ext_resource type="Texture2D" uid="uid://wr24jr0ruuf0" path="res://assets/Vampire Black/attack 2 black.png" id="3_oesiw"]
+[ext_resource type="Texture2D" uid="uid://cm5wd6528vcyi" path="res://assets/Vampire Black/attack 3 black.png" id="4_64ney"]
+[ext_resource type="Texture2D" uid="uid://drmjo4pa4l000" path="res://assets/Vampire Black/attack 4 black.png" id="5_2amah"]
+[ext_resource type="Texture2D" uid="uid://b8hjsybptip8a" path="res://assets/Vampire Black/walk 1 black.png" id="6_a60o3"]
+[ext_resource type="Texture2D" uid="uid://bmffcilywp7n6" path="res://assets/Vampire Black/walk 2 black.png" id="7_xulut"]
+[ext_resource type="Texture2D" uid="uid://b82mbmkg27ors" path="res://assets/Vampire Black/walk 3 black.png" id="8_e86lu"]
+[ext_resource type="Texture2D" uid="uid://bxpg02pnoy82h" path="res://assets/Vampire Black/death 1 black.png" id="9_ql4kf"]
+[ext_resource type="Texture2D" uid="uid://b6o7p8t5fh0ye" path="res://assets/Vampire Black/death 2 black.png" id="10_a2dkl"]
+[ext_resource type="Texture2D" uid="uid://55r0gqbtfnjo" path="res://assets/Vampire Black/idle black.png" id="11_igfwc"]
+[ext_resource type="Script" uid="uid://c3kd6eafvk3nt" path="res://scripts/Vampire Scripts/Black Vampire HitDetector.gd" id="12_eljh5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mw74f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_eljh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oesiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_64ney")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_2amah")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 0.75
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_a60o3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_xulut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e86lu")
+}],
+"loop": true,
+"name": &"Chasing",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_ql4kf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a2dkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a2dkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a2dkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a2dkl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_a2dkl")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_igfwc")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="BlackVampire" type="CharacterBody2D"]
+script = ExtResource("1_5fv47")
+max_health = 600
+move_speed = 35.0
+attack_range = 90.0
+detection_range = 600.0
+contact_damage_cooldown = 2.0
+
+[node name="collider2" type="CollisionPolygon2D" parent="."]
+rotation = 3.1415927
+scale = Vector2(1, -1)
+polygon = PackedVector2Array(9.25, -21, -28.999998, -22.000002, -28.000002, 31.999998, 12.999997, 32)
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(8, -18)
+scale = Vector2(-1, 1)
+sprite_frames = SubResource("SpriteFrames_mw74f")
+animation = &"Attack"
+frame_progress = 0.21709284
+
+[node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
+position = Vector2(0, 18)
+collision_layer = 2
+script = ExtResource("12_eljh5")
+knockback_force = 400.0
+cooldown_time = 1.0
+
+[node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
+polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)

@@ -8,6 +8,7 @@ var player_weapon_path: String = ""
 var player_has_weapon: bool = false
 var current_game_over_layer: CanvasLayer = null
 # A dictionary to act as our "world map". Key: Vector2i Coordinates, Value: Room scene file path
+
 var world_map = {
 	Vector2i(0, 0): "res://scenes/Area1/room_start.tscn",  # Start room
 	Vector2i(1, 0): "res://scenes/Area1/room_1.tscn",
@@ -209,6 +210,31 @@ func cleanup_vampires():
 		if is_instance_valid(vampire):
 			vampire.queue_free()
 func _ready():
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_1.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_2.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_3.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_4.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_5.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_6.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_7.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_8.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_9.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_10.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_11.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_12.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_13.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_14.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_15.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_16.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_17.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_18.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_19.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_20.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_1.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_2.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_3.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_4.tscn")
+	
 	print("GameManager loaded! World map has ", world_map.size(), " rooms.")
 	print("Available rooms: ", world_map)
 func cleanup_current_room():
@@ -221,12 +247,22 @@ func cleanup_current_room():
 	get_tree().call_group("projectile", "queue_free")
 # This function will be called to change rooms
 func change_room(direction: Vector2i):
+
 	save_player_stats()
 	
 	# Use call_deferred for cleanup to avoid physics callback issues
 	call_deferred("_deferred_change_room", direction)
 
 func _deferred_change_room(direction: Vector2i):
+	ResourceLoader.load_threaded_request("res://scenes/Area1/room_2.tscn")
+	var next_scene_vector = current_room_coords + direction
+	if world_map.has(next_scene_vector):
+		var scene_path = world_map[next_scene_vector]
+		var scene_resource = load(scene_path)  # This gets the String path
+		print("Loading scene: ", scene_path)
+		get_tree().change_scene_to_packed(scene_resource)
+
+	
 	cleanup_current_room()
 	var new_room_coords = current_room_coords + direction
 	print("Changing to room at coordinates: ", new_room_coords)
@@ -252,7 +288,40 @@ func _deferred_change_room(direction: Vector2i):
 		
 		await get_tree().create_timer(0.1).timeout
 		restore_player_stats()
+func teleport_to_room(target_coords: Vector2i, spawn_direction: Vector2i = Vector2i.RIGHT):
+	save_player_stats()
+	call_deferred("_deferred_teleport_to_room", target_coords, spawn_direction)
 
+func _deferred_teleport_to_room(target_coords: Vector2i, spawn_direction: Vector2i):
+	cleanup_current_room()
+	print("Teleporting to room at coordinates: ", target_coords)
+	
+	call_deferred("cleanup_vampires")
+	
+	if world_map.has(target_coords):
+		current_room_coords = target_coords
+		get_tree().change_scene_to_file(world_map[target_coords])
+		
+		# WAIT for the new scene to load
+		await get_tree().process_frame
+		
+		# Reposition the player based on spawn direction
+		var player = get_tree().get_first_node_in_group("player")
+		if player:
+			var screen_width = 640
+			if spawn_direction == Vector2i.RIGHT:    # Spawn from left
+				player.global_position.x = 50
+			elif spawn_direction == Vector2i.LEFT:   # Spawn from right
+				player.global_position.x = screen_width - 50
+			elif spawn_direction == Vector2i.DOWN:   # Spawn from top
+				player.global_position.y = 50
+			elif spawn_direction == Vector2i.UP:     # Spawn from bottom
+				player.global_position.y = 360 - 50
+		
+		await get_tree().create_timer(0.1).timeout
+		restore_player_stats()
+	else:
+		print("ERROR: Room coordinates not found in world_map: ", target_coords)
 func save_player_stats():
 	var player = get_tree().get_first_node_in_group("player")
 	if player:
