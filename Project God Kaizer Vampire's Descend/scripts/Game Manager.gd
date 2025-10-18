@@ -234,6 +234,14 @@ func _ready():
 	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_2.tscn")
 	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_3.tscn")
 	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_4.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_5.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_6.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_7.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_8.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_9.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_10.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_11.tscn")
+	ResourceLoader.load_threaded_request("res://scenes/Area2/Room_12.tscn")
 	
 	print("GameManager loaded! World map has ", world_map.size(), " rooms.")
 	print("Available rooms: ", world_map)
@@ -254,7 +262,7 @@ func change_room(direction: Vector2i):
 	call_deferred("_deferred_change_room", direction)
 
 func _deferred_change_room(direction: Vector2i):
-	ResourceLoader.load_threaded_request("res://scenes/Area1/room_2.tscn")
+	
 	var next_scene_vector = current_room_coords + direction
 	if world_map.has(next_scene_vector):
 		var scene_path = world_map[next_scene_vector]

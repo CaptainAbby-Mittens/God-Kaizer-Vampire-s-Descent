@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://da2rbgupj28lc"]
+[gd_scene load_steps=3 format=3 uid="uid://da2rbgupj28lc"]
+
+[ext_resource type="PackedScene" uid="uid://dka6syydhjahc" path="res://scenes/Area2/Room_6.tscn" id="1_vrw0d"]
+[ext_resource type="PackedScene" uid="uid://kuwj5d7lgrk0" path="res://scenes/Vampires/BlueVampire.tscn" id="2_lqn1f"]
 
 [node name="Room7" type="Node2D"]
+
+[node name="Room6" parent="." instance=ExtResource("1_vrw0d")]
+
+[node name="BlueVampire" parent="Room6" instance=ExtResource("2_lqn1f")]
+position = Vector2(481, 214)

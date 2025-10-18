@@ -81,6 +81,7 @@ script = ExtResource("1_bixt0")
 metadata/_edit_horizontal_guides_ = [64.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2(1.5, 3.5)
 shape = SubResource("RectangleShape2D_t6bcj")
 

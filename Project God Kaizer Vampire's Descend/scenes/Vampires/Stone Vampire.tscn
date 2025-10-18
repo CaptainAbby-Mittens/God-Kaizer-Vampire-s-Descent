@@ -1,3 +1,89 @@
-[gd_scene format=3 uid="uid://bod4sftvbnnlo"]
+[gd_scene load_steps=11 format=3 uid="uid://bod4sftvbnnlo"]
 
-[node name="StoneVampire" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://hdp16tn65828" path="res://assets/VampireRed/attack 1 (1).png" id="1_4w5op"]
+[ext_resource type="Script" uid="uid://cywu3qisfowx8" path="res://scripts/Vampire Scripts/Stone attached.gd" id="1_nckh2"]
+[ext_resource type="Texture2D" uid="uid://cfn6l50agmnjx" path="res://assets/VampireRed/attack 2 (1).png" id="2_2hv13"]
+[ext_resource type="PackedScene" uid="uid://b4uu73grpe8du" path="res://scenes/Vampires/Stone.tscn" id="2_yd4ny"]
+[ext_resource type="Texture2D" uid="uid://lwjj22ge66jc" path="res://assets/VampireRed/idle (1).png" id="3_jrpp6"]
+[ext_resource type="Texture2D" uid="uid://bobw4weym71at" path="res://assets/VampireRed/attack 3 (1).png" id="3_nckh2"]
+[ext_resource type="Texture2D" uid="uid://qbyt8woe5652" path="res://assets/VampireRed/attack 4 (1).png" id="4_yd4ny"]
+[ext_resource type="Script" uid="uid://2fr3uvswg262" path="res://scripts/Vampire Scripts/RedVampireHitDetector.gd" id="7_yd4ny"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jrpp6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jrpp6")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jrpp6")
+}],
+"loop": true,
+"name": &"Chasing",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jrpp6")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_jrpp6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4w5op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2hv13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_nckh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_yd4ny")
+}],
+"loop": true,
+"name": &"throw",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhq17"]
+size = Vector2(19, 63)
+
+[node name="StoneVampire" type="CharacterBody2D"]
+collision_mask = 2
+script = ExtResource("1_nckh2")
+rock_scene = ExtResource("2_yd4ny")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(30, 18)
+sprite_frames = SubResource("SpriteFrames_jrpp6")
+animation = &"Death"
+
+[node name="HitDetectionArea" type="Area2D" parent="AnimatedSprite2D"]
+position = Vector2(0, 18)
+collision_layer = 2
+script = ExtResource("7_yd4ny")
+
+[node name="Collider" type="CollisionPolygon2D" parent="AnimatedSprite2D/HitDetectionArea"]
+polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(29.5, 35.5)
+shape = SubResource("RectangleShape2D_nhq17")
+
+[node name="Timer" type="Timer" parent="."]
