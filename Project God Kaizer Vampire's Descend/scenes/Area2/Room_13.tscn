@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://cdn24v3ysmk1g"]
+[gd_scene load_steps=6 format=4 uid="uid://cdn24v3ysmk1g"]
 
 [ext_resource type="Texture2D" uid="uid://beaeicdhd5u2f" path="res://assets/Stone.png" id="1_bnmna"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_86728"]
 [ext_resource type="PackedScene" uid="uid://bod4sftvbnnlo" path="res://scenes/Vampires/Stone Vampire.tscn" id="3_86728"]
-[ext_resource type="PackedScene" uid="uid://dxt1xf83rxcng" path="res://scenes/Weapons/Start Sword.tscn" id="4_chhc6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_86728"]
 texture = ExtResource("1_bnmna")
@@ -950,8 +949,3 @@ use_kinematic_bodies = true
 [node name="StoneVampire" parent="." instance=ExtResource("3_86728")]
 position = Vector2(346, 180)
 scale = Vector2(-1, 1)
-
-[node name="StartSword" parent="." instance=ExtResource("4_chhc6")]
-position = Vector2(55, 207)
-rotation = 3.1415927
-scale = Vector2(1, -1)
