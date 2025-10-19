@@ -14302,7 +14302,7 @@ limit_right = 640
 limit_bottom = 360
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_u7ycg")]
-position = Vector2(20, 198)
+position = Vector2(22, 198)
 
 [node name="BloodDamageBlock" parent="." instance=ExtResource("3_u7ycg")]
 position = Vector2(417, 216)

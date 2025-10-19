@@ -1,1 +1,5 @@
-res://scenes/Area2/Room_15.tscn
+res://scenes/Area1/room_20.tscn
+res://scripts/Game Manager.gd
+res://scenes/Area1/room_8.tscn
+res://scenes/Area1/room_2.tscn
+res://scenes/Area1/room_7.tscn

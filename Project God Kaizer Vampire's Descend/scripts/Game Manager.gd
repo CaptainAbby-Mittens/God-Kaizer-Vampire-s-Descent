@@ -130,6 +130,7 @@ var playtime: float = 0.0
 var is_timer_running: bool = false
 var start_time: float = 0.0
 var has_key1: bool = false
+var has_key2: bool = false
 var boss_killed_1: bool = false
 var score: int = 0
 # Signal for UI updates (optional)
@@ -303,7 +304,7 @@ func teleport_to_room(target_coords: Vector2i, spawn_direction: Vector2i = Vecto
 func _deferred_teleport_to_room(target_coords: Vector2i, spawn_direction: Vector2i):
 	cleanup_current_room()
 	print("Teleporting to room at coordinates: ", target_coords)
-	
+	current_room_coords = target_coords 
 	call_deferred("cleanup_vampires")
 	
 	if world_map.has(target_coords):

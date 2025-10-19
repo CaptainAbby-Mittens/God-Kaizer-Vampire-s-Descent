@@ -14377,7 +14377,7 @@ _data = {
 position = Vector2(320, 180)
 
 [node name="player" parent="." instance=ExtResource("2_7d510")]
-position = Vector2(33, 199)
+position = Vector2(41, 198)
 
 [node name="Layer2" type="TileMapLayer" parent="."]
 use_parent_material = true

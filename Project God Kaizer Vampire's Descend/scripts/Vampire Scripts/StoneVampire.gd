@@ -5,7 +5,7 @@ extends CharacterBody2D
 @export var damage: int = 20
 @export var move_speed: float = 60.0
 @export var attack_range: float = 400
-@export var detection_range: float = 200.0
+@export var detection_range: float = 300.0
 @export var contact_damage_cooldown: float = 1.0
 @export var throw_interval: float = 4.0
 @export var rock_scene: PackedScene

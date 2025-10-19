@@ -14307,4 +14307,4 @@ tile_set = SubResource("TileSet_out1o")
 use_kinematic_bodies = true
 
 [node name="BlueVampire" parent="." instance=ExtResource("5_ebnbs")]
-position = Vector2(591, 215)
+position = Vector2(592, 215)
