@@ -1,5 +1,5 @@
 extends CharacterBody2D
-@export var collider_offset: Vector2 = Vector2(0, -20)
+@export var collider_offset: Vector2 = Vector2(10, -12)
 @export var max_health: int = 50
 @export var damage: int = 20
 @export var move_speed: float = 60.0

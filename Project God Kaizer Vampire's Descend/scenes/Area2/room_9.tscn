@@ -950,8 +950,10 @@ position = Vector2(43, 58)
 
 [node name="RedVampire2" parent="." instance=ExtResource("3_npojc")]
 position = Vector2(597, 55)
+detection_range = 700.0
 
 [node name="RedVampire3" parent="." instance=ExtResource("3_npojc")]
 position = Vector2(323, 48)
 rotation = 3.1415927
 scale = Vector2(1, -1)
+detection_range = 700.0

@@ -1194,3 +1194,4 @@ use_kinematic_bodies = true
 
 [node name="Room20ToRoom1" parent="." instance=ExtResource("9_0imx1")]
 position = Vector2(606, 230)
+target_room_coords = Vector2i(1, 1)

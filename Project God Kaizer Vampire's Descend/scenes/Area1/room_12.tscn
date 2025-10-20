@@ -14335,3 +14335,4 @@ use_kinematic_bodies = true
 
 [node name="BlueVampire" parent="." instance=ExtResource("8_iw08b")]
 position = Vector2(372, 199)
+move_speed = 160.0

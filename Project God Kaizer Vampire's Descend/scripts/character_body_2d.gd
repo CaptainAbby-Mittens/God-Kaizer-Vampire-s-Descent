@@ -40,6 +40,7 @@ var max_jump_hold_time = 0.2  # Maximum time to hold jump for full height
 var physics_ready = false
 var has_key: bool = false
 
+
 func pick_up_key():
 	GameManager.has_key1 = true
 	print("Player picked up a key!")
@@ -97,7 +98,7 @@ func equip_weapon(weapon_node):
 	# Remove the world pickup weapon
 	weapon_node.queue_free()
 	
-
+	
 		
 func _deferred_equip_weapon():
 	if GameManager.player_weapon_path != "":

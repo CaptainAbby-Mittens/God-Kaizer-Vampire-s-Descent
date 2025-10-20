@@ -32,7 +32,7 @@ func _on_start_button_pressed():
 	# Start the game
 	start_game()
 	
-	
+
 func start_game():
 	# Your existing game start logic here
 	# Example:
