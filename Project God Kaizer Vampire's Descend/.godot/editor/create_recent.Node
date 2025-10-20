@@ -1,14 +1,14 @@
-Sprite2D
-Camera2D
-StaticBody2D
-CollisionShape2D
-Area2D
-Timer
-AnimatedSprite2D
-CharacterBody2D
 AnimationPlayer
-Label      - Matches the "text" keyword.
+CollisionShape2D
+Sprite2D
+Area2D
 AnimatableBody2D
 TileMapLayer
+CharacterBody2D
+Camera2D
+StaticBody2D
+Timer
+AnimatedSprite2D
+Label      - Matches the "text" keyword.
 Label
 CollisionPolygon2D

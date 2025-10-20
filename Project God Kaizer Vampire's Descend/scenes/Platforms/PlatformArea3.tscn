@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://dae50thj4mks5"]
+
+[ext_resource type="Texture2D" uid="uid://cj2df8iwn05jx" path="res://assets/FireSet.png" id="1_bko67"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g36dw"]
+size = Vector2(64, 4)
+
+[node name="PlatformArea3" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-12, 0)
+texture = ExtResource("1_bko67")
+region_enabled = true
+region_rect = Rect2(48, 32, 32, 16)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(20, 0)
+texture = ExtResource("1_bko67")
+region_enabled = true
+region_rect = Rect2(48, 32, 32, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -6)
+shape = SubResource("RectangleShape2D_g36dw")
+one_way_collision = true

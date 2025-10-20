@@ -1,3 +1,9 @@
-[gd_scene format=3 uid="uid://d0dn6e3bgvr00"]
+[gd_scene load_steps=2 format=3 uid="uid://d0dn6e3bgvr00"]
+
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="1_is1vf"]
 
 [node name="SecondSword" type="Node2D"]
+position = Vector2(116, 224)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_is1vf")
