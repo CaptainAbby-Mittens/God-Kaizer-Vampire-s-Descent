@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://cjw12vysodeyi"]
+[gd_scene load_steps=15 format=4 uid="uid://cjw12vysodeyi"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_7ve8g"]
 [ext_resource type="PackedScene" uid="uid://f1mxf3q2bblt" path="res://scenes/Pickups/MysteryPotion.tscn" id="1_dwyvw"]
@@ -10,7 +10,6 @@
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="7_q3ygu"]
 [ext_resource type="PackedScene" uid="uid://vpg15akjhk1k" path="res://scenes/Teleporters/Room_20 to Room_1.tscn" id="9_bpe1c"]
 [ext_resource type="PackedScene" uid="uid://qn4pnbeiujsu" path="res://scenes/Pickups/Area1Key.tscn" id="10_ra1r1"]
-[ext_resource type="PackedScene" uid="uid://dxt1xf83rxcng" path="res://scenes/Weapons/Start Sword.tscn" id="11_ra1r1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f3eas"]
 texture = ExtResource("6_ja3lc")
@@ -14326,9 +14325,6 @@ use_kinematic_bodies = true
 
 [node name="Area1Key" parent="." instance=ExtResource("10_ra1r1")]
 position = Vector2(343, 102)
-
-[node name="StartSword" parent="." instance=ExtResource("11_ra1r1")]
-position = Vector2(132, 216)
 
 [node name="Room20ToRoom1" parent="." instance=ExtResource("9_bpe1c")]
 position = Vector2(610, 232)

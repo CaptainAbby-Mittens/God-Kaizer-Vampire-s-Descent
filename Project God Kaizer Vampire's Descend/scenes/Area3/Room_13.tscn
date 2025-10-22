@@ -1108,10 +1108,10 @@ tile_set = SubResource("TileSet_knrhf")
 use_kinematic_bodies = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 108.0
-offset_top = 27.0
-offset_right = 427.0
-offset_bottom = 79.0
+offset_left = 132.0
+offset_top = 29.0
+offset_right = 451.0
+offset_bottom = 81.0
 theme_override_fonts/font = ExtResource("5_2hij3")
 theme_override_font_sizes/font_size = 20
 text = "Sorry about that invisible  lava, 
