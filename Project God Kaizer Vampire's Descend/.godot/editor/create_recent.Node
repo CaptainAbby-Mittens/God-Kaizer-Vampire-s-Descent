@@ -1,3 +1,5 @@
+TileMapLayer
+Camera2D
 AnimationPlayer
 Label
 StaticBody2D
@@ -5,9 +7,7 @@ Area2D
 CollisionShape2D
 Sprite2D
 AnimatableBody2D
-TileMapLayer
 CharacterBody2D
-Camera2D
 Timer
 AnimatedSprite2D
 Label      - Matches the "text" keyword.

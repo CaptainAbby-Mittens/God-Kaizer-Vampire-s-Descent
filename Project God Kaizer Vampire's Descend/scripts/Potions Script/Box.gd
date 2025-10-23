@@ -13,4 +13,5 @@ func _ready():
 func _on_sword_hit(area: Area2D):
 	if area.get_collision_layer_value(2):
 		print("Hit by sword!")
-		queue_free()
+		sprite.visible = false
+		collision_shape.set_deferred("disabled", true)
