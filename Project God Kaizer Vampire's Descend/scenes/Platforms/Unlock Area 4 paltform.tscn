@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://devj7d2ikfkpd"]
+
+[ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="1_c7rdt"]
+[ext_resource type="Script" uid="uid://bp1qmxn3a6mld" path="res://scripts/Key and platform scripts/Area4Platform.gd" id="1_wtfem"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtfem"]
+size = Vector2(48, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dw825"]
+size = Vector2(48, 7)
+
+[node name="UnlockArea4Paltform" type="StaticBody2D"]
+script = ExtResource("1_wtfem")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_c7rdt")
+region_enabled = true
+region_rect = Rect2(16, 144, 48, 8)
+
+[node name="KeyTrigger" type="Area2D" parent="."]
+collision_mask = 3
+
+[node name="KeyTrigger" type="CollisionShape2D" parent="KeyTrigger"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_wtfem")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_dw825")

@@ -73,7 +73,7 @@ _data = {
 &"new_animation": SubResource("Animation_irfv3")
 }
 
-[node name="StartSword" type="Area2D"]
+[node name="StartSword" type="Area2D" groups=["weapon"]]
 collision_layer = 2
 collision_mask = 9
 script = ExtResource("1_irfv3")

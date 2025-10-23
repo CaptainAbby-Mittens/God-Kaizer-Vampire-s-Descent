@@ -132,6 +132,7 @@ var start_time: float = 0.0
 var has_key1: bool = false
 var has_key2: bool = false
 var has_key3: bool = false
+var has_key4: bool = false
 var boss_killed_1: bool = false
 var score: int = 0
 # Signal for UI updates (optional)

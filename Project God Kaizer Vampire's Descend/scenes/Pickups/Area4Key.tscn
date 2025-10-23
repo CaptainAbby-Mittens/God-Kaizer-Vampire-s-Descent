@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu6owk6cdsuhy"]
+
+[ext_resource type="Texture2D" uid="uid://beaeicdhd5u2f" path="res://assets/Stone.png" id="1_226eb"]
+[ext_resource type="Script" uid="uid://d2t4yskbxna50" path="res://scripts/Key and platform scripts/Area4Key.gd" id="1_m62f7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m62f7"]
+size = Vector2(5, 10)
+
+[node name="Area4Key" type="Area2D"]
+script = ExtResource("1_m62f7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_226eb")
+region_enabled = true
+region_rect = Rect2(288, 32, 16, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_m62f7")

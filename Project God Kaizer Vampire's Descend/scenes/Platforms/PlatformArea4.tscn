@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://csiubiay1m4ur"]
+
+[ext_resource type="Texture2D" uid="uid://bsd04bbto2bbl" path="res://assets/IceSet.png" id="1_gvpii"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ijc7"]
+size = Vector2(64, 4)
+
+[node name="PlatformArea4" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4, 0)
+texture = ExtResource("1_gvpii")
+region_enabled = true
+region_rect = Rect2(0, 32, 64, 16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -6)
+shape = SubResource("RectangleShape2D_6ijc7")
+one_way_collision = true

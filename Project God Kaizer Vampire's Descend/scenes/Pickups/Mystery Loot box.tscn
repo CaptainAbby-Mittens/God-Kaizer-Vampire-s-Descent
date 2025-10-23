@@ -7,7 +7,7 @@
 size = Vector2(16, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8iwk"]
-size = Vector2(16, 16)
+size = Vector2(22, 19)
 
 [node name="MysteryLootBox" type="StaticBody2D"]
 collision_layer = 3
@@ -25,5 +25,6 @@ region_rect = Rect2(160, 160, 16, 16)
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="Trigger" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_i8iwk")
