@@ -1,2 +1,6 @@
 res://scenes/Area1/room_9.tscn
-res://scripts/Potions Script/Box.gd
+res://scripts/Vampire Scripts/Ice Vampire Sword.gd
+res://scripts/Vampire Scripts/Ince Vampire Hit Detector.gd
+res://scenes/Vampires/Ice Vampire.tscn
+res://scripts/character_body_2d.gd
+res://scenes/Area4/Room_1.tscn

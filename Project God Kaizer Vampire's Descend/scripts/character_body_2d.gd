@@ -39,16 +39,34 @@ var max_jump_hold_time = 0.2  # Maximum time to hold jump for full height
 # Safety flag
 var physics_ready = false
 var has_key: bool = false
-
+var slowed: bool = false
 
 func pick_up_key():
 	GameManager.has_key1 = true
 	print("Player picked up a key!")
+	
+func slow():
+	if slowed:
+		max_walk_speed = 80
+		max_fall_speed = 200
+		jump_velocity = -160
+		max_air_speed = 80
+		short_jump_velocity = -160
+	else:
+		max_walk_speed = 160
+		max_fall_speed = 400
+		jump_velocity = -320
+		max_air_speed = 160
+		short_jump_velocity = -320
 
+func slowed_down():
+	slowed = true
+	await get_tree().create_timer(4.0).timeout
+	slowed = false 
 
 
 func _ready():	
-
+	
 	# Make sure player is in the correct group
 	add_to_group("player")
 	print("Player: Added to 'player' group")
@@ -67,6 +85,7 @@ func _ready():
 
 	add_to_group("player")
 func _process(delta):
+	slow()
 	if current_weapon and current_weapon.has_method("update_collision_position"):
 		current_weapon.update_collision_position()
 	queue_redraw()
@@ -253,6 +272,7 @@ func _deferred_drop_weapon():
 		weapon_sprite.visible = false
 		print("Weapon dropped")
 func _physics_process(delta):
+	
 	var input_direction = Input.get_axis("ui_left", "ui_right")
 	if input_direction != 0:
 		facing_right = input_direction > 0

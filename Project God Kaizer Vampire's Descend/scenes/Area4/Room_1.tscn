@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=4 uid="uid://d2y22tdlycg8k"]
+[gd_scene load_steps=8 format=4 uid="uid://d2y22tdlycg8k"]
 
 [ext_resource type="Texture2D" uid="uid://bsd04bbto2bbl" path="res://assets/IceSet.png" id="1_t5ryd"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_fd5sv"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="3_fd5sv"]
+[ext_resource type="PackedScene" uid="uid://m545o5eoak41" path="res://scenes/Vampires/Ice Vampire.tscn" id="5_kel64"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3ppg"]
 texture = ExtResource("1_t5ryd")
@@ -144,3 +145,7 @@ tile_set = SubResource("TileSet_kel64")
 
 [node name="player" parent="." instance=ExtResource("3_fd5sv")]
 position = Vector2(17, 199)
+
+[node name="IceVampire" parent="." instance=ExtResource("5_kel64")]
+position = Vector2(578, 213)
+scale = Vector2(-1, 1)

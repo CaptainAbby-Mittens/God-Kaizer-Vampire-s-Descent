@@ -1,3 +1,4 @@
+CharacterBody2D
 Area2D
 StaticBody2D
 AnimatableBody2D
@@ -7,7 +8,6 @@ AnimationPlayer
 Label
 CollisionShape2D
 Sprite2D
-CharacterBody2D
 Timer
 AnimatedSprite2D
 Label      - Matches the "text" keyword.

@@ -1,0 +1,92 @@
+[gd_scene load_steps=15 format=3 uid="uid://m545o5eoak41"]
+
+[ext_resource type="Texture2D" uid="uid://bqub7qyifr622" path="res://assets/Vampire Ice/attack 1 ice.png" id="1_4om5e"]
+[ext_resource type="Texture2D" uid="uid://ptywxplmsl3x" path="res://assets/Vampire Ice/attack 2 ice.png" id="2_tsn51"]
+[ext_resource type="Texture2D" uid="uid://fupimgl2c1dc" path="res://assets/Vampire Ice/attack 3 ice.png" id="3_48y5g"]
+[ext_resource type="Texture2D" uid="uid://cbqt86130qid3" path="res://assets/Vampire Ice/attack 4 ice.png" id="4_1ol4o"]
+[ext_resource type="Texture2D" uid="uid://c6wfu8xfeljb" path="res://assets/Vampire Ice/walk 1 ice.png" id="5_31oxv"]
+[ext_resource type="Texture2D" uid="uid://cmt4nv7k4ctpx" path="res://assets/Vampire Ice/walk 2 ice.png" id="6_6187f"]
+[ext_resource type="Texture2D" uid="uid://do2n208aq77y0" path="res://assets/Vampire Ice/walk 3 ice.png" id="7_bpgf5"]
+[ext_resource type="Texture2D" uid="uid://cm4h21du6j6v3" path="res://assets/Vampire Ice/death 1 ice.png" id="8_liis2"]
+[ext_resource type="Texture2D" uid="uid://crlyaucq0ecym" path="res://assets/Vampire Ice/death 2 ice.png" id="9_rc0nh"]
+[ext_resource type="Texture2D" uid="uid://cy5paonw7lueq" path="res://assets/Vampire Ice/idle ice.png" id="10_nsaa7"]
+[ext_resource type="Script" uid="uid://cng0337l6lf2u" path="res://scripts/Vampire Scripts/Ince Vampire Hit Detector.gd" id="12_48y5g"]
+[ext_resource type="Script" uid="uid://cpdql7bv5i6hw" path="res://scripts/Vampire Scripts/Ice Vampire Sword.gd" id="12_tsn51"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k48ae"]
+size = Vector2(33, 59)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_altda"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_4om5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_tsn51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_48y5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1ol4o")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_31oxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_6187f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bpgf5")
+}],
+"loop": true,
+"name": &"Chasing",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_liis2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_rc0nh")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_nsaa7")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="IceVampire" type="CharacterBody2D"]
+script = ExtResource("12_tsn51")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 4.5)
+shape = SubResource("RectangleShape2D_k48ae")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(5, -17)
+sprite_frames = SubResource("SpriteFrames_altda")
+animation = &"Idle"
+
+[node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
+position = Vector2(0, 18)
+collision_layer = 2
+script = ExtResource("12_48y5g")
+
+[node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
+position = Vector2(-10, -4)
+polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)
