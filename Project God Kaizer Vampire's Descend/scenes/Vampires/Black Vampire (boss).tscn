@@ -83,6 +83,7 @@ scale = Vector2(-2, 2)
 script = ExtResource("1_xqap3")
 
 [node name="collider2" type="CollisionPolygon2D" parent="."]
+texture_filter = 1
 rotation = 3.1415927
 scale = Vector2(1, -1)
 polygon = PackedVector2Array(9.25, -18.75, -13.25, -19.25, -6.75, -2.75, 7.75, -13.75)
@@ -92,7 +93,7 @@ texture_filter = 1
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_mw5pj")
 animation = &"Attack"
-frame_progress = 0.90438
+frame_progress = 0.6139399
 
 [node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
 position = Vector2(0, 18)

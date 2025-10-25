@@ -61,7 +61,7 @@ func slow():
 
 func slowed_down():
 	slowed = true
-	await get_tree().create_timer(4.0).timeout
+	await get_tree().create_timer(2).timeout
 	slowed = false 
 
 

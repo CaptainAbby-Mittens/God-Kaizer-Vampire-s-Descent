@@ -70,9 +70,11 @@ animations = [{
 }]
 
 [node name="FireVampire" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_aid0m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
 position = Vector2(1.5, 4.5)
 shape = SubResource("RectangleShape2D_gk7oo")
 
@@ -81,7 +83,7 @@ texture_filter = 1
 position = Vector2(5, -17)
 sprite_frames = SubResource("SpriteFrames_6ysnh")
 animation = &"Attack"
-frame_progress = 0.88593245
+frame_progress = 0.48379096
 
 [node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
 position = Vector2(0, 18)

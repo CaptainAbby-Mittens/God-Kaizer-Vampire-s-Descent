@@ -70,6 +70,7 @@ animations = [{
 }]
 
 [node name="BlueVampire" type="CharacterBody2D"]
+texture_filter = 1
 scale = Vector2(-1, 1)
 script = ExtResource("1_amvfu")
 

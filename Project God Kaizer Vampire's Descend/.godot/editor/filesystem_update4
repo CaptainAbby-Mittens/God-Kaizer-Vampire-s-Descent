@@ -1,6 +1,20 @@
-res://scenes/Area1/room_9.tscn
-res://scripts/Vampire Scripts/Ice Vampire Sword.gd
-res://scripts/Vampire Scripts/Ince Vampire Hit Detector.gd
 res://scenes/Vampires/Ice Vampire.tscn
-res://scripts/character_body_2d.gd
+res://scenes/Area4/Room_2.tscn
 res://scenes/Area4/Room_1.tscn
+res://scenes/Platforms/Platform Area 4.tscn
+res://scenes/Area4/Room_3.tscn
+res://scripts/character_body_2d.gd
+res://scenes/Area4/Room_4.tscn
+res://scenes/Vampires/Stone Vampire.tscn
+res://scenes/Vampires/BlueVampire.tscn
+res://scenes/Vampires/Black Vampire (boss).tscn
+res://scenes/Vampires/fire stone.tscn
+res://scenes/Vampires/fire vampire.tscn
+res://scenes/Area4/Room_5.tscn
+res://scenes/Area4/Room_6.tscn
+res://scenes/Area4/Room_7.tscn
+res://scenes/Area4/Room_8.tscn
+res://scenes/Area4/Room_9.tscn
+res://scenes/Area4/Room_10.tscn
+res://scenes/Area4/Room_11.tscn
+res://scenes/Damage/ice fire.tscn

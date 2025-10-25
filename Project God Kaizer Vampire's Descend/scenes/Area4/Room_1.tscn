@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bsd04bbto2bbl" path="res://assets/IceSet.png" id="1_t5ryd"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_fd5sv"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="3_fd5sv"]
-[ext_resource type="PackedScene" uid="uid://m545o5eoak41" path="res://scenes/Vampires/Ice Vampire.tscn" id="5_kel64"]
+[ext_resource type="FontFile" uid="uid://dngj8q2mrhf3a" path="res://Fonts/ARCADECLASSIC.TTF" id="4_n3ppg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_n3ppg"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6y7f"]
 texture = ExtResource("1_t5ryd")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -58,7 +58,7 @@ texture = ExtResource("1_t5ryd")
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6y7f"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kel64"]
 texture = ExtResource("2_fd5sv")
 0:0/0 = 0
 1:0/0 = 0
@@ -129,8 +129,8 @@ texture = ExtResource("2_fd5sv")
 
 [sub_resource type="TileSet" id="TileSet_kel64"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_n3ppg")
-sources/1 = SubResource("TileSetAtlasSource_f6y7f")
+sources/0 = SubResource("TileSetAtlasSource_f6y7f")
+sources/1 = SubResource("TileSetAtlasSource_kel64")
 
 [node name="Room1" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [-8.0]
@@ -144,8 +144,18 @@ tile_map_data = PackedByteArray("AAAAABYAAAABAAMAAAAAABUAAAABAAMAAAAAABQAAAAEAAI
 tile_set = SubResource("TileSet_kel64")
 
 [node name="player" parent="." instance=ExtResource("3_fd5sv")]
-position = Vector2(17, 199)
+position = Vector2(15, 200)
 
-[node name="IceVampire" parent="." instance=ExtResource("5_kel64")]
-position = Vector2(578, 213)
-scale = Vector2(-1, 1)
+[node name="Snow2" type="TileMapLayer" parent="."]
+position = Vector2(0, -8)
+tile_map_data = PackedByteArray("AAAnAA8AAAAEAAAAAFAnAA4AAAAEAAAAAFAnAA0AAAAEAAAAAFAnAAwAAAAEAAAAAFAnAAsAAAAEAAAAAFAnAAoAAAAEAAAAAFAnAAkAAAAEAAAAAFA=")
+tile_set = SubResource("TileSet_kel64")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 92.0
+offset_top = -19.0
+offset_right = 530.0
+offset_bottom = 30.0
+theme_override_fonts/font = ExtResource("4_n3ppg")
+theme_override_font_sizes/font_size = 36
+text = "Welcome to Winter's Abyss"

@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://bqkh5188cv12f"]
+
+[ext_resource type="Script" uid="uid://b8pd0dc4xwn6l" path="res://scripts/50 Damage Block.gd" id="1_6j2jr"]
+[ext_resource type="Texture2D" uid="uid://bsd04bbto2bbl" path="res://assets/IceSet.png" id="2_mw1lq"]
+[ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="3_duwva"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ysn5q"]
+texture = ExtResource("2_mw1lq")
+3:1/animation_frame_0/duration = 1.0
+3:1/animation_frame_1/duration = 1.0
+3:1/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jaim8"]
+texture = ExtResource("3_duwva")
+48:2/animation_frame_0/duration = 1.0
+48:2/animation_frame_1/duration = 1.0
+48:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8obpx"]
+sources/2 = SubResource("TileSetAtlasSource_jaim8")
+sources/0 = SubResource("TileSetAtlasSource_ysn5q")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ur1n4"]
+size = Vector2(16, 16)
+
+[node name="IceFire" type="Area2D"]
+script = ExtResource("1_6j2jr")
+damage_amount = 14
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 2, 0, 0, 0, 0, 0, 3, 0, 1, 0, 0, 0)
+tile_set = SubResource("TileSet_8obpx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(40, 8)
+shape = SubResource("RectangleShape2D_ur1n4")

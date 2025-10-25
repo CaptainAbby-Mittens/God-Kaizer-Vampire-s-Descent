@@ -70,6 +70,8 @@ animations = [{
 }]
 
 [node name="IceVampire" type="CharacterBody2D"]
+texture_filter = 1
+scale = Vector2(-1, 1)
 script = ExtResource("12_tsn51")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
