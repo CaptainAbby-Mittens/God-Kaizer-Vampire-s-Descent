@@ -1,0 +1,6 @@
+res://scenes/Vampires/void vampire.tscn
+res://scripts/Vampire Scripts/void hit detector.gd
+res://scripts/Vampire Scripts/void sword.gd
+res://scenes/Vampires/RedVampire.tscn
+res://scripts/Game Manager.gd
+res://scenes/Vampires/BlueVampire.tscn

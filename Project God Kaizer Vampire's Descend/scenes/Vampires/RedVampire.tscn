@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://2fr3uvswg262" path="res://scripts/Vampire Scripts/RedVampireHitDetector.gd" id="12_jk7qk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6bcj"]
-size = Vector2(33, 57)
+size = Vector2(33, 54)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lcf3t"]
 animations = [{
@@ -81,15 +81,14 @@ script = ExtResource("1_bixt0")
 metadata/_edit_horizontal_guides_ = [64.0]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 3.5)
+position = Vector2(1.5, 2)
 shape = SubResource("RectangleShape2D_t6bcj")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, -18)
 sprite_frames = SubResource("SpriteFrames_lcf3t")
-animation = &"Attack"
-frame_progress = 0.56250453
+animation = &"Death"
 
 [node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
 position = Vector2(0, 18)

@@ -15,7 +15,7 @@ texture = ExtResource("2_5rpdq")
 region_enabled = true
 region_rect = Rect2(48, 64, 16, 16)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["destructible"]]
 texture_filter = 1
 position = Vector2(9, 8)
 shape = SubResource("CircleShape2D_8fw2t")

@@ -109,6 +109,9 @@ func check_existing_overlaps():
 				print("Sword hit overlapping enemy: ", enemy.name)
 				if enemy.has_method("take_damage"):
 					enemy.take_damage(damage)
+			if area.get_parent().is_in_group("destructible"):
+				area.queue_free()
+			
 		
 		# Check bodies (enemy physics bodies)
 		var bodies = get_overlapping_bodies()
@@ -117,6 +120,9 @@ func check_existing_overlaps():
 				print("Sword hit overlapping enemy: ", body.name)
 				if body.has_method("take_damage"):
 					body.take_damage(damage)
+			if body.is_in_group("destructible"):
+				body.queue_free()
+			
 
 func start_attack():
 	# Called when attack animation starts

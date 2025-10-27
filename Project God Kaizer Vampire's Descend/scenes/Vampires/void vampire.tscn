@@ -1,0 +1,92 @@
+[gd_scene load_steps=15 format=3 uid="uid://bur87olvk8r3i"]
+
+[ext_resource type="Texture2D" uid="uid://d0ny7dkh8dixp" path="res://assets/void vampire/attack 1 (1) void.png" id="1_du7yn"]
+[ext_resource type="Script" uid="uid://drscrrib67tlr" path="res://scripts/Vampire Scripts/void sword.gd" id="1_fy2b2"]
+[ext_resource type="Texture2D" uid="uid://b6ye8irq8mmhy" path="res://assets/void vampire/attack 2 (1) void.png" id="2_fy2b2"]
+[ext_resource type="Texture2D" uid="uid://cvkpppcxmbkt8" path="res://assets/void vampire/attack 3 (1) void.png" id="3_1wmpq"]
+[ext_resource type="Texture2D" uid="uid://d2j8k6svlpdrm" path="res://assets/void vampire/attack 4 (1) void.png" id="4_7isuj"]
+[ext_resource type="Texture2D" uid="uid://ce8n32wc1ngqg" path="res://assets/void vampire/walk 1 (1) void.png" id="5_p1jsr"]
+[ext_resource type="Texture2D" uid="uid://d4jof7uyav1lg" path="res://assets/void vampire/walk 2 (1) void.png" id="6_sb2ou"]
+[ext_resource type="Texture2D" uid="uid://bvl5777lp7lif" path="res://assets/void vampire/walk 3 (1) void.png" id="7_feybw"]
+[ext_resource type="Texture2D" uid="uid://d2efhjp4xmrvk" path="res://assets/void vampire/death 1 void.png" id="8_odhw4"]
+[ext_resource type="Texture2D" uid="uid://ix7gw31po12d" path="res://assets/void vampire/death 2 void.png" id="9_gycfi"]
+[ext_resource type="Texture2D" uid="uid://drlxbjsijtdj4" path="res://assets/void vampire/idle (1) void.png" id="10_8eyf6"]
+[ext_resource type="Script" uid="uid://dvihi8j5i2cpd" path="res://scripts/Vampire Scripts/void hit detector.gd" id="12_1wmpq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_meh5n"]
+size = Vector2(33, 57)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1emdk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_du7yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_fy2b2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1wmpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_7isuj")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_p1jsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_sb2ou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_feybw")
+}],
+"loop": true,
+"name": &"Chasing",
+"speed": 1.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_odhw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_gycfi")
+}],
+"loop": true,
+"name": &"Death",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_8eyf6")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="VoidVampire" type="CharacterBody2D"]
+scale = Vector2(-1, 1)
+script = ExtResource("1_fy2b2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 3.5)
+shape = SubResource("RectangleShape2D_meh5n")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -18)
+sprite_frames = SubResource("SpriteFrames_1emdk")
+animation = &"Idle"
+
+[node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
+position = Vector2(0, 18)
+collision_layer = 2
+script = ExtResource("12_1wmpq")
+
+[node name="Collider" type="CollisionPolygon2D" parent="Sprite2D/HitDetectionArea"]
+polygon = PackedVector2Array(11, -8, 12, 19, -11, 19, -8, -9)
