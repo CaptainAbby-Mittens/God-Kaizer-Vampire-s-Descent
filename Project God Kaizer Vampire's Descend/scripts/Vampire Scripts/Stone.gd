@@ -40,7 +40,7 @@ func _on_area_entered(area: Area2D) -> void:
 	print("Area groups: ", area.get_groups())
 	
 	# This is where weapon detection happens!
-	if area.is_in_group("weapon") or area.is_in_group("player_weapon"):
+	if area.is_in_group("weapon") or area.is_in_group("player_weapon") or area.get_collision_layer_value(2):
 		print("Weapon area hit - destroying rock immediately!")
 		destroy_immediately()
 

@@ -14,7 +14,7 @@
 [ext_resource type="Script" uid="uid://cpdql7bv5i6hw" path="res://scripts/Vampire Scripts/Ice Vampire Sword.gd" id="12_tsn51"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k48ae"]
-size = Vector2(33, 59)
+size = Vector2(33, 58)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_altda"]
 animations = [{
@@ -75,14 +75,15 @@ scale = Vector2(-1, 1)
 script = ExtResource("12_tsn51")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 4.5)
+position = Vector2(1.5, 4)
 shape = SubResource("RectangleShape2D_k48ae")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(5, -17)
 sprite_frames = SubResource("SpriteFrames_altda")
-animation = &"Idle"
+animation = &"Attack"
+frame_progress = 0.47610664
 
 [node name="HitDetectionArea" type="Area2D" parent="Sprite2D"]
 position = Vector2(0, 18)

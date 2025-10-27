@@ -1,12 +1,13 @@
-[gd_scene load_steps=9 format=4 uid="uid://cpprstifnhcvc"]
+[gd_scene load_steps=10 format=4 uid="uid://cpprstifnhcvc"]
 
 [ext_resource type="Texture2D" uid="uid://bsd04bbto2bbl" path="res://assets/IceSet.png" id="1_8uslk"]
 [ext_resource type="Texture2D" uid="uid://bdgx55im0icf5" path="res://assets/Godot Project.png" id="2_vdj8q"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="3_dgq3u"]
 [ext_resource type="PackedScene" uid="uid://x5dfaa3ckla4" path="res://scenes/Pickups/DamagePotion.tscn" id="4_dgq3u"]
 [ext_resource type="PackedScene" uid="uid://cp7b5v6gm3ugq" path="res://scenes/Pickups/HealingPotion.tscn" id="5_w7yio"]
+[ext_resource type="FontFile" uid="uid://dngj8q2mrhf3a" path="res://Fonts/ARCADECLASSIC.TTF" id="6_w7yio"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w7yio"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t17yy"]
 texture = ExtResource("1_8uslk")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -59,7 +60,7 @@ texture = ExtResource("1_8uslk")
 4:4/0 = 0
 4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t17yy"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xoddf"]
 texture = ExtResource("2_vdj8q")
 0:0/0 = 0
 1:0/0 = 0
@@ -130,8 +131,8 @@ texture = ExtResource("2_vdj8q")
 
 [sub_resource type="TileSet" id="TileSet_xoddf"]
 physics_layer_0/collision_layer = 1
-sources/0 = SubResource("TileSetAtlasSource_w7yio")
-sources/1 = SubResource("TileSetAtlasSource_t17yy")
+sources/0 = SubResource("TileSetAtlasSource_t17yy")
+sources/1 = SubResource("TileSetAtlasSource_xoddf")
 
 [node name="Room10" type="Node2D"]
 
@@ -177,3 +178,11 @@ position = Vector2(82, 112)
 
 [node name="HealingPotion3" parent="." instance=ExtResource("5_w7yio")]
 position = Vector2(-61, 112)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 161.0
+offset_top = -8.0
+offset_right = 483.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("6_w7yio")
+text = "I wouldn't take those healing if I were you"
