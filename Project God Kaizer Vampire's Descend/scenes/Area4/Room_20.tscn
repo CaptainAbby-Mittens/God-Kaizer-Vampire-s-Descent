@@ -137,6 +137,12 @@ sources/1 = SubResource("TileSetAtlasSource_1tkdi")
 
 [node name="Room20" type="Node2D"]
 
+[node name="DamagePotion2" parent="." instance=ExtResource("2_6h1gi")]
+position = Vector2(16, -54)
+
+[node name="DamagePotion3" parent="." instance=ExtResource("2_6h1gi")]
+position = Vector2(16, -54)
+
 [node name="Area4Key" parent="." instance=ExtResource("1_f2cym")]
 position = Vector2(297, 223)
 
