@@ -1,11 +1,12 @@
-res://scenes/Vampires/void vampire.tscn
-res://scripts/Vampire Scripts/void hit detector.gd
-res://scripts/Vampire Scripts/void sword.gd
-res://scenes/Vampires/RedVampire.tscn
-res://scripts/Game Manager.gd
-res://scenes/Vampires/BlueVampire.tscn
 res://scenes/Players and NPC/Player.tscn
-res://scripts/Vampire Scripts/Stone.gd
-res://scenes/Weapons/Start Sword.tscn
-res://scenes/Area2/Room_13.tscn
-res://scenes/Area5/Room_1.tscn
+res://scripts/Game Manager.gd
+res://scenes/Area5/Room_11.tscn
+res://scenes/Area5/Room_2.tscn
+res://scenes/Area5/Room_3.tscn
+res://scenes/Area5/Room_4.tscn
+res://scenes/Area5/Room_5.tscn
+res://scenes/Area5/Room_6.tscn
+res://scenes/Area5/Room_7.tscn
+res://scenes/Area5/Room_8.tscn
+res://scenes/Area5/Room_9.tscn
+res://scenes/Area5/Room_10.tscn

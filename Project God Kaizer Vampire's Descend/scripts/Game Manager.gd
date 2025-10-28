@@ -125,6 +125,9 @@ var world_map = {
 	  
 }
 
+var next_threshold_index = 0
+var base_threshold = 500
+var threshold_step = 250
 # Playtime tracking
 var playtime: float = 0.0
 var is_timer_running: bool = false
@@ -146,11 +149,34 @@ var supermode: bool = false
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
 
+func check_score_thresholds():
+	var next_threshold = base_threshold + next_threshold_index * threshold_step
+	if score >= next_threshold:
+		_increase_player_stats()
+		next_threshold_index += 1
+		
+func _increase_player_stats():
+	var player = get_tree().get_first_node_in_group("player")
+	if not player:
+		return
+		
+	# Example stat scaling logic
+	player.max_health += 10
+	player.current_health = player.max_health
+	player.attack_damage += 2 if player.has_method("attack_damage") else 0
+	
+	crit += 1
+	shield += 1
+
+	print("🩸 Player leveled up! New stats → HP:", player.max_health, ", Crit:", crit, ", Shield:", shield)
+
+
 func add_score(addScore):
 	score += addScore
+	check_score_thresholds()
 func reset_score():
 	score = 0
-	
+
 func respawn_all_potions():
 	print("Respawning all potions...")
 	get_tree().call_group("potions", "respawn_potion")
