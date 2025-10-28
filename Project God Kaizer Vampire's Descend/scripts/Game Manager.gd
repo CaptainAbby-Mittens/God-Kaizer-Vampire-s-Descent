@@ -136,7 +136,13 @@ var has_key4: bool = false
 var boss_killed_1: bool = false
 var score: int = 0
 var vampirism: bool = false
-var fireswor
+var firesword: bool = false
+var shield: int = 0
+var crit: int = 0
+var bleed: int = 0
+var autoheal: bool = false
+var fireball: bool = false
+var supermode: bool = false
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
 

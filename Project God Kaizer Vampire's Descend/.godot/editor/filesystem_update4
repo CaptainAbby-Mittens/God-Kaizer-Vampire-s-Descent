@@ -4,3 +4,8 @@ res://scripts/Vampire Scripts/void sword.gd
 res://scenes/Vampires/RedVampire.tscn
 res://scripts/Game Manager.gd
 res://scenes/Vampires/BlueVampire.tscn
+res://scenes/Players and NPC/Player.tscn
+res://scripts/Vampire Scripts/Stone.gd
+res://scenes/Weapons/Start Sword.tscn
+res://scenes/Area2/Room_13.tscn
+res://scenes/Area5/Room_1.tscn
