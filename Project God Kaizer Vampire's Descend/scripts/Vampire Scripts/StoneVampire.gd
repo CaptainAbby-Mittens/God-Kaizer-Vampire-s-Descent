@@ -244,6 +244,7 @@ func take_damage(amount):
 		die()
 
 func die():
+	GameManager.grant_shield()
 	current_state = State.DEAD
 	update_sprite_frame()
 	collision_layer = 0

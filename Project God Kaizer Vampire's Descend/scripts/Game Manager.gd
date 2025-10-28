@@ -124,7 +124,7 @@ var world_map = {
 	Vector2i(5, 5):"res://scenes/AreaBoss/Congratulations.tscn",
 	  
 }
-
+var player_damage = 30
 var next_threshold_index = 0
 var base_threshold = 500
 var threshold_step = 250
@@ -148,6 +148,10 @@ var fireball: bool = false
 var supermode: bool = false
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
+
+func grant_shield():
+	if randf() < 0.5 and shield <=3:
+		shield +=1
 
 func check_score_thresholds():
 	var next_threshold = base_threshold + next_threshold_index * threshold_step

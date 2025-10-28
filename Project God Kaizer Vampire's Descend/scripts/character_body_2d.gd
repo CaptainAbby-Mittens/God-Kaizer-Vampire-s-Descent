@@ -385,9 +385,12 @@ signal health_updated(current_health, max_health)
 
 # Your health functions should EMIT this signal:
 func take_damage(amount):
-	current_health -= amount
-	current_health = max(0, current_health)
-	health_updated.emit(current_health, max_health)  # ← This line is crucial!
+	if GameManager.shield <=0:
+		current_health -= amount
+		current_health = max(0, current_health)
+		health_updated.emit(current_health, max_health)  # ← This line is crucial!
+	else:
+		GameManager.shield -= 1 
 	
 	if current_health <= 0:
 		die()

@@ -1,6 +1,9 @@
+Label
+VBoxContainer
+Control
+CanvasLayer
 CharacterBody2D
 Camera2D
-Label
 CollisionShape2D
 TileMapLayer
 AnimatedSprite2D
@@ -9,6 +12,3 @@ AnimationPlayer
 AnimatableBody2D
 StaticBody2D
 Sprite2D
-Timer
-Label      - Matches the "text" keyword.
-CollisionPolygon2D

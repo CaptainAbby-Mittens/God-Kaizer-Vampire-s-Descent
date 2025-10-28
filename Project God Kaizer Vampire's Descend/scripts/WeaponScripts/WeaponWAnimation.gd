@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var weapon_name: String = "Sword"
-@export var damage: int = 30
+@export var damage: int = 0
 @export var attack_speed: float = 1.0
 @export var show_collision_debug: bool = true
 @export var debug_color: Color = Color(1, 0, 0, 0.5)
@@ -148,8 +148,9 @@ func end_attack():
 
 # Debug process to see positions and force collision to follow sprite
 func _process(_delta):
+	damage = GameManager.player_damage
 	if is_attacking:
-
+	
 		
 		# Debug info
 		if collision_polygon and sprite:

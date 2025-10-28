@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://c46su8bw3ross"]
+
+[ext_resource type="Script" uid="uid://uyno5yhu53os" path="res://scripts/HUD.gd" id="1_caewe"]
+[ext_resource type="FontFile" uid="uid://dngj8q2mrhf3a" path="res://Fonts/ARCADECLASSIC.TTF" id="2_dq6qs"]
+
+[node name="Hud" type="CanvasLayer"]
+script = ExtResource("1_caewe")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 1
+
+[node name="Score" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dq6qs")
+theme_override_font_sizes/font_size = 12
+
+[node name="Shield" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dq6qs")
+theme_override_font_sizes/font_size = 12
+
+[node name="Crit" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dq6qs")
+theme_override_font_sizes/font_size = 12
+
+[node name="Damage" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dq6qs")
+theme_override_font_sizes/font_size = 12
+
+[node name="Abilties" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dq6qs")
+theme_override_font_sizes/font_size = 12
