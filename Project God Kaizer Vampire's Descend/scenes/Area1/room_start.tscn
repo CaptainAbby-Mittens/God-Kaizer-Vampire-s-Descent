@@ -14293,6 +14293,7 @@ sources/1 = SubResource("TileSetAtlasSource_8fcta")
 [node name="Room_Start" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -1)
 limit_left = 0
 limit_top = 2
 limit_right = 640

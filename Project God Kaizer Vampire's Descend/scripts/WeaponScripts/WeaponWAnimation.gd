@@ -61,7 +61,7 @@ func _on_body_entered(body):
 	if can_damage and body.is_in_group("enemy"):
 		print("Sword hit enemy: ", body.name)
 		if body.has_method("take_damage"):
-			body.take_damage(damage)
+			body.take_damage(damage* GameManager.crit_strike())
 	if body.is_in_group("player") and not is_equipped:
 		var player = body
 		if player.has_method("equip_weapon"):

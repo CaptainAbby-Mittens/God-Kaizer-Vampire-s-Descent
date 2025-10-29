@@ -1,6 +1,6 @@
 extends CharacterBody2D
 @export var collider_offset: Vector2 = Vector2(0, -20)
-@export var max_health: int = 50
+@export var max_health: int = 400
 @export var damage: int = 20
 @export var move_speed: float = 60.0
 @export var attack_range: float = 60.0
@@ -9,6 +9,13 @@ extends CharacterBody2D
 # Gravity properties
 @export var gravity: float = 980.0  # pixels per second squared
 @export var max_fall_speed: float = 400.0  # terminal velocity
+@export var teleport_distance: float = 80.0
+@export var teleport_check_range: float = 400.0
+@export var min_teleport_interval: float = 2.0
+@export var max_teleport_interval: float = 5.0
+@export var vampire_types: Array[PackedScene] = []
+@onready var fade_overlay = get_tree().get_first_node_in_group("fade_overlay")
+var teleport_timer: Timer
 
 @onready var sprite: AnimatedSprite2D = $Sprite2D
 @onready var collider: CollisionPolygon2D = $Sprite2D/HitDetectionArea/Collider
@@ -33,7 +40,13 @@ func _ready():
 	collision_layer = 4
 	collision_mask = 1 | 2
 	add_to_group("enemy")
+	teleport_timer = Timer.new()
+	teleport_timer.one_shot = true
+	add_child(teleport_timer)
+	teleport_timer.timeout.connect(_on_teleport_timeout)
 
+# Start random teleport schedule
+	_start_random_teleport()
 	if contact_area:
 		contact_area.area_entered.connect(_on_contact_area_entered)
 
@@ -65,6 +78,36 @@ func _ready():
 	generate_frame_polys()
 	sprite.frame_changed.connect(_on_frame_changed)
 
+func teleport_and_spawn(target_position: Vector2):
+	await fade_overlay.fade_out(0.3)
+	
+	# Optionally remove the current vampire
+	queue_free()
+	
+	# Spawn a random one
+	spawn_random_vampire(target_position)
+	
+	await fade_overlay.fade_in(0.3)
+func _start_random_teleport():
+	if not teleport_timer.is_stopped():
+		return
+	var delay = randf_range(min_teleport_interval, max_teleport_interval)
+	teleport_timer.start(delay)
+
+func _on_teleport_timeout():
+	if player and is_instance_valid(player):
+		var distance = global_position.distance_to(player.global_position)
+		if distance <= teleport_check_range:
+			_perform_teleport()
+	# Always schedule next teleport
+	_start_random_teleport()
+
+func _perform_teleport():
+	# Choose a random direction around the player
+	var angle = randf() * TAU
+	var offset = Vector2(cos(angle), sin(angle)) * teleport_distance
+	global_position = player.global_position + offset
+	print("⚡ Vampire teleported to:", global_position)
 
 # ---------------- COLLISION POLY GEN ---------------- #
 
@@ -238,6 +281,17 @@ func take_damage(amount):
 	print("Vampire took ", amount, " damage! Health: ", current_health)
 	if current_health <= 0:
 		die()
+func spawn_random_vampire(spawn_position: Vector2):
+	if vampire_types.is_empty():
+		print("⚠ No vampire types assigned!")
+		return
+
+	var index = randi_range(0, vampire_types.size() - 1)
+	var vampire_scene = vampire_types[index]
+	var vampire = vampire_scene.instantiate()
+
+	vampire.global_position = spawn_position
+	get_tree().current_scene.add_child(vampire)
 
 func die():
 	GameManager.grant_shield()
@@ -246,6 +300,7 @@ func die():
 	collision_layer = 0
 	collision_mask = 0
 	GameManager.add_score(10)
+	spawn_random_vampire(global_position)
 	await get_tree().create_timer(1.0).timeout
 	queue_free()
 

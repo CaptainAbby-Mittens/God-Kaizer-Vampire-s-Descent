@@ -141,7 +141,7 @@ var score: int = 0
 var vampirism: bool = false
 var firesword: bool = false
 var shield: int = 0
-var crit: int = 0
+var crit: float = 12
 var bleed: int = 0
 var autoheal: bool = false
 var fireball: bool = false
@@ -149,8 +149,13 @@ var supermode: bool = false
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
 
+func crit_strike():
+	if randf()< crit/100:
+		return RandomNumberGenerator.new().randf_range(1.25, 1.75)
+	else:
+		return 1
 func grant_shield():
-	if randf() < 0.5 and shield <=3:
+	if randf() < 0.15 and shield <=3:
 		shield +=1
 
 func check_score_thresholds():

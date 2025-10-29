@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1761666603
+::res://::1761698940
 8 bit fantasy music.wav::AudioStreamWAV::4232532440531331490::1756483179::1759113079::1::::<><><>0<>0<>b8f179713f054ea0a97c825edf7fd69b<>res://.godot/imported/8 bit fantasy music.wav-48ce09b1cfe85fcfe633bf00dbffa5f7.sample::
 default_bus_layout.tres::AudioBusLayout::8804715334867657501::1759120304::0::1::::<><><>0<>0<><>::
 export_presets.cfg::TextFile::-1::1761272602::0::1::::<><><>0<>0<><>::
@@ -103,9 +103,9 @@ EndScreen.tscn::PackedScene::2813074805080745502::1760283994::0::1::::<><><>0<>0
 game.tscn::PackedScene::6683444621325899329::1757261526::0::1::::<><><>0<>0<><>::uid://cip3sa83c6pgt::::res://scripts/game.gd<>uid://yy8nx7pu0lms::::res://scripts/audio_stream_player.gd
 score.gd::GDScript::4794026852014664595::1760283485::0::1::::<>Label<><>0<>0<><>::
 Weapons.tscn::PackedScene::6356330943425599065::1759949255::0::1::::<><><>0<>0<><>::
-::res://scenes/Area1/::1761583286
+::res://scenes/Area1/::1761698889
 MainMenu.tscn::PackedScene::6826189667680843591::1760551374::0::1::::<><><>0<>0<><>::uid://di574vgvd61i2::::res://scripts/main_menu.gd<>uid://dngj8q2mrhf3a::::res://Fonts/ARCADECLASSIC.TTF
-room_1.tscn::PackedScene::3974710852007888105::1760496607::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://cp7b5v6gm3ugq::::res://scenes/Pickups/HealingPotion.tscn<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://x5dfaa3ckla4::::res://scenes/Pickups/DamagePotion.tscn<>uid://chb44cc8nwvrh::::res://scenes/Pickups/MaxHPPotion.tscn<>uid://f1mxf3q2bblt::::res://scenes/Pickups/MysteryPotion.tscn<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://b1y3m7cni4m6k::::res://scenes/Vampires/RedVampire.tscn
+room_1.tscn::PackedScene::3974710852007888105::1761675797::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://cp7b5v6gm3ugq::::res://scenes/Pickups/HealingPotion.tscn<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://x5dfaa3ckla4::::res://scenes/Pickups/DamagePotion.tscn<>uid://chb44cc8nwvrh::::res://scenes/Pickups/MaxHPPotion.tscn<>uid://f1mxf3q2bblt::::res://scenes/Pickups/MysteryPotion.tscn<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://b1y3m7cni4m6k::::res://scenes/Vampires/RedVampire.tscn
 room_2.tscn::PackedScene::9011567598233422469::1760843349::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://f1mxf3q2bblt::::res://scenes/Pickups/MysteryPotion.tscn<>uid://bwgodrkg5ljec::::res://scenes/Damage/Room2BloodBlock.tscn<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png
 room_3.tscn::PackedScene::4728101335208513412::1759938043::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://b1y3m7cni4m6k::::res://scenes/Vampires/RedVampire.tscn<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://bdgx55im0icf5::::res://assets/Godot Project.png
 room_4.tscn::PackedScene::8573509542830732392::1759940767::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://b1y3m7cni4m6k::::res://scenes/Vampires/RedVampire.tscn<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://bdgx55im0icf5::::res://assets/Godot Project.png
@@ -125,7 +125,7 @@ room_17.tscn::PackedScene::2110820090272679289::1760206465::0::1::::<><><>0<>0<>
 room_18.tscn::PackedScene::4616963456886727013::1760282687::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://kuwj5d7lgrk0::::res://scenes/Vampires/BlueVampire.tscn<>uid://cp7b5v6gm3ugq::::res://scenes/Pickups/HealingPotion.tscn
 room_19.tscn::PackedScene::6206960575425523090::1760315371::0::1::::<><><>0<>0<><>::uid://2vhbu41rlrnb::::res://scenes/Platforms/PlatformElevator.tscn<>uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://dn4wkmdb6kwok::::res://scenes/Vampires/Black Vampire (boss).tscn
 room_20.tscn::PackedScene::5451585269867497600::1761099249::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://f1mxf3q2bblt::::res://scenes/Pickups/MysteryPotion.tscn<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://x5dfaa3ckla4::::res://scenes/Pickups/DamagePotion.tscn<>uid://cp7b5v6gm3ugq::::res://scenes/Pickups/HealingPotion.tscn<>uid://chb44cc8nwvrh::::res://scenes/Pickups/MaxHPPotion.tscn<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://vpg15akjhk1k::::res://scenes/Teleporters/Room_20 to Room_1.tscn<>uid://qn4pnbeiujsu::::res://scenes/Pickups/Area1Key.tscn
-room_start.tscn::PackedScene::5322342189449726044::1760284791::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://dxt1xf83rxcng::::res://scenes/Weapons/Start Sword.tscn
+room_start.tscn::PackedScene::5322342189449726044::1761698889::0::1::::<><><>0<>0<><>::uid://cwirxhpa84gvb::::res://images/icon.jpg<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://dxt1xf83rxcng::::res://scenes/Weapons/Start Sword.tscn
 ::res://scenes/Area2/::1761617252
 LevelNotice.tscn::PackedScene::3029917995456046264::1757431100::0::1::::<><><>0<>0<><>::
 Room_1.tscn::PackedScene::7658750021427023016::1760844184::0::1::::<><><>0<>0<><>::uid://beaeicdhd5u2f::::res://assets/Stone.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
@@ -192,19 +192,19 @@ Room_17.tscn::PackedScene::1126386331183376433::1761538566::0::1::::<><><>0<>0<>
 Room_18.tscn::PackedScene::8186572990760198445::1761539324::0::1::::<><><>0<>0<><>::uid://bsd04bbto2bbl::::res://assets/IceSet.png<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://m545o5eoak41::::res://scenes/Vampires/Ice Vampire.tscn<>uid://bod4sftvbnnlo::::res://scenes/Vampires/Stone Vampire.tscn<>uid://dxt1xf83rxcng::::res://scenes/Weapons/Start Sword.tscn
 Room_19.tscn::PackedScene::8561316372942274420::1761533568::0::1::::<><><>0<>0<><>::uid://bsd04bbto2bbl::::res://assets/IceSet.png<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://m545o5eoak41::::res://scenes/Vampires/Ice Vampire.tscn<>uid://dn4wkmdb6kwok::::res://scenes/Vampires/Black Vampire (boss).tscn<>uid://bod4sftvbnnlo::::res://scenes/Vampires/Stone Vampire.tscn
 Room_20.tscn::PackedScene::7878814951681949778::1761541312::0::1::::<><><>0<>0<><>::uid://cu6owk6cdsuhy::::res://scenes/Pickups/Area4Key.tscn<>uid://x5dfaa3ckla4::::res://scenes/Pickups/DamagePotion.tscn<>uid://cp7b5v6gm3ugq::::res://scenes/Pickups/HealingPotion.tscn<>uid://bsd04bbto2bbl::::res://assets/IceSet.png<>uid://bdgx55im0icf5::::res://assets/Godot Project.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn<>uid://vpg15akjhk1k::::res://scenes/Teleporters/Room_20 to Room_1.tscn
-::res://scenes/Area5/::1761623932
+::res://scenes/Area5/::1761668263
 LevelNotice.tscn::PackedScene::4027487157553275637::1757604957::0::1::::<><><>0<>0<><>::
 Room_1.tscn::PackedScene::3680010413957472964::1761623932::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
-Room_2.tscn::PackedScene::4138612075528658974::1757604975::0::1::::<><><>0<>0<><>::
-Room_3.tscn::PackedScene::591889853544079514::1757604990::0::1::::<><><>0<>0<><>::
-Room_4.tscn::PackedScene::7310058768327837690::1757604999::0::1::::<><><>0<>0<><>::
-Room_5.tscn::PackedScene::7732983700676571392::1757605006::0::1::::<><><>0<>0<><>::
-Room_6.tscn::PackedScene::3929440355115521388::1757605011::0::1::::<><><>0<>0<><>::
-Room_7.tscn::PackedScene::6896625662631687134::1757605018::0::1::::<><><>0<>0<><>::
-Room_8.tscn::PackedScene::6442990362319744482::1757605026::0::1::::<><><>0<>0<><>::
-Room_9.tscn::PackedScene::2312103697546715227::1757605032::0::1::::<><><>0<>0<><>::
-Room_10.tscn::PackedScene::4973161991031193709::1757605039::0::1::::<><><>0<>0<><>::
-Room_11.tscn::PackedScene::791342160451812817::1757605046::0::1::::<><><>0<>0<><>::
+Room_2.tscn::PackedScene::4138612075528658974::1761668262::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_3.tscn::PackedScene::591889853544079514::1761668262::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_4.tscn::PackedScene::7310058768327837690::1761668262::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_5.tscn::PackedScene::7732983700676571392::1761668262::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_6.tscn::PackedScene::3929440355115521388::1761668263::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_7.tscn::PackedScene::6896625662631687134::1761668263::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_8.tscn::PackedScene::6442990362319744482::1761668263::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_9.tscn::PackedScene::2312103697546715227::1761668263::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_10.tscn::PackedScene::4973161991031193709::1761668263::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
+Room_11.tscn::PackedScene::791342160451812817::1761668259::0::1::::<><><>0<>0<><>::uid://dklyrl12i3jd4::::res://assets/DarkCastle.png<>uid://dnqrgvuvxldbm::::res://scenes/Players and NPC/Player.tscn
 Room_12.tscn::PackedScene::7760259257428154978::1757605053::0::1::::<><><>0<>0<><>::
 Room_13.tscn::PackedScene::9024376053477803574::1757604981::0::1::::<><><>0<>0<><>::
 Room_14.tscn::PackedScene::1407463535109321509::1757605069::0::1::::<><><>0<>0<><>::
@@ -244,8 +244,9 @@ PlatformArea4.tscn::PackedScene::6053972121864999341::1761234099::0::1::::<><><>
 PlatformElevator.tscn::PackedScene::1938878612276221927::1759714669::0::1::::<><><>0<>0<><>::
 Unlock Area 4 paltform.tscn::PackedScene::7483973156463367857::1761234534::0::1::::<><><>0<>0<><>::uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png<>uid://bp1qmxn3a6mld::::res://scripts/Key and platform scripts/Area4Platform.gd
 Unlock Platform Area 1.tscn::PackedScene::3574537342130157041::1759936538::0::1::::<><><>0<>0<><>::uid://delpoomo37267::::res://scripts/Key and platform scripts/Area1Platform.gd<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png
-::res://scenes/Players and NPC/::1761611238
-Player.tscn::PackedScene::8105791100950896674::1761611238::0::1::::<><><>0<>0<><>::uid://bg48l40mkaiey::::res://scripts/character_body_2d.gd<>uid://ci83l3fcych00::::res://scenes/Players and NPC/UI_HealthBar.tscn<>uid://bs5cnafuasb3s::::res://assets/Maxis.png
+::res://scenes/Players and NPC/::1761671841
+HUD.tscn::PackedScene::6873443900865929462::1761671841::0::1::::<><><>0<>0<><>::uid://uyno5yhu53os::::res://scripts/HUD.gd<>uid://dngj8q2mrhf3a::::res://Fonts/ARCADECLASSIC.TTF
+Player.tscn::PackedScene::8105791100950896674::1761668196::0::1::::<><><>0<>0<><>::uid://bg48l40mkaiey::::res://scripts/character_body_2d.gd<>uid://ci83l3fcych00::::res://scenes/Players and NPC/UI_HealthBar.tscn<>uid://bs5cnafuasb3s::::res://assets/Maxis.png
 UI_HealthBar.tscn::PackedScene::5404197780405705239::1757261528::0::1::::<><><>0<>0<><>::uid://dlfn8324s0v45::::res://scripts/ui_health_bar.gd
 ::res://scenes/Teleporters/::1760285258
 Room_20 to Room_1.tscn::PackedScene::1505343691474875950::1760285258::0::1::::<><><>0<>0<><>::uid://crer6uuiknf67::::res://scripts/Teleport/Teleporter.gd<>uid://dix54a2fynupc::::res://assets/Dungeon Tile Set.png
@@ -263,14 +264,15 @@ void vampire.tscn::PackedScene::3827353537727590412::1761607000::0::1::::<><><>0
 ::res://scenes/Weapons/::1761611402
 Second Sword.tscn::PackedScene::8921021209211531479::1760918742::0::1::::<><><>0<>0<><>::uid://bdgx55im0icf5::::res://assets/Godot Project.png
 Start Sword.tscn::PackedScene::8814448662044037200::1761611402::0::1::::<><><>0<>0<><>::uid://dvv122j4hkv5m::::res://scripts/WeaponScripts/WeaponWAnimation.gd<>uid://bdgx55im0icf5::::res://assets/Godot Project.png
-::res://scripts/::1761627671
+::res://scripts/::1761675797
 50 Damage Block.gd::GDScript::4733845147893891229::1760496828::0::1::::<>Area2D<><>0<>0<><>::
 audio_stream_player.gd::GDScript::1736105447672317246::1759094446::0::1::::<>AudioStreamPlayer<><>0<>0<><>::
-character_body_2d.gd::GDScript::2869445567239138464::1761357981::0::1::::<>CharacterBody2D<><>0<>0<><>::
+character_body_2d.gd::GDScript::2869445567239138464::1761669823::0::1::::<>CharacterBody2D<><>0<>0<><>::
 end_screen.gd::GDScript::982568776566584633::1760284161::0::1::::<>CanvasLayer<><>0<>0<><>::
-Game Manager.gd::GDScript::5755595710846315181::1761627671::0::1::::<>Node<><>0<>0<><>::
+Game Manager.gd::GDScript::5755595710846315181::1761675797::0::1::::<>Node<><>0<>0<><>::
 game.gd::GDScript::5367050055143753203::1759112178::0::1::::<>Node2D<><>0<>0<><>::
 HealthUpgrade.gd::GDScript::2788031654916433863::1759112178::0::1::::<>Area2D<><>0<>0<><>::
+HUD.gd::GDScript::1454137874000511854::1761671811::0::1::::<>CanvasLayer<><>0<>0<><>::
 main_menu.gd::GDScript::7784699977815705563::1760932386::0::1::::<>CanvasLayer<><>0<>0<><>::
 preloader.gd::GDScript::4155136566628793325::1760402259::0::1::::<>Node<><>0<>0<><>::
 ui_health_bar.gd::GDScript::7942510985678996372::1759112295::0::1::::<>Control<><>0<>0<><>::
@@ -292,24 +294,24 @@ MaxHPPotion.gd::GDScript::8579373041615930804::1759679877::0::1::::<>Area2D<><>0
 MysteryPotion.gd::GDScript::3489224514548283159::1759679877::0::1::::<>Area2D<><>0<>0<><>::
 ::res://scripts/Teleport/::1760829800
 Teleporter.gd::GDScript::5975397850477529178::1760330414::0::1::::<>Area2D<><>0<>0<><>::
-::res://scripts/Vampire Scripts/::1761611309
-Black Vampire Boxx Sword.gd::GDScript::7900629483760464170::1760283126::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/Vampire Scripts/::1761698889
+Black Vampire Boxx Sword.gd::GDScript::7900629483760464170::1761698889::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Black Vampire HitDetector.gd::GDScript::6759010487730124413::1760446433::0::1::::<>Area2D<><>0<>0<><>::
-Black Vampire Sword.gd::GDScript::2132494359445599965::1760461579::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Black Vampire Sword.gd::GDScript::2132494359445599965::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
 BlackVampireBoss Hit Detector.gd::GDScript::3897916601367306573::1760446311::0::1::::<>Area2D<><>0<>0<><>::
-BlueVampire Sword.gd::GDScript::5697684520809467941::1760982324::0::1::::<>CharacterBody2D<><>0<>0<><>::
+BlueVampire Sword.gd::GDScript::5697684520809467941::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
 BlueVampireHitDetector.gd::GDScript::2356438930192930662::1760280072::0::1::::<>Area2D<><>0<>0<><>::
-Fire Vampire.gd::GDScript::7233445586036905464::1760981966::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Fire Vampire.gd::GDScript::7233445586036905464::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Fire VampireHit Detector.gd::GDScript::486234585716044912::1760919175::0::1::::<>Area2D<><>0<>0<><>::
-Ice Vampire Sword.gd::GDScript::5832859954122678016::1761268430::0::1::::<>CharacterBody2D<><>0<>0<><>::
+Ice Vampire Sword.gd::GDScript::5832859954122678016::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Ince Vampire Hit Detector.gd::GDScript::5699252048882680934::1761515021::0::1::::<>Area2D<><>0<>0<><>::
 Player Detection Zone.gd::GDScript::2210884195826876234::1759112178::0::1::::<>Area2D<><>0<>0<><>::
-red Vampire Sword.gd::GDScript::935030536542867864::1760283126::0::1::::<>CharacterBody2D<><>0<>0<><>::
+red Vampire Sword.gd::GDScript::935030536542867864::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
 RedVampireHitDetector.gd::GDScript::1906503941858940981::1759948678::0::1::::<>Area2D<><>0<>0<><>::
 Stone attached.gd::GDScript::6504055120930094215::1760726508::0::1::::<>CharacterBody2D<><>0<>0<><>::
 Stone.gd::GDScript::7611665583489943212::1761611309::0::1::::<>Area2D<><>0<>0<><>::
-StoneVampire.gd::GDScript::7259743779418081299::1760830349::0::1::::<>CharacterBody2D<><>0<>0<><>::
+StoneVampire.gd::GDScript::7259743779418081299::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
 void hit detector.gd::GDScript::8650183843359677793::1761607000::0::1::::<>Area2D<><>0<>0<><>::
-void sword.gd::GDScript::8389783890324375523::1761607000::0::1::::<>CharacterBody2D<><>0<>0<><>::
-::res://scripts/WeaponScripts/::1761589799
-WeaponWAnimation.gd::GDScript::8678207991921692412::1761589799::0::1::::<>Area2D<><>0<>0<><>::
+void sword.gd::GDScript::8389783890324375523::1761669670::0::1::::<>CharacterBody2D<><>0<>0<><>::
+::res://scripts/WeaponScripts/::1761675549
+WeaponWAnimation.gd::GDScript::8678207991921692412::1761675549::0::1::::<>Area2D<><>0<>0<><>::

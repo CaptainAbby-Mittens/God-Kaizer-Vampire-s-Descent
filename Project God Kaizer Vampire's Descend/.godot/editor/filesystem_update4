@@ -1,25 +1,5 @@
-res://scenes/Players and NPC/Player.tscn
-res://scripts/Game Manager.gd
-res://scenes/Area5/Room_11.tscn
 res://scenes/Area5/Room_2.tscn
-res://scenes/Area5/Room_3.tscn
-res://scenes/Area5/Room_4.tscn
-res://scenes/Area5/Room_5.tscn
-res://scenes/Area5/Room_6.tscn
-res://scenes/Area5/Room_7.tscn
-res://scenes/Area5/Room_8.tscn
-res://scenes/Area5/Room_9.tscn
-res://scenes/Area5/Room_10.tscn
-res://scripts/Vampire Scripts/Black Vampire Boxx Sword.gd
-res://scripts/Vampire Scripts/Black Vampire Sword.gd
-res://scripts/Vampire Scripts/BlueVampire Sword.gd
-res://scripts/Vampire Scripts/Fire Vampire.gd
-res://scripts/Vampire Scripts/Ice Vampire Sword.gd
-res://scripts/Vampire Scripts/red Vampire Sword.gd
-res://scripts/Vampire Scripts/StoneVampire.gd
 res://scripts/Vampire Scripts/void sword.gd
-res://scripts/character_body_2d.gd
-res://scenes/Players and NPC/HUD.tscn
-res://scripts/HUD.gd
-res://scripts/WeaponScripts/WeaponWAnimation.gd
-res://scenes/Area1/room_start.tscn
+res://scenes/Area5/Room_1.tscn
+res://scripts/Vampire Scripts/void hit detector.gd
+res://scenes/Vampires/void vampire.tscn
