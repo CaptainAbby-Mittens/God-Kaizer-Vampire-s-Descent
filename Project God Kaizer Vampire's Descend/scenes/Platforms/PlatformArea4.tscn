@@ -6,6 +6,7 @@
 size = Vector2(64, 4)
 
 [node name="PlatformArea4" type="AnimatableBody2D"]
+texture_filter = 1
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(4, 0)

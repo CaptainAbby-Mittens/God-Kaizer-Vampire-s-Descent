@@ -274,7 +274,7 @@ func die():
 	update_sprite_frame()
 	collision_layer = 0
 	collision_mask = 0
-	GameManager.add_score(50)
+	GameManager.add_score(70)
 	GameManager.boss_killed_1 = true
 	await get_tree().create_timer(3.0).timeout
 	queue_free()

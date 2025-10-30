@@ -1,15 +1,15 @@
 res://addons/godot_super-wakatime/api_key_prompt.tscn::650e9e8a9a30b8a8d718b043ffe42c60::1758565546::res://.godot/exported/133200997/export-cd8705cb5e2533bd79c64579ac674dae-api_key_prompt.scn
 res://addons/godot_super-wakatime/counter.tscn::7f13ad35960e259f6de719f9785ce249::1757955976::res://.godot/exported/133200997/export-4af6c9115c1c285af5925fa1ce6a526e-counter.scn
-res://scenes/Area1/MainMenu.tscn::50bcc0e13ca3821d2d5448d9e778c82b::1760551374::res://.godot/exported/133200997/export-66d36ebc8009d99eb1a39b4f90913155-MainMenu.scn
-res://scenes/Area1/room_1.tscn::a3f7ce51097a23c10066ec067c5c7a41::1760496607::res://.godot/exported/133200997/export-6c2fef0fb3d4e5381418d7366e8b363a-room_1.scn
+res://scenes/Area1/MainMenu.tscn::50bcc0e13ca3821d2d5448d9e778c82b::1761793749::res://.godot/exported/133200997/export-66d36ebc8009d99eb1a39b4f90913155-MainMenu.scn
+res://scenes/Area1/room_1.tscn::a3f7ce51097a23c10066ec067c5c7a41::1761675797::res://.godot/exported/133200997/export-6c2fef0fb3d4e5381418d7366e8b363a-room_1.scn
 res://scenes/Area1/room_2.tscn::d44b171cc12b8ad634948bab563a9069::1760843349::res://.godot/exported/133200997/export-812f4a1cdc2abe795d431c109e654d82-room_2.scn
 res://scenes/Area1/room_3.tscn::9919b19d8687b4a3aee89f066474b68f::1759938043::res://.godot/exported/133200997/export-dfb1b7f3e057bde27fe93a3b31bef564-room_3.scn
 res://scenes/Area1/room_4.tscn::fcb66d50b757bbef51de440b683c931d::1759940767::res://.godot/exported/133200997/export-0f083c1699a3125fb6f8afa34ebee9a7-room_4.scn
 res://scenes/Area1/room_5.tscn::7f6f9f76e85ef22c7a29420fb9f6982c::1759938043::res://.godot/exported/133200997/export-eb014d32f58817be3500c63174734095-room_5.scn
 res://scenes/Area1/room_6.tscn::914ebb2e71233e2f7e29d7f85e1ea0a7::1759938043::res://.godot/exported/133200997/export-433cbd182bde0ec03c60578763d33151-room_6.scn
 res://scenes/Area1/room_7.tscn::8efcd44430218d2bf3d18ccb5281b9e6::1760843354::res://.godot/exported/133200997/export-d7aec72cc2f94902c1a6161cc67699b7-room_7.scn
-res://scenes/Area1/room_8.tscn::c39f691fe960f316e9869989ed562033::1761184384::res://.godot/exported/133200997/export-29b9c335ca6a3de7fdc00a16eb2adbaa-room_8.scn
-res://scenes/Area1/room_9.tscn::4d7364d48234f560779c951a176896bd::1761268430::res://.godot/exported/133200997/export-eba6da8a10e32ebea0a8c8a21d5fb16e-room_9.scn
+res://scenes/Area1/room_8.tscn::dc6b6e2398e04e707c500b3f3810fb30::1761539966::res://.godot/exported/133200997/export-29b9c335ca6a3de7fdc00a16eb2adbaa-room_8.scn
+res://scenes/Area1/room_9.tscn::b2084ddc6a4a96f971a845c1134c1f48::1761583286::res://.godot/exported/133200997/export-eba6da8a10e32ebea0a8c8a21d5fb16e-room_9.scn
 res://scenes/Area1/room_10.tscn::651746582d9df50f8e4e189b7f5e5bc5::1760066778::res://.godot/exported/133200997/export-ac06d63a5716e079b113b40c678085da-room_10.scn
 res://scenes/Area1/room_11.tscn::129d2443a7f401c635b558c72103c127::1760114635::res://.godot/exported/133200997/export-cc201161984c1ad10fbdc6b969a21e98-room_11.scn
 res://scenes/Area1/room_12.tscn::720c676727742a5888da32ffa0f4ba91::1760982340::res://.godot/exported/133200997/export-3a8f5c80233b50040c46aa9024a3f7eb-room_12.scn
@@ -21,7 +21,7 @@ res://scenes/Area1/room_17.tscn::3cd4b0b1b97f3c8e501b28731e3eac68::1760206465::r
 res://scenes/Area1/room_18.tscn::9042155927b80d81b9b72d95e01bb92a::1760282687::res://.godot/exported/133200997/export-7fab03c13a582ad00403f26a12b06dc1-room_18.scn
 res://scenes/Area1/room_19.tscn::44475f2d277752626ff6c62d4b3fdde7::1760315371::res://.godot/exported/133200997/export-fb6ed83c4facbe18353ab6ff33746a12-room_19.scn
 res://scenes/Area1/room_20.tscn::cdd8114db602998f965081b114a3dd31::1761099249::res://.godot/exported/133200997/export-1776767256e1ee83b4a3ca6ef3221aa7-room_20.scn
-res://scenes/Area1/room_start.tscn::6d8afeeb89b6705a8b3e81b01c80896f::1760284791::res://.godot/exported/133200997/export-a02bcb1ccd4be9fe8882ad9136ab4cfc-room_start.scn
+res://scenes/Area1/room_start.tscn::a9f5e2f4112967ccc1ddc655f92f43f7::1761698889::res://.godot/exported/133200997/export-a02bcb1ccd4be9fe8882ad9136ab4cfc-room_start.scn
 res://scenes/Area2/LevelNotice.tscn::98f5ab3df3502e2cc4b12e4865996c53::1757431100::res://.godot/exported/133200997/export-010b8926513887966c6a5662ddb6da60-LevelNotice.scn
 res://scenes/Area2/Room_1.tscn::c6fefc6b3190568f4023092a0455b02c::1760844184::res://.godot/exported/133200997/export-2385bd2573a2a4db26fe4c035c05ce27-Room_1.scn
 res://scenes/Area2/Room_2.tscn::80f7da5e03c3924713deb1f34f6b324b::1760461446::res://.godot/exported/133200997/export-4523b2a97c921d5f3ed253a402321d01-Room_2.scn
@@ -35,13 +35,13 @@ res://scenes/Area2/room_9.tscn::77eb4c0f649a02e0bcab92fc3c2e11e3::1760986424::re
 res://scenes/Area2/Room_10.tscn::4665b4ca3ef745dc3d50bc0974e01099::1760549631::res://.godot/exported/133200997/export-bf10b4ffeefdc397ae8c5272ef493af9-Room_10.scn
 res://scenes/Area2/Room_11.tscn::7691d3fe2ceed131118f8aed003a5556::1760888912::res://.godot/exported/133200997/export-0d56cf7c81f0b646af912f02a96ce551-Room_11.scn
 res://scenes/Area2/Room_12.tscn::1de1e88e5f0e56788bb9feff0e416075::1760589279::res://.godot/exported/133200997/export-725b2f27d8e2603f742c0423d71fd3c3-Room_12.scn
-res://scenes/Area2/Room_13.tscn::ef5bdab47e437a02ed3862948f4ed8c5::1760888915::res://.godot/exported/133200997/export-df8c2e8684258db99a282cb5a7562ac8-Room_13.scn
+res://scenes/Area2/Room_13.tscn::ef5bdab47e437a02ed3862948f4ed8c5::1761617252::res://.godot/exported/133200997/export-df8c2e8684258db99a282cb5a7562ac8-Room_13.scn
 res://scenes/Area2/Room_14.tscn::e34972d965c8d91c5139580d9df5ac29::1760674700::res://.godot/exported/133200997/export-c3b7d098ca48455a82868c2809e603cf-Room_14.scn
 res://scenes/Area2/Room_15.tscn::d9279588ae9a7ce971816bc0594f3b7a::1760830626::res://.godot/exported/133200997/export-5d098ff478412efd9f6ffe89ee87a0c3-Room_15.scn
 res://scenes/Area2/Room_16.tscn::4570ad130c2c4981d9a8403c07e90a6d::1760830612::res://.godot/exported/133200997/export-dbe9cbdf5844cc3d6ec9c372a1d17888-Room_16.scn
 res://scenes/Area2/Room_17.tscn::baf14209a272fe902decaa7c58565805::1760830600::res://.godot/exported/133200997/export-caa98418386db670f189c102ba11a245-Room_17.scn
 res://scenes/Area2/Room_18.tscn::a1a7e38e27612efa523dddd04a48666f::1760830795::res://.godot/exported/133200997/export-ce2bdb37e22c8a142f718d24f1df1636-Room_18.scn
-res://scenes/Area2/Room_19.tscn::e4722b438e8f7fd4ccdf963010a99fb4::1760830907::res://.godot/exported/133200997/export-b11a64ec51c116a4b293f6308402f648-Room_19.scn
+res://scenes/Area2/Room_19.tscn::1db42f4ede32895f99df8c2f40ee7da8::1761540083::res://.godot/exported/133200997/export-b11a64ec51c116a4b293f6308402f648-Room_19.scn
 res://scenes/Area2/Room_20.tscn::9148da294e8a3b2561d094e478721576::1760933478::res://.godot/exported/133200997/export-2fa6274ebe8abc2b65ddcff50935e527-Room_20.scn
 res://scenes/Area3/LevelNotice.tscn::643de9a2a2efb4dea1b66a141579b3b9::1757604218::res://.godot/exported/133200997/export-b5f8e564eedab80b1fa433d3b4cfc6e7-LevelNotice.scn
 res://scenes/Area3/Room_1.tscn::0b3f94d62d31c4182530b46ed96ab33f::1760919968::res://.godot/exported/133200997/export-7df183f403a348a2f442a52426083c09-Room_1.scn
@@ -65,38 +65,38 @@ res://scenes/Area3/Room_18.tscn::34c58a9d02e8c80f5202ddb857ec717e::1757604563::r
 res://scenes/Area3/Room_19.tscn::b874663e37dbb970e9cef89ab276ab96::1761157377::res://.godot/exported/133200997/export-ff1274b1909d08d772b1daceda2722e8-Room_19.scn
 res://scenes/Area3/Room_20.tscn::d29c1022f8dbc1a405961e3909b6508f::1761157714::res://.godot/exported/133200997/export-a36ad3ad0b3e0565e0c123b36085db6f-Room_20.scn
 res://scenes/Area4/LevelNotice.tscn::a21f816c65145ee05a3e3340b5385c6b::1757604761::res://.godot/exported/133200997/export-52d7b887e3f538d1115940f0a8fe064e-LevelNotice.scn
-res://scenes/Area4/Room_1.tscn::a1a3781bbd03b3315554bda422d2d242::1761270712::res://.godot/exported/133200997/export-22b66dc4f251e3055a31a35b2ef3f771-Room_1.scn
-res://scenes/Area4/Room_2.tscn::cd4a9faee865fe6b2137b0e699aee5ca::1757604782::res://.godot/exported/133200997/export-a29f9cf8b45613a82922e9bd8db677fb-Room_2.scn
-res://scenes/Area4/Room_3.tscn::33a32f75cdfa3b72da7c8fae0d76c19e::1757604787::res://.godot/exported/133200997/export-1cd82334d703c677b9375c89c0c18697-Room_3.scn
-res://scenes/Area4/Room_4.tscn::a2e571a5fdd3da786b192a6929d15ae7::1757604792::res://.godot/exported/133200997/export-a47165a8783b1f3469cbe2eb431aec39-Room_4.scn
-res://scenes/Area4/Room_5.tscn::64d74ed1e46bb22567df208962bdd10a::1757604800::res://.godot/exported/133200997/export-68f28dcf7ced49808c7fa76dcc724e15-Room_5.scn
-res://scenes/Area4/Room_6.tscn::89ff8b8ac25e32f0fc23ac7800edcf20::1757604806::res://.godot/exported/133200997/export-1e44ced150da79cb023b91fd297a9a68-Room_6.scn
-res://scenes/Area4/Room_7.tscn::c3b33074836fda8778942e6c65c7f546::1757604811::res://.godot/exported/133200997/export-f980a343157e6872e668e986bbb96544-Room_7.scn
-res://scenes/Area4/Room_8.tscn::8633510722b2dc67c6c77e44b7336532::1757604817::res://.godot/exported/133200997/export-974c4222ade2386895dbd2cf8d4c3ebf-Room_8.scn
-res://scenes/Area4/Room_9.tscn::9d2778e79ff64b9f7fb1a0576d697b70::1757604823::res://.godot/exported/133200997/export-a202b9a6a40877eea8187317320d9430-Room_9.scn
-res://scenes/Area4/Room_10.tscn::98806bdd958dca159ab47995975757b8::1757604829::res://.godot/exported/133200997/export-13650d6fb05dae3ff60f01bc4dd78feb-Room_10.scn
-res://scenes/Area4/Room_11.tscn::bd82ed5c43de732da04cb9faec0fc8de::1757604838::res://.godot/exported/133200997/export-ff1645bc8fe13f624ca6ea74e4ae26c4-Room_11.scn
-res://scenes/Area4/Room_12.tscn::ed95d02ab4edfd9eadca4f64bab27559::1757604844::res://.godot/exported/133200997/export-22b95d97a180efff48d74f3209ff8c09-Room_12.scn
-res://scenes/Area4/Room_13.tscn::d46bbe620393a0aa68a214e4ec19c888::1757604851::res://.godot/exported/133200997/export-dc8c1bf8accd5cd8049959341fc291f6-Room_13.scn
-res://scenes/Area4/Room_14.tscn::00e11c8577b660f10a9f0c427bb08f8c::1757604861::res://.godot/exported/133200997/export-533620a4fa6ec9386378721de35264f2-Room_14.scn
-res://scenes/Area4/Room_15.tscn::81e32787870141453805ec373549a4c1::1757604866::res://.godot/exported/133200997/export-43cc4993438baa6e0c0ef7808a186819-Room_15.scn
-res://scenes/Area4/Room_16.tscn::6d5d1b07292f6ca24d5cd1b12972def7::1757604876::res://.godot/exported/133200997/export-b8862c4a4f22478dd2d03511046caa8c-Room_16.scn
-res://scenes/Area4/Room_17.tscn::d33000d6f6ce004793092f9511bbb5af::1757604883::res://.godot/exported/133200997/export-0620abfaed4d8103c6be5c0f73da4758-Room_17.scn
-res://scenes/Area4/Room_18.tscn::69efe366f319b873dc383da326fd7e49::1757604889::res://.godot/exported/133200997/export-ddfc3bb387cc6d73e73a2ddf0b8a4b53-Room_18.scn
-res://scenes/Area4/Room_19.tscn::6137b6164e7ebabd20e3927395eea978::1757604895::res://.godot/exported/133200997/export-88f682a4f57e3f774e28812de36fa98b-Room_19.scn
-res://scenes/Area4/Room_20.tscn::869f2fe5aa46f5ad71a44d1a8f2b5a8c::1757604902::res://.godot/exported/133200997/export-e193b46c5d9cfeda860a0425fc9a840a-Room_20.scn
+res://scenes/Area4/Room_1.tscn::ac63446b26e6c14499d035f9ace410e2::1761356993::res://.godot/exported/133200997/export-22b66dc4f251e3055a31a35b2ef3f771-Room_1.scn
+res://scenes/Area4/Room_2.tscn::2263e86a1065d3ff92833bc6036efc7c::1761356989::res://.godot/exported/133200997/export-a29f9cf8b45613a82922e9bd8db677fb-Room_2.scn
+res://scenes/Area4/Room_3.tscn::e4b26d0f07210c88acc12b9576497a8e::1761359371::res://.godot/exported/133200997/export-1cd82334d703c677b9375c89c0c18697-Room_3.scn
+res://scenes/Area4/Room_4.tscn::6343491823d715fe6f6fcfff07de6137::1761358963::res://.godot/exported/133200997/export-a47165a8783b1f3469cbe2eb431aec39-Room_4.scn
+res://scenes/Area4/Room_5.tscn::5ca806a39d5c52a52f2553d3871fedb5::1761359596::res://.godot/exported/133200997/export-68f28dcf7ced49808c7fa76dcc724e15-Room_5.scn
+res://scenes/Area4/Room_6.tscn::304fe8a1c70e3312f669707174e0b53c::1761359735::res://.godot/exported/133200997/export-1e44ced150da79cb023b91fd297a9a68-Room_6.scn
+res://scenes/Area4/Room_7.tscn::14d00f8787fc963ddc41c92385058df1::1761361525::res://.godot/exported/133200997/export-f980a343157e6872e668e986bbb96544-Room_7.scn
+res://scenes/Area4/Room_8.tscn::f1bd58d14325fc5cbf288a4816b8d2d9::1761361748::res://.godot/exported/133200997/export-974c4222ade2386895dbd2cf8d4c3ebf-Room_8.scn
+res://scenes/Area4/Room_9.tscn::671250394811f3fe15664c38839b7bb6::1761362042::res://.godot/exported/133200997/export-a202b9a6a40877eea8187317320d9430-Room_9.scn
+res://scenes/Area4/Room_10.tscn::887df2f348ce4c0e2ede863fc68d1b90::1761515008::res://.godot/exported/133200997/export-13650d6fb05dae3ff60f01bc4dd78feb-Room_10.scn
+res://scenes/Area4/Room_11.tscn::a518855249464819eb8d7f342be255b5::1761529147::res://.godot/exported/133200997/export-ff1645bc8fe13f624ca6ea74e4ae26c4-Room_11.scn
+res://scenes/Area4/Room_12.tscn::dd08a594e94ca8982991ebfee7c75a8a::1761513675::res://.godot/exported/133200997/export-22b95d97a180efff48d74f3209ff8c09-Room_12.scn
+res://scenes/Area4/Room_13.tscn::614371917859c97172fd84044eb40b89::1761514998::res://.godot/exported/133200997/export-dc8c1bf8accd5cd8049959341fc291f6-Room_13.scn
+res://scenes/Area4/Room_14.tscn::ceab74b7234560d27325b93512fd6356::1761515214::res://.godot/exported/133200997/export-533620a4fa6ec9386378721de35264f2-Room_14.scn
+res://scenes/Area4/Room_15.tscn::e7cdd5bb22543e02c5e7138641ec3809::1761523933::res://.godot/exported/133200997/export-43cc4993438baa6e0c0ef7808a186819-Room_15.scn
+res://scenes/Area4/Room_16.tscn::24244f5aee174e775db0a954aa683d02::1761528644::res://.godot/exported/133200997/export-b8862c4a4f22478dd2d03511046caa8c-Room_16.scn
+res://scenes/Area4/Room_17.tscn::76b65deaf62ff59023903a29cd426551::1761538566::res://.godot/exported/133200997/export-0620abfaed4d8103c6be5c0f73da4758-Room_17.scn
+res://scenes/Area4/Room_18.tscn::fefaa847e2e67573ec2b1179900c70bf::1761539324::res://.godot/exported/133200997/export-ddfc3bb387cc6d73e73a2ddf0b8a4b53-Room_18.scn
+res://scenes/Area4/Room_19.tscn::1af204f9b380e271aefe6a8921cce35e::1761533568::res://.godot/exported/133200997/export-88f682a4f57e3f774e28812de36fa98b-Room_19.scn
+res://scenes/Area4/Room_20.tscn::c492720e6b25551ab3ab37392ee960f7::1761541312::res://.godot/exported/133200997/export-e193b46c5d9cfeda860a0425fc9a840a-Room_20.scn
 res://scenes/Area5/LevelNotice.tscn::3c7c66ad2d47512c0abe6dcabdd8db6f::1757604957::res://.godot/exported/133200997/export-08fedcf68a374b1ca2d5083527b7aaa6-LevelNotice.scn
-res://scenes/Area5/Room_1.tscn::54e5911d9c410cc74a732d3b7539f45c::1757604966::res://.godot/exported/133200997/export-a4de00db5bba3bf8cea6cca203d8607a-Room_1.scn
-res://scenes/Area5/Room_2.tscn::17e92b1504fafc29681eec290917b72b::1757604975::res://.godot/exported/133200997/export-c77217ca6c5327cc14d5115514530d59-Room_2.scn
-res://scenes/Area5/Room_3.tscn::56999eac134892bd857cdef7a46675c1::1757604990::res://.godot/exported/133200997/export-3a37d8f6156bf821559f36b08cafc63b-Room_3.scn
-res://scenes/Area5/Room_4.tscn::9abb47c465b82205cc04bd2cf74b5d62::1757604999::res://.godot/exported/133200997/export-3dfd5e287a31adc1aee17dda00d9982a-Room_4.scn
-res://scenes/Area5/Room_5.tscn::04ec580d91e89fbc1634699ae8726d35::1757605006::res://.godot/exported/133200997/export-96f32d1fa7d6db4ebb03bc58c145a5d3-Room_5.scn
-res://scenes/Area5/Room_6.tscn::16c12c557dd915107382499cc8acc3d8::1757605011::res://.godot/exported/133200997/export-564ef9255563d60370dc2afd9edef67c-Room_6.scn
-res://scenes/Area5/Room_7.tscn::75d775d8715e9b8af96ff7a96d2dcdc3::1757605018::res://.godot/exported/133200997/export-4f6098a46a735560355e2fd5659f084e-Room_7.scn
-res://scenes/Area5/Room_8.tscn::8ee774a4b9aa3633257816e6ec849632::1757605026::res://.godot/exported/133200997/export-85a437cbb5bf60037642544c6a2ff5c8-Room_8.scn
-res://scenes/Area5/Room_9.tscn::6322db24a378a304fedb6624cc5f2201::1757605032::res://.godot/exported/133200997/export-5610f504cf44b78ac5b10ae1dea1e8c5-Room_9.scn
-res://scenes/Area5/Room_10.tscn::046af99653fdc0962055388e24e2e04d::1757605039::res://.godot/exported/133200997/export-e830bcf218755b50fc1462ff91cc600b-Room_10.scn
-res://scenes/Area5/Room_11.tscn::0f3d1245ae27e29bdd0daf1cb11a9d8c::1757605046::res://.godot/exported/133200997/export-34057ea940e16d828abe7d19676242b0-Room_11.scn
+res://scenes/Area5/Room_1.tscn::8bca217108d0442812cd992135bbe9be::1761705519::res://.godot/exported/133200997/export-a4de00db5bba3bf8cea6cca203d8607a-Room_1.scn
+res://scenes/Area5/Room_2.tscn::57cba420a5b25b99ba20f713681cba2d::1761791335::res://.godot/exported/133200997/export-c77217ca6c5327cc14d5115514530d59-Room_2.scn
+res://scenes/Area5/Room_3.tscn::ffce98286446e4e09a4512b94d44d0fb::1761792742::res://.godot/exported/133200997/export-3a37d8f6156bf821559f36b08cafc63b-Room_3.scn
+res://scenes/Area5/Room_4.tscn::a2bcbab32cc80587449e721c44255bad::1761793377::res://.godot/exported/133200997/export-3dfd5e287a31adc1aee17dda00d9982a-Room_4.scn
+res://scenes/Area5/Room_5.tscn::43480a8911475b94c8112de620338d26::1761793376::res://.godot/exported/133200997/export-96f32d1fa7d6db4ebb03bc58c145a5d3-Room_5.scn
+res://scenes/Area5/Room_6.tscn::7f9699eec0bca979b2999c4d1d8afe0b::1761793645::res://.godot/exported/133200997/export-564ef9255563d60370dc2afd9edef67c-Room_6.scn
+res://scenes/Area5/Room_7.tscn::0d91c60c9778c37d02c71b1661a2bc63::1761668263::res://.godot/exported/133200997/export-4f6098a46a735560355e2fd5659f084e-Room_7.scn
+res://scenes/Area5/Room_8.tscn::6787906f6c80054480a9bbac35109328::1761668263::res://.godot/exported/133200997/export-85a437cbb5bf60037642544c6a2ff5c8-Room_8.scn
+res://scenes/Area5/Room_9.tscn::c72d263a43735a9015dc30ec502aa00a::1761668263::res://.godot/exported/133200997/export-5610f504cf44b78ac5b10ae1dea1e8c5-Room_9.scn
+res://scenes/Area5/Room_10.tscn::e863e704eb69cc517c4009e406b3e31c::1761668263::res://.godot/exported/133200997/export-e830bcf218755b50fc1462ff91cc600b-Room_10.scn
+res://scenes/Area5/Room_11.tscn::4a526d6f31e3f3f3df87586a4fb8c04e::1761668259::res://.godot/exported/133200997/export-34057ea940e16d828abe7d19676242b0-Room_11.scn
 res://scenes/Area5/Room_12.tscn::21081a1a814b7b502d23362fdfb2f335::1757605053::res://.godot/exported/133200997/export-9c44021a33064e7cb7e46b8cd047974a-Room_12.scn
 res://scenes/Area5/Room_13.tscn::a48a9494cbe3b09f30c1b8426b4e954a::1757604981::res://.godot/exported/133200997/export-6e3daad18de8dad3f5996f168bef734f-Room_13.scn
 res://scenes/Area5/Room_14.tscn::4de476b237402bf7be2463d9d094ac86::1757605069::res://.godot/exported/133200997/export-f131bb2ed0a27d06d53d36539956b026-Room_14.scn
@@ -117,34 +117,40 @@ res://scenes/Pickups/HealingPotion.tscn::0746513ed8270e52bb50159c8f8b90b9::17585
 res://scenes/Pickups/MaxHPPotion.tscn::75edddf2f2528cb9daf7fa1394611db2::1758302610::res://.godot/exported/133200997/export-c440dcb9043f0bef6b8447e8c8815db0-MaxHPPotion.scn
 res://scenes/Pickups/MysteryPotion.tscn::99f97cb85ad2b596f57c86ed1ee3bd35::1758302610::res://.godot/exported/133200997/export-e5d05e17246fc207ba56823c4c92d514-MysteryPotion.scn
 res://scenes/Platforms/PlatformElevator.tscn::fe3ecf42bb5caad441299528c4df4e60::1759714669::res://.godot/exported/133200997/export-dddaaa75834c32676e6cffc470b62020-PlatformElevator.scn
-res://scenes/Players and NPC/Player.tscn::a323e9ab31831650ef17da33785c435f::1760933478::res://.godot/exported/133200997/export-b202a230eee8f91bed0ff0741a1853a7-Player.scn
+res://scenes/Players and NPC/Player.tscn::0db0b1a1718314c48f2447e63c27d7fb::1761668196::res://.godot/exported/133200997/export-b202a230eee8f91bed0ff0741a1853a7-Player.scn
 res://scenes/Players and NPC/UI_HealthBar.tscn::75679ded006f6acba2c82ef9dd601b53::1757261528::res://.godot/exported/133200997/export-c95ca1f4fabf28362629feb90829ad45-UI_HealthBar.scn
-res://scenes/Weapons/Start Sword.tscn::09e9bab30278ca2b9f1821cb79e4965d::1761235240::res://.godot/exported/133200997/export-f35fb32b94b072892c0237eeeb6594c5-Start Sword.scn
+res://scenes/Weapons/Start Sword.tscn::ca697e799c63cdecd46b80ab573721f9::1761611402::res://.godot/exported/133200997/export-f35fb32b94b072892c0237eeeb6594c5-Start Sword.scn
 res://scenes/EndScreen.tscn::da11ffe53f9137318e14d85b4349f127::1760283994::res://.godot/exported/133200997/export-fbf7fe00226cb87c9342c48da97b2085-EndScreen.scn
 res://scenes/game.tscn::c5ce33f59918d076d58360347466650a::1757261526::res://.godot/exported/133200997/export-c2a7af834e91ff64325daddf58e45dc0-game.scn
 res://scenes/Weapons.tscn::1830201f1707ffb278d6e4ff7507adb7::1759949255::res://.godot/exported/133200997/export-c8d7269c130e28b162c77c95a6f1f043-Weapons.scn
 res://default_bus_layout.tres::4b064098e1d0a64df9a77cbb7b5a77e8::1759120304::res://.godot/exported/133200997/export-19246414aa9fb561ced4b8dce477acec-default_bus_layout.res
 res://scenes/Pickups/Area1Key.tscn::6a2e202bb80484f40e1ba5537611b016::1759858242::res://.godot/exported/133200997/export-6fbb91dce67db108cd66544da5fcac4b-Area1Key.scn
-res://scenes/Pickups/Mystery Loot box.tscn::8fcf816b3e6bf46666d96f39b0121ce6::1761242630::res://.godot/exported/133200997/export-aadd463f473e56b7a26ba7a20d4a1db2-Mystery Loot box.scn
+res://scenes/Pickups/Mystery Loot box.tscn::2d6e7bbbc10425c0620ad1e4f104625f::1761583302::res://.godot/exported/133200997/export-aadd463f473e56b7a26ba7a20d4a1db2-Mystery Loot box.scn
 res://scenes/Platforms/Unlock Platform Area 1.tscn::e444e7a10e98a398f0207afdcebd06cc::1759936538::res://.godot/exported/133200997/export-7a1420afd08201451fafbc0fab3641a2-Unlock Platform Area 1.scn
-res://scenes/Vampires/RedVampire.tscn::4b8bf7dadb0bd6ee64b0ccdf2253afe2::1761160105::res://.godot/exported/133200997/export-1b550021925b1842d7ff5c793bb6fc5f-RedVampire.scn
+res://scenes/Vampires/RedVampire.tscn::fc2dac772a872c33de528ff641919e5d::1761607914::res://.godot/exported/133200997/export-1b550021925b1842d7ff5c793bb6fc5f-RedVampire.scn
 res://scenes/Teleporters/Room_20 to Room_1.tscn::cb0c2baf96240ac4ea58ed69f40d674e::1760285258::res://.godot/exported/133200997/export-fb3676d7b0e47f0da01c29f0cdd90bcd-Room_20 to Room_1.scn
-res://scenes/Vampires/Black Vampire (boss).tscn::ecded2529d718d36c0ee361e8ba4afa3::1760281374::res://.godot/exported/133200997/export-f74682e65f5026d5551c7fa90cd32d01-Black Vampire (boss).scn
-res://scenes/Vampires/BlueVampire.tscn::d93a40b41fe888b5552214f86e6cbbe1::1760282592::res://.godot/exported/133200997/export-ad231f9849bfd906db8f7e90f2fd9c08-BlueVampire.scn
-res://scenes/Platforms/PlatformArea2.tscn::2c94a8c27822fb22f6b3e692db4eb473::1760461229::res://.godot/exported/133200997/export-40c67d059f909fe4240b5dab0e657724-PlatformArea2.scn
-res://scenes/Vampires/Black Vampire.tscn::146fc493c33cc94a705ce0884945553d::1760461646::res://.godot/exported/133200997/export-0aac91940f82738818cfaa65dfefc2e6-Black Vampire.scn
-res://scenes/Vampires/Stone Vampire.tscn::8c644f30247ae3204701c83423121bc2::1760976031::res://.godot/exported/133200997/export-04d260bae72a90173aaa0042e754ea95-Stone Vampire.scn
-res://scenes/Vampires/Stone.tscn::ac24f7f8cf5a982120baa94e8d89d979::1760673120::res://.godot/exported/133200997/export-16fc181f76bd67f88b58f8d0ce571b4c-Stone.scn
+res://scenes/Vampires/Black Vampire (boss).tscn::9ebdc9ab22d94518c33abfe34d5f5c47::1761792265::res://.godot/exported/133200997/export-f74682e65f5026d5551c7fa90cd32d01-Black Vampire (boss).scn
+res://scenes/Vampires/BlueVampire.tscn::dd83a657fc595e97e86dc1ee75134f3b::1761792264::res://.godot/exported/133200997/export-ad231f9849bfd906db8f7e90f2fd9c08-BlueVampire.scn
+res://scenes/Platforms/PlatformArea2.tscn::bd93a3c9c657dac3c829cb9e4141708b::1761792273::res://.godot/exported/133200997/export-40c67d059f909fe4240b5dab0e657724-PlatformArea2.scn
+res://scenes/Vampires/Black Vampire.tscn::7a4adfde7347ce39db023fb3ee5fdf9c::1761792264::res://.godot/exported/133200997/export-0aac91940f82738818cfaa65dfefc2e6-Black Vampire.scn
+res://scenes/Vampires/Stone Vampire.tscn::1a44bdc37fe4df02f2f402e03c834820::1761761363::res://.godot/exported/133200997/export-04d260bae72a90173aaa0042e754ea95-Stone Vampire.scn
+res://scenes/Vampires/Stone.tscn::bbcd14aaa983e6641166eccfc48f1931::1761591090::res://.godot/exported/133200997/export-16fc181f76bd67f88b58f8d0ce571b4c-Stone.scn
 res://scenes/Damage/lava.tscn::0b96776249f3662862d803ff3eb95c4d::1760928127::res://.godot/exported/133200997/export-5fc5ef7636f179e2138c0189c419963f-lava.scn
 res://scenes/Pickups/Area2Key.tscn::aee0e5eb74d736b2a8efdef577dbc533::1760829791::res://.godot/exported/133200997/export-d8505fe749598fbd54bbfc87b4f6a840-Area2Key.scn
-res://scenes/Platforms/Platform Unlock 2.tscn::6a78442925dff60c193f706c957b0ea5::1760829787::res://.godot/exported/133200997/export-2bf4019813e97715e2e8f550be4dabbf-Platform Unlock 2.scn
-res://scenes/Platforms/PlatformArea3.tscn::b1e1d5c449b5e599f361e20f789ba31c::1761055636::res://.godot/exported/133200997/export-7c0106f30489db0ad895d310a0981c50-PlatformArea3.scn
-res://scenes/Vampires/fire vampire.tscn::562786bd2aaecf48b0204fc5d8f9af71::1760919524::res://.godot/exported/133200997/export-5db9ff01c0658af0c30fd30855f5ba00-fire vampire.scn
+res://scenes/Platforms/Platform Unlock 2.tscn::6a78442925dff60c193f706c957b0ea5::1761792275::res://.godot/exported/133200997/export-2bf4019813e97715e2e8f550be4dabbf-Platform Unlock 2.scn
+res://scenes/Platforms/PlatformArea3.tscn::ef969c59841e9d39341e367fb5b5b30b::1761792271::res://.godot/exported/133200997/export-7c0106f30489db0ad895d310a0981c50-PlatformArea3.scn
+res://scenes/Vampires/fire vampire.tscn::005560f2121bab275b9233cc1f4853ea::1761761362::res://.godot/exported/133200997/export-5db9ff01c0658af0c30fd30855f5ba00-fire vampire.scn
 res://scenes/Weapons/Second Sword.tscn::61a0434eab3731bc2079009586ec81f8::1760918742::res://.godot/exported/133200997/export-ccbdfed184efdd13dc52e0d50e3faa3c-Second Sword.scn
 res://scenes/Pickups/Area4Key.tscn::b3576d5910344f3d792de039a0881323::1761234533::res://.godot/exported/133200997/export-8835c3ea539a5891a0fb702c7bc3632d-Area4Key.scn
 res://scenes/Pickups/Area 3 Key.tscn::e3e71a6a545208660150139af64cc7fc::1761055794::res://.godot/exported/133200997/export-818664f82228955ac8dc67e19c5449a3-Area 3 Key.scn
 res://scenes/Platforms/Platform Unlock Area 3.tscn::e3348df0d5b70223790f828c6a47927c::1761055795::res://.godot/exported/133200997/export-b5c3cfc8d77f74afaa379a84bfc3a299-Platform Unlock Area 3.scn
-res://scenes/Platforms/PlatformArea4.tscn::39998c153e725246de0529d594bac8c8::1761234099::res://.godot/exported/133200997/export-fe2e7e2d403f8101022b5e580ddc9023-PlatformArea4.scn
+res://scenes/Platforms/PlatformArea4.tscn::3d1e213f672cbc5c9da36ff54338d44c::1761792269::res://.godot/exported/133200997/export-fe2e7e2d403f8101022b5e580ddc9023-PlatformArea4.scn
 res://scenes/Platforms/Unlock Area 4 paltform.tscn::4d0085f474e5170d9ba46b964d1f57b7::1761234534::res://.godot/exported/133200997/export-35ec627fad6a92a6224595012dac8929-Unlock Area 4 paltform.scn
-res://scenes/Vampires/fire stone.tscn::29e3dc994895706f2120fee3ce4ca9c6::1760976659::res://.godot/exported/133200997/export-5f088a64cde77915b4e4da9a6229312f-fire stone.scn
-res://scenes/Vampires/Ice Vampire.tscn::c722623bc3ff2cc09b7538e2d40a82e0::1761269460::res://.godot/exported/133200997/export-58cb5b35153d70513189367ad26774ab-Ice Vampire.scn
+res://scenes/Vampires/fire stone.tscn::1bad58c14f1a55523c214d9a1d409b8b::1761583326::res://.godot/exported/133200997/export-5f088a64cde77915b4e4da9a6229312f-fire stone.scn
+res://scenes/Vampires/Ice Vampire.tscn::c83fcfb89fe5381f65862b2bb675bb3c::1761515021::res://.godot/exported/133200997/export-58cb5b35153d70513189367ad26774ab-Ice Vampire.scn
+res://scenes/Damage/ice fire.tscn::c6c8d27935f96bf3676e62c92253a287::1761365096::res://.godot/exported/133200997/export-94dd8463e55d97d01969a8b372111a29-ice fire.scn
+res://scenes/Damage/void.tscn::a3ab913d8e4e6887be59d9b45a1cd092::1761792357::res://.godot/exported/133200997/export-c233b72114b841ce6a6620ef39212d5a-void.scn
+res://scenes/Platforms/Platform Area 4.tscn::cff1c722ce7d823de550494cc7a461ea::1761357145::res://.godot/exported/133200997/export-871fef7352b072a803fd2f16c1caf0cd-Platform Area 4.scn
+res://scenes/Platforms/Platform Area 5.tscn::12b1129f82b63015c555ae17a8bf9fe8::1761792277::res://.godot/exported/133200997/export-301baf9d23b5348ae84ecefc7516006e-Platform Area 5.scn
+res://scenes/Players and NPC/HUD.tscn::ca72ef3b3c5a5347728c88be28492fe2::1761793938::res://.godot/exported/133200997/export-63309335ef572cdfd599333bae51379e-HUD.scn
+res://scenes/Vampires/void vampire.tscn::6da5e2d393e933fd08967830d9de8950::1761762671::res://.godot/exported/133200997/export-8cacf931d091d64a368e14292e4aa66d-void vampire.scn

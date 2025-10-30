@@ -245,7 +245,7 @@ func die():
 	update_sprite_frame()
 	collision_layer = 0
 	collision_mask = 0
-	GameManager.add_score(15)
+	GameManager.add_score(30)
 	await get_tree().create_timer(1.0).timeout
 	queue_free()
 

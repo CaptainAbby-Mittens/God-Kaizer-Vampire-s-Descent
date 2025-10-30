@@ -8,11 +8,13 @@ size = Vector2(56, 4)
 [node name="PlatformArea2" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
 texture = ExtResource("1_ywuih")
 region_enabled = true
 region_rect = Rect2(424, 144, 56, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -6)
 shape = SubResource("RectangleShape2D_s0tuy")
 one_way_collision = true

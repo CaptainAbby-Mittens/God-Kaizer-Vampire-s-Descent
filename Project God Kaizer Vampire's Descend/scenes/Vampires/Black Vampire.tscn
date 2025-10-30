@@ -79,6 +79,7 @@ animations = [{
 }]
 
 [node name="BlackVampire" type="CharacterBody2D"]
+texture_filter = 1
 script = ExtResource("1_5fv47")
 max_health = 600
 move_speed = 35.0

@@ -126,7 +126,7 @@ var world_map = {
 }
 var player_damage = 30
 var next_threshold_index = 0
-var base_threshold = 500
+var base_threshold = 400
 var threshold_step = 250
 # Playtime tracking
 var playtime: float = 0.0
@@ -170,12 +170,12 @@ func _increase_player_stats():
 		return
 		
 	# Example stat scaling logic
-	player.max_health += 10
+	player.max_health += 30
 	player.current_health = player.max_health
-	player.attack_damage += 2 if player.has_method("attack_damage") else 0
+	player.attack_damage += 4 if player.has_method("attack_damage") else 0
 	
 	crit += 1
-	shield += 1
+	shield = 3
 
 	print("🩸 Player leveled up! New stats → HP:", player.max_health, ", Crit:", crit, ", Shield:", shield)
 

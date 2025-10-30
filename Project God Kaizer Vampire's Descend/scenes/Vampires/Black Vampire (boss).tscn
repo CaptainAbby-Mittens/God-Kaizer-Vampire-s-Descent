@@ -79,6 +79,7 @@ animations = [{
 }]
 
 [node name="BlackVampire(boss)" type="CharacterBody2D"]
+texture_filter = 1
 scale = Vector2(-2, 2)
 script = ExtResource("1_xqap3")
 

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=4 uid="uid://f52ytcqty034"]
+
+[ext_resource type="Script" uid="uid://b8pd0dc4xwn6l" path="res://scripts/50 Damage Block.gd" id="1_cslte"]
+[ext_resource type="Texture2D" uid="uid://dklyrl12i3jd4" path="res://assets/DarkCastle.png" id="2_ugiu7"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e11b8"]
+texture = ExtResource("2_ugiu7")
+0:4/animation_frame_0/duration = 1.0
+0:4/animation_frame_1/duration = 1.0
+0:4/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_4qp2x"]
+sources/1 = SubResource("TileSetAtlasSource_e11b8")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yvxw"]
+size = Vector2(160, 16)
+
+[node name="VoidVampire" type="Area2D"]
+script = ExtResource("1_cslte")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAQAAAAQAAAABAAAAAQAAAAQAAAACAAAAAQAAAAQAAAADAAAAAQAAAAQAAAAEAAAAAQAAAAQAAAAFAAAAAQAAAAQAAAAGAAAAAQAAAAQAAAAHAAAAAQAAAAQAAAAIAAAAAQAAAAQAAAAJAAAAAQAAAAQAAAA=")
+tile_set = SubResource("TileSet_4qp2x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(80, 8)
+shape = SubResource("RectangleShape2D_0yvxw")

@@ -299,7 +299,7 @@ func die():
 	update_sprite_frame()
 	collision_layer = 0
 	collision_mask = 0
-	GameManager.add_score(10)
+	GameManager.add_score(30)
 	await get_tree().create_timer(1.0).timeout
 	call_deferred("spawn_random_vampire", global_position)
 	queue_free()

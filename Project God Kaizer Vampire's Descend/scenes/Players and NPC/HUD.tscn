@@ -23,6 +23,11 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("2_dq6qs")
 theme_override_font_sizes/font_size = 12
 
+[node name="Level" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_dq6qs")
+theme_override_font_sizes/font_size = 12
+
 [node name="Shield" type="Label" parent="Control/VBoxContainer"]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_dq6qs")

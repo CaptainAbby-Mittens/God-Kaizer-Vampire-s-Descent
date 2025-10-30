@@ -1,6 +1,7 @@
 extends CanvasLayer
 
 @onready var label_score = $Control/VBoxContainer/Score
+@onready var label_level = $Control/VBoxContainer/Level
 @onready var label_shield = $Control/VBoxContainer/Shield
 @onready var label_crit = $Control/VBoxContainer/Crit
 @onready var label_damage = $Control/VBoxContainer/Damage
@@ -30,6 +31,7 @@ func update_display():
 		return
 
 	label_score.text = "Score: " + str(gm.score)
+	label_level.text = "Lvl: " + str(gm.next_threshold_index + 1)
 	label_shield.text = "Shield: " + str(gm.shield)
 	label_crit.text = "Crit: " + str(gm.crit)
 	label_damage.text = "Damage: " + str(gm.player_damage)

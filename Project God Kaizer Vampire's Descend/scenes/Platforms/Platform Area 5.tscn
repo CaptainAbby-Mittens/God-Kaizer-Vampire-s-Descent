@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://wlaoymwgp1hy"]
+
+[ext_resource type="Texture2D" uid="uid://dklyrl12i3jd4" path="res://assets/DarkCastle.png" id="1_qtatr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vo0fx"]
+size = Vector2(56, 4)
+
+[node name="PlatformArea5" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-4.4703484e-07, -4)
+scale = Vector2(1.1666667, 1)
+texture = ExtResource("1_qtatr")
+region_enabled = true
+region_rect = Rect2(0, 16, 48, 8)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_vo0fx")
+one_way_collision = true
