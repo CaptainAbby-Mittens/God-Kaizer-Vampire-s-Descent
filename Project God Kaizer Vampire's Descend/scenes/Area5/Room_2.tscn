@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=4 uid="uid://by71low817ni1"]
+[gd_scene load_steps=6 format=4 uid="uid://by71low817ni1"]
 
 [ext_resource type="Texture2D" uid="uid://dklyrl12i3jd4" path="res://assets/DarkCastle.png" id="1_odyei"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_kx6kn"]
 [ext_resource type="PackedScene" uid="uid://bur87olvk8r3i" path="res://scenes/Vampires/void vampire.tscn" id="3_kx6kn"]
-[ext_resource type="PackedScene" uid="uid://dxt1xf83rxcng" path="res://scenes/Weapons/Start Sword.tscn" id="4_xx2iv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k7j4l"]
 texture = ExtResource("1_odyei")
@@ -165,11 +164,4 @@ tile_set = SubResource("TileSet_1cw4w")
 use_kinematic_bodies = true
 
 [node name="VoidVampire" parent="." instance=ExtResource("3_kx6kn")]
-position = Vector2(575, 216)
-rotation = 3.1415927
-scale = Vector2(1, -1)
-
-[node name="StartSword" parent="." instance=ExtResource("4_xx2iv")]
-position = Vector2(56, 210)
-rotation = 3.1415927
-scale = Vector2(1, -1)
+position = Vector2(571, 211)

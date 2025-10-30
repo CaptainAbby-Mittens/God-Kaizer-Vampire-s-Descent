@@ -1,5 +1,3 @@
-res://scenes/Area5/Room_2.tscn
+res://scenes/Area5/Room_3.tscn
 res://scripts/Vampire Scripts/void sword.gd
-res://scenes/Area5/Room_1.tscn
-res://scripts/Vampire Scripts/void hit detector.gd
-res://scenes/Vampires/void vampire.tscn
+res://scenes/Area5/Room_2.tscn

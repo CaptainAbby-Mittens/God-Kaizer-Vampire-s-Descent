@@ -284,13 +284,13 @@ func take_damage(amount):
 func spawn_random_vampire(spawn_position: Vector2):
 	if vampire_types.is_empty():
 		print("⚠ No vampire types assigned!")
-		return
+		return 
 
 	var index = randi_range(0, vampire_types.size() - 1)
 	var vampire_scene = vampire_types[index]
 	var vampire = vampire_scene.instantiate()
 
-	vampire.global_position = spawn_position
+	vampire.global_position = spawn_position 
 	get_tree().current_scene.add_child(vampire)
 
 func die():
@@ -300,10 +300,11 @@ func die():
 	collision_layer = 0
 	collision_mask = 0
 	GameManager.add_score(10)
-	spawn_random_vampire(global_position)
 	await get_tree().create_timer(1.0).timeout
+	call_deferred("spawn_random_vampire", global_position)
 	queue_free()
-
+	await get_tree().create_timer(1.0).timeout
+	call_deferred("spawn_random_vampire", global_position)
 func _exit_tree():
 	if has_node("HitDetectionArea"):
 		var hit_area = $HitDetectionArea
