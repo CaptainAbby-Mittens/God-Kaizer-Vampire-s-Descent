@@ -292,8 +292,11 @@ func spawn_random_vampire(spawn_position: Vector2):
 
 	vampire.global_position = spawn_position 
 	get_tree().current_scene.add_child(vampire)
-
+func vampirism_active():
+	if GameManager.vampirism:
+		player.heal(max_health*0.05)
 func die():
+	vampirism_active()
 	GameManager.grant_shield()
 	current_state = State.DEAD
 	update_sprite_frame()

@@ -1,26 +1,11 @@
-res://scenes/Area5/Room_3.tscn
-res://scripts/Vampire Scripts/void sword.gd
-res://scenes/Area5/Room_2.tscn
-res://scenes/Damage/void vampire.tscn
-res://scenes/Vampires/BlueVampire.tscn
-res://scenes/Vampires/Black Vampire.tscn
-res://scenes/Vampires/Black Vampire (boss).tscn
-res://scenes/Platforms/PlatformArea4.tscn
-res://scenes/Platforms/PlatformArea3.tscn
-res://scenes/Platforms/PlatformArea2.tscn
-res://scenes/Platforms/Platform Unlock 2.tscn
-res://scenes/Platforms/Platform Area 5.tscn
-res://scenes/Damage/void.tscn
-res://scenes/Area5/Room_4.tscn
+res://scripts/Game Manager.gd
 res://scenes/Area5/Room_5.tscn
-res://scenes/Area5/Room_6.tscn
-res://scripts/Vampire Scripts/StoneVampire.gd
-res://scripts/Vampire Scripts/Ice Vampire Sword.gd
+res://scenes/Pickups/HealingPotion.tscn
 res://scripts/Vampire Scripts/Black Vampire Boxx Sword.gd
 res://scripts/Vampire Scripts/Black Vampire Sword.gd
 res://scripts/Vampire Scripts/BlueVampire Sword.gd
 res://scripts/Vampire Scripts/Fire Vampire.gd
-res://scripts/Game Manager.gd
-res://scenes/Area1/MainMenu.tscn
-res://scenes/Players and NPC/HUD.tscn
-res://scripts/HUD.gd
+res://scripts/Vampire Scripts/Ice Vampire Sword.gd
+res://scripts/Vampire Scripts/red Vampire Sword.gd
+res://scripts/Vampire Scripts/StoneVampire.gd
+res://scripts/Vampire Scripts/void sword.gd

@@ -138,7 +138,7 @@ var has_key3: bool = false
 var has_key4: bool = false
 var boss_killed_1: bool = false
 var score: int = 0
-var vampirism: bool = false
+var vampirism: bool = true
 var firesword: bool = false
 var shield: int = 0
 var crit: float = 12
@@ -149,6 +149,10 @@ var supermode: bool = false
 # Signal for UI updates (optional)
 signal playtime_updated(playtime_seconds)
 
+
+func grant_vampirism():
+	if randf() < 0.25:
+		vampirism = true
 func crit_strike():
 	if randf()< crit/100:
 		return RandomNumberGenerator.new().randf_range(1.25, 1.75)

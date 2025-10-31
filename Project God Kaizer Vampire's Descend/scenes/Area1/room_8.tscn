@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://o46jelw7whgt"]
+[gd_scene load_steps=12 format=4 uid="uid://o46jelw7whgt"]
 
 [ext_resource type="Texture2D" uid="uid://cwirxhpa84gvb" path="res://images/icon.jpg" id="1_pkrhe"]
 [ext_resource type="PackedScene" uid="uid://dnqrgvuvxldbm" path="res://scenes/Players and NPC/Player.tscn" id="2_18htk"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dix54a2fynupc" path="res://assets/Dungeon Tile Set.png" id="4_ty528"]
 [ext_resource type="PackedScene" uid="uid://bq6sdwuehhjt6" path="res://scenes/Platforms/Unlock Platform Area 1.tscn" id="6_kn0tp"]
 [ext_resource type="PackedScene" uid="uid://vpg15akjhk1k" path="res://scenes/Teleporters/Room_20 to Room_1.tscn" id="6_qhgb5"]
+[ext_resource type="Script" uid="uid://df71th1s7quae" path="res://scripts/Key and platform scripts/Area2Platform.gd" id="7_kn0tp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qhgb5"]
 texture = ExtResource("3_huqxg")
@@ -14296,7 +14297,7 @@ sources/1 = SubResource("TileSetAtlasSource_kn0tp")
 [node name="Room8" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource("2_18htk")]
-position = Vector2(35, 198)
+position = Vector2(33, 200)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(320, 180)
@@ -14316,6 +14317,7 @@ target_room_coords = Vector2i(1, 1)
 
 [node name="UnlockPlatformArea2" parent="." instance=ExtResource("6_kn0tp")]
 position = Vector2(471, 252)
+script = ExtResource("7_kn0tp")
 
 [node name="Room20ToRoom2" parent="." instance=ExtResource("6_qhgb5")]
 position = Vector2(473, 328)

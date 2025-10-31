@@ -266,8 +266,13 @@ func take_damage(amount):
 	print("Vampire took ", amount, " damage! Health: ", current_health)
 	if current_health <= 0:
 		die()
-
+func vampirism_active():
+	if GameManager.vampirism:
+		player.heal(max_health*0.05)
+		
 func die():
+	vampirism_active()
+	GameManager.grant_vampirism()
 	GameManager.crit += 1
 	GameManager.grant_shield()
 	current_state = State.DEAD
